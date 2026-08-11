@@ -35,6 +35,15 @@ export default function Home() {
                 Explore Our Services
               </Button>
             </div>
+            
+            <div className="hidden lg:flex items-center gap-4 mt-16">
+              <span className="text-xs font-bold tracking-[0.2em] text-brand-navy">SCROLL TO EXPLORE</span>
+              <motion.div 
+                animate={{ x: [0, 10, 0] }} 
+                transition={{ duration: 2, repeat: Infinity }}
+                className="w-16 h-px bg-brand-navy/30"
+              />
+            </div>
           </div>
           
           {/* Hero Visual */}
@@ -47,7 +56,7 @@ export default function Home() {
             <div className="relative w-full h-full max-w-lg mx-auto">
               <div className="absolute inset-0 bg-brand-navy rounded-2xl shadow-2xl transform rotate-3 scale-105" />
               <div className="absolute inset-0 bg-brand-yellow rounded-2xl shadow-xl transform -rotate-2" />
-              <div className="absolute inset-0 bg-brand-purewhite rounded-2xl shadow-lg border border-brand-charcoal/10 overflow-hidden">
+              <div className="absolute inset-0 bg-brand-purewhite rounded-2xl shadow-lg border border-brand-charcoal/10 overflow-hidden z-10">
                 <img 
                   src="/images/hero_dashboard_1786440656238.png" 
                   alt="Daredevil Digital Dashboard" 
@@ -56,15 +65,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-        
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 hidden lg:flex">
-          <span className="text-xs font-bold tracking-widest text-brand-charcoal/40">SCROLL TO EXPLORE</span>
-          <motion.div 
-            animate={{ y: [0, 10, 0] }} 
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-px h-12 bg-brand-charcoal/20"
-          />
         </div>
       </section>
 
