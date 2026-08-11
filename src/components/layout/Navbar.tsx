@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { navigation } from '../../data/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
+import Logo from '../ui/Logo';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,8 +33,8 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <Link to="/" className="-m-1.5 p-1.5 font-display text-xl font-bold tracking-tight text-brand-navy">
-            DAREDEVIL DIGITAL
+          <Link to="/" className="-m-1.5 p-1.5 transition-transform hover:scale-105">
+            <Logo />
           </Link>
         </div>
         
@@ -82,8 +83,8 @@ export default function Navbar() {
             className="fixed inset-0 z-50 bg-brand-navy px-6 py-6 lg:hidden"
           >
             <div className="flex items-center justify-between">
-              <Link to="/" className="-m-1.5 p-1.5 font-display text-xl font-bold tracking-tight text-brand-purewhite">
-                DAREDEVIL DIGITAL
+              <Link to="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
+                <Logo light />
               </Link>
               <button
                 type="button"
