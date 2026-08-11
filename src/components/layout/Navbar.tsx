@@ -24,6 +24,7 @@ export default function Navbar() {
   }, [location.pathname]);
 
   return (
+    <>
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         isScrolled
@@ -72,6 +73,7 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
+    </header>
 
       <AnimatePresence>
         {mobileMenuOpen && (
@@ -121,6 +123,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
