@@ -38,19 +38,21 @@ export default function Chatbot() {
       setIsTyping(false);
       
       const lowerInput = inputValue.toLowerCase();
-      let response = "I'm not entirely sure about that, but our digital experts would love to discuss it with you! Would you like to schedule a call?";
+      // Default to a highly positive response
+      let response = "That's fantastic! Our digital experts would love to discuss this with you and see how we can help. Would you like to schedule a quick call with the team?";
       
-      if (lowerInput.match(/\b(hi|hello|hey|greetings)\b/)) {
+      // Removed strict word boundaries \b to catch "hii", "hiii", etc.
+      if (lowerInput.match(/(hi|hello|hey|greetings)/)) {
         response = "Hello there! 👋 How can we help your business grow today?";
-      } else if (lowerInput.match(/\b(services|what do you do|offer|help)\b/)) {
+      } else if (lowerInput.match(/(services|what do you do|offer|help)/)) {
         response = "We offer a range of digital services including Social Media Management, Analytics & Reporting, Content Creation, and Website Development. Which area are you interested in?";
-      } else if (lowerInput.match(/\b(price|cost|pricing|fee)\b/)) {
+      } else if (lowerInput.match(/(price|cost|pricing|fee)/)) {
         response = "Our pricing is tailored to your specific business needs and goals. We'd love to jump on a quick call to understand your requirements and provide a custom proposal.";
-      } else if (lowerInput.match(/\b(contact|talk|call|meet|schedule)\b/)) {
+      } else if (lowerInput.match(/(contact|talk|call|meet|schedule)/)) {
         response = "You can easily reach us via the 'Start a Conversation' button at the top, or directly email us at info@daredevildigital.com. Let's make things happen!";
-      } else if (lowerInput.match(/\b(portfolio|work|case studies|examples)\b/)) {
+      } else if (lowerInput.match(/(portfolio|work|case studies|examples)/)) {
         response = "We have a strong portfolio across Web Design, Social Media, and Branding! Check out our 'Work' page to see how we've helped other ambitious brands.";
-      } else if (lowerInput.match(/\b(thanks|thank you|awesome|great)\b/)) {
+      } else if (lowerInput.match(/(thanks|thank you|awesome|great)/)) {
         response = "You're very welcome! Let me know if you need anything else. 🚀";
       }
 
