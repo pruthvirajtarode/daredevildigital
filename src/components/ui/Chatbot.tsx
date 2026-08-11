@@ -36,15 +36,26 @@ export default function Chatbot() {
     // Simulate bot response
     setTimeout(() => {
       setIsTyping(false);
-      const botResponses = [
-        "That's a great question! Our strategy team can definitely help with that.",
-        "We specialize in exactly this type of digital growth.",
-        "I'd love to connect you with one of our digital experts to discuss this further.",
-        "Daredevil Digital has a proven track record of handling such queries effectively!"
-      ];
-      const randomResponse = botResponses[Math.floor(Math.random() * botResponses.length)];
-      setMessages(prev => [...prev, { id: Date.now().toString(), type: 'bot', text: randomResponse }]);
-    }, 1500);
+      
+      const lowerInput = inputValue.toLowerCase();
+      let response = "I'm not entirely sure about that, but our digital experts would love to discuss it with you! Would you like to schedule a call?";
+      
+      if (lowerInput.match(/\b(hi|hello|hey|greetings)\b/)) {
+        response = "Hello there! 👋 How can we help your business grow today?";
+      } else if (lowerInput.match(/\b(services|what do you do|offer|help)\b/)) {
+        response = "We offer a range of digital services including Social Media Management, Analytics & Reporting, Content Creation, and Website Development. Which area are you interested in?";
+      } else if (lowerInput.match(/\b(price|cost|pricing|fee)\b/)) {
+        response = "Our pricing is tailored to your specific business needs and goals. We'd love to jump on a quick call to understand your requirements and provide a custom proposal.";
+      } else if (lowerInput.match(/\b(contact|talk|call|meet|schedule)\b/)) {
+        response = "You can easily reach us via the 'Start a Conversation' button at the top, or directly email us at info@daredevildigital.com. Let's make things happen!";
+      } else if (lowerInput.match(/\b(portfolio|work|case studies|examples)\b/)) {
+        response = "We have a strong portfolio across Web Design, Social Media, and Branding! Check out our 'Work' page to see how we've helped other ambitious brands.";
+      } else if (lowerInput.match(/\b(thanks|thank you|awesome|great)\b/)) {
+        response = "You're very welcome! Let me know if you need anything else. 🚀";
+      }
+
+      setMessages(prev => [...prev, { id: Date.now().toString(), type: 'bot', text: response }]);
+    }, 1200);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -57,7 +68,7 @@ export default function Chatbot() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-brand-navy text-brand-purewhite shadow-xl transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:ring-offset-2 ${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100 duration-300'}`}
+        className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-brand-navy text-brand-purewhite shadow-xl transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:ring-offset-2 ${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100 duration-300'}`}
         aria-label="Open chat"
       >
         <MessageSquare className="h-6 w-6" />
@@ -72,7 +83,7 @@ export default function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-6 right-6 z-50 w-80 sm:w-96 overflow-hidden rounded-2xl bg-brand-purewhite shadow-2xl border border-brand-charcoal/10 flex flex-col h-[500px] max-h-[80vh]"
+            className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-96 overflow-hidden rounded-2xl bg-brand-purewhite shadow-2xl border border-brand-charcoal/10 flex flex-col h-[500px] max-h-[80vh]"
           >
             {/* Header */}
             <div className="bg-brand-navy p-4 text-brand-purewhite flex items-center justify-between">
