@@ -1,7 +1,8 @@
 import type { ReactNode } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import FloatingWhatsApp from '../ui/FloatingWhatsApp';
+import Chatbot from '../ui/Chatbot';
+import ScrollToTop from '../ui/ScrollToTop';
 
 interface LayoutProps {
   children: ReactNode;
@@ -15,7 +16,8 @@ export default function Layout({ children }: LayoutProps) {
         {children}
       </main>
       <Footer />
-      <FloatingWhatsApp />
+      <Chatbot />
+      <ScrollToTop />
     </div>
   );
 }
