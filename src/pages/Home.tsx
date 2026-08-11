@@ -37,31 +37,22 @@ export default function Home() {
             </div>
           </div>
           
-          {/* Abstract Hero Visual */}
+          {/* Hero Visual */}
           <div className="relative h-[400px] lg:h-[600px] w-full flex justify-center items-center">
             <motion.div 
               animate={{ rotate: 360 }}
               transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
               className="absolute w-[120%] h-[120%] bg-brand-yellow/10 rounded-full blur-3xl -z-10"
             />
-            <div className="relative w-full h-full max-w-md mx-auto">
+            <div className="relative w-full h-full max-w-lg mx-auto">
               <div className="absolute inset-0 bg-brand-navy rounded-2xl shadow-2xl transform rotate-3 scale-105" />
               <div className="absolute inset-0 bg-brand-yellow rounded-2xl shadow-xl transform -rotate-2" />
-              <div className="absolute inset-0 bg-brand-purewhite rounded-2xl shadow-lg border border-brand-charcoal/10 overflow-hidden flex flex-col p-8">
-                <div className="flex gap-2 mb-8">
-                  <div className="w-3 h-3 rounded-full bg-brand-charcoal/20" />
-                  <div className="w-3 h-3 rounded-full bg-brand-charcoal/20" />
-                  <div className="w-3 h-3 rounded-full bg-brand-charcoal/20" />
-                </div>
-                <div className="flex-1 space-y-4">
-                  <div className="h-4 bg-brand-charcoal/5 rounded w-3/4" />
-                  <div className="h-4 bg-brand-charcoal/5 rounded w-1/2" />
-                  <div className="h-32 bg-brand-yellow/20 rounded-xl mt-8" />
-                  <div className="grid grid-cols-2 gap-4 mt-4">
-                    <div className="h-24 bg-brand-navy/5 rounded-xl" />
-                    <div className="h-24 bg-brand-burgundy/5 rounded-xl" />
-                  </div>
-                </div>
+              <div className="absolute inset-0 bg-brand-purewhite rounded-2xl shadow-lg border border-brand-charcoal/10 overflow-hidden">
+                <img 
+                  src="/images/hero_dashboard_1786440656238.png" 
+                  alt="Daredevil Digital Dashboard" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -100,10 +91,19 @@ export default function Home() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              {['Strategy', 'Creative', 'Analytics', 'Digital'].map((pillar, i) => (
-                <div key={pillar} className={`p-8 bg-brand-offwhite rounded-2xl ${i === 1 || i === 3 ? 'translate-y-8' : ''}`}>
-                  <h3 className="font-display text-xl font-bold text-brand-navy mb-2">{pillar}</h3>
-                  <div className="w-8 h-1 bg-brand-yellow rounded-full" />
+              {[
+                { name: 'Strategy', img: '/images/pillar_strategy_1786441160788.png' }, 
+                { name: 'Creative', img: '/images/pillar_creative_1786441173912.png' }, 
+                { name: 'Analytics', img: '/images/pillar_analytics_1786441199775.png' }, 
+                { name: 'Digital', img: '/images/pillar_digital_1786441215627.png' }
+              ].map((pillar, i) => (
+                <div key={pillar.name} className={`relative overflow-hidden group rounded-2xl h-48 ${i === 1 || i === 3 ? 'translate-y-8' : ''}`}>
+                  <img src={pillar.img} alt={pillar.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-brand-navy/60 group-hover:bg-brand-navy/40 transition-colors" />
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                    <h3 className="font-display text-2xl font-bold text-brand-purewhite mb-2">{pillar.name}</h3>
+                    <div className="w-8 h-1 bg-brand-yellow rounded-full" />
+                  </div>
                 </div>
               ))}
             </div>
@@ -196,13 +196,26 @@ export default function Home() {
             theme="light"
           />
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16">
-            {company.promises.map((promise) => (
-              <div key={promise.id} className="bg-brand-purewhite p-12 rounded-3xl shadow-sm">
-                <span className="block font-display text-7xl font-bold text-brand-yellow mb-8">{promise.id}</span>
-                <h3 className="font-bold text-2xl mb-4 leading-tight">{promise.title}</h3>
-                <p className="text-brand-charcoal/70">{promise.description}</p>
-              </div>
-            ))}
+            {company.promises.map((promise, index) => {
+              const images = [
+                '/images/promise_1_1786441509620.png',
+                '/images/pillar_analytics_1786441199775.png',
+                '/images/hero_dashboard_1786440656238.png'
+              ];
+              return (
+                <div key={promise.id} className="bg-brand-purewhite rounded-3xl shadow-sm overflow-hidden group">
+                  <div className="h-48 relative overflow-hidden">
+                    <img src={images[index]} alt={promise.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-brand-navy/20" />
+                    <span className="absolute bottom-4 left-6 block font-display text-6xl font-bold text-brand-purewhite drop-shadow-md">{promise.id}</span>
+                  </div>
+                  <div className="p-8">
+                    <h3 className="font-bold text-2xl mb-4 leading-tight text-brand-navy">{promise.title}</h3>
+                    <p className="text-brand-charcoal/70">{promise.description}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -245,17 +258,20 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Placeholder Project Cards */}
-            {[1, 2].map((i) => (
-              <div key={i} className="group cursor-pointer">
-                <div className="aspect-[4/3] rounded-3xl bg-brand-offwhite mb-6 overflow-hidden flex items-center justify-center relative border border-brand-charcoal/5">
-                  <span className="text-brand-charcoal/40 font-bold tracking-widest uppercase">Case Study Coming Soon</span>
-                  <div className="absolute inset-0 bg-brand-navy/0 group-hover:bg-brand-navy/5 transition-colors duration-300" />
+            {/* Case Study Cards */}
+            {[
+              { id: 1, title: 'E-Commerce Revamp', category: 'WEB DESIGN & STRATEGY', img: '/images/case_study_1_1786440689248.png' },
+              { id: 2, title: 'Fintech Mobile Experience', category: 'APP DESIGN & ANALYTICS', img: '/images/case_study_2_1786440961686.png' }
+            ].map((caseStudy) => (
+              <div key={caseStudy.id} className="group cursor-pointer">
+                <div className="aspect-[4/3] rounded-3xl bg-brand-offwhite mb-6 overflow-hidden relative border border-brand-charcoal/5 shadow-sm">
+                  <img src={caseStudy.img} alt={caseStudy.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-brand-navy/0 group-hover:bg-brand-navy/10 transition-colors duration-300" />
                 </div>
-                <div className="flex gap-4 items-center text-sm font-bold tracking-widest text-brand-charcoal/60 uppercase mb-3">
-                  <span>CONCEPT PROJECT</span>
+                <div className="flex gap-4 items-center text-sm font-bold tracking-widest text-brand-burgundy uppercase mb-3">
+                  <span>{caseStudy.category}</span>
                 </div>
-                <h3 className="font-display text-2xl font-bold text-brand-navy">Digital Growth System</h3>
+                <h3 className="font-display text-2xl font-bold text-brand-navy group-hover:text-brand-burgundy transition-colors">{caseStudy.title}</h3>
               </div>
             ))}
           </div>

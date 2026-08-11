@@ -29,10 +29,21 @@ export default function Services() {
                 key={service.id} 
                 className={`flex flex-col gap-12 lg:gap-24 ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center`}
               >
-                {/* Visual Placeholder */}
-                <div className="w-full lg:w-1/2 aspect-square md:aspect-[4/3] rounded-3xl bg-brand-navy flex items-center justify-center p-12 relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-brand-yellow/10 transform -skew-y-12 translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
-                  <span className="font-display text-9xl font-bold text-brand-purewhite/10 z-10">{service.id}</span>
+                {/* Service Image */}
+                <div className="w-full lg:w-1/2 aspect-square md:aspect-[4/3] rounded-3xl bg-brand-navy flex items-center justify-center relative overflow-hidden group shadow-lg">
+                  <img 
+                    src={[
+                      '/images/service_social_media_1786441004737.png',
+                      '/images/service_coaching_1786441123552.png',
+                      '/images/service_analytics_1786441229735.png',
+                      '/images/service_content_1786441264836.png',
+                      '/images/service_webdev_1786441294976.png'
+                    ][index] || '/images/hero_dashboard_1786440656238.png'}
+                    alt={service.title} 
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                  />
+                  <div className="absolute inset-0 bg-brand-navy/30 group-hover:bg-brand-navy/10 transition-colors duration-700" />
+                  <span className="font-display text-9xl font-bold text-brand-purewhite/90 z-10 drop-shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">{service.id}</span>
                 </div>
                 
                 {/* Content */}
