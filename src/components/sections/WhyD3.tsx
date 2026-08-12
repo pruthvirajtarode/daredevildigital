@@ -1,4 +1,5 @@
 import SectionHeading from '../ui/SectionHeading';
+import { motion } from 'framer-motion';
 
 export default function WhyD3() {
   const points = [
@@ -28,7 +29,13 @@ export default function WhyD3() {
           description="We do not delegate campaigns to junior executives. We do not recycle playbooks designed for large overseas markets. We optimize around outcomes."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-brand-charcoal/10 rounded-3xl overflow-hidden mt-16 shadow-lg bg-brand-purewhite">
+        <motion.div 
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.6 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-brand-charcoal/10 rounded-3xl overflow-hidden mt-16 shadow-lg bg-brand-purewhite"
+        >
           {points.map((point, index) => (
             <div
               key={point.stat}
@@ -49,7 +56,7 @@ export default function WhyD3() {
               </p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

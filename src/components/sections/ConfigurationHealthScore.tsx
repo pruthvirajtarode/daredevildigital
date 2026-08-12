@@ -47,7 +47,12 @@ export default function ConfigurationHealthScore() {
       
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+          >
             <span className="block mb-4 text-xs font-mono font-bold tracking-[0.2em] text-brand-yellow uppercase">
               ACCOUNT CONFIGURATION HEALTH
             </span>
@@ -65,9 +70,15 @@ export default function ConfigurationHealthScore() {
                 * Real score is derived from our 6-layer Lead Engine Audit.
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-12 bg-white/5 border border-white/10 rounded-3xl p-12 backdrop-blur-sm">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-12 bg-white/5 border border-white/10 rounded-3xl p-12 backdrop-blur-sm"
+          >
             {/* Animated Gauge */}
             <div className="relative w-48 h-48 flex items-center justify-center shrink-0">
               <svg className="w-full h-full transform -rotate-90" viewBox="0 0 120 120">
@@ -116,7 +127,7 @@ export default function ConfigurationHealthScore() {
                 Illustrative average score before Signal Loop implementation. Book an audit to pinpoint your configuration errors.
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

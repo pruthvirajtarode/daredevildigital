@@ -22,8 +22,14 @@ export default function PerformanceTracks() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16 items-stretch">
           {/* Option A — Active Spenders */}
           <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
             whileHover={{ y: -6 }}
-            transition={{ duration: 0.3 }}
+            transition={{ 
+              y: { duration: 0.3 },
+              default: { duration: 0.6, ease: "easeOut" } 
+            }}
             className="flex flex-col bg-brand-navy text-brand-offwhite rounded-3xl p-8 lg:p-12 shadow-xl border border-white/5 relative overflow-hidden"
           >
             {/* Ambient accent background glow */}
@@ -104,8 +110,14 @@ export default function PerformanceTracks() {
 
           {/* Option B — Early Stage */}
           <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
             whileHover={{ y: -6 }}
-            transition={{ duration: 0.3 }}
+            transition={{ 
+              y: { duration: 0.3 },
+              default: { duration: 0.6, ease: "easeOut", delay: 0.2 } 
+            }}
             className="flex flex-col bg-brand-purewhite text-brand-charcoal rounded-3xl p-8 lg:p-12 shadow-lg border border-brand-charcoal/5 relative overflow-hidden"
           >
             {/* Ambient accent background glow */}

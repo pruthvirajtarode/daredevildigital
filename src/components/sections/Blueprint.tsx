@@ -1,6 +1,7 @@
 import { Info, HelpCircle, Check } from 'lucide-react';
 import SectionHeading from '../ui/SectionHeading';
 import { pricing } from '../../data/pricing';
+import { motion } from 'framer-motion';
 
 export default function Blueprint() {
   const layers = [
@@ -49,8 +50,15 @@ export default function Blueprint() {
             />
 
             <div className="mt-12 space-y-6">
-              {layers.map((layer) => (
-                <div key={layer.num} className="p-6 bg-brand-offwhite border border-brand-charcoal/5 rounded-2xl">
+              {layers.map((layer, idx) => (
+                <motion.div 
+                  key={layer.num} 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15 }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className="p-6 bg-brand-offwhite border border-brand-charcoal/5 rounded-2xl"
+                >
                   <div className="flex gap-4 items-start">
                     <span className="font-mono text-xs font-bold text-brand-burgundy bg-brand-burgundy/10 px-2.5 py-1 rounded shrink-0">
                       LAYER {layer.num}
@@ -64,7 +72,7 @@ export default function Blueprint() {
                       </p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
 
@@ -83,7 +91,13 @@ export default function Blueprint() {
           </div>
 
           {/* Right Column: Pricing & Conversion Card */}
-          <div className="lg:col-span-5 lg:sticky lg:top-32">
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:col-span-5 lg:sticky lg:top-32"
+          >
             <div className="bg-brand-navy text-brand-offwhite rounded-3xl p-8 lg:p-12 shadow-2xl border border-white/5">
               <div className="mb-6">
                 <span className="text-xs font-mono text-brand-offwhite/40 line-through block">
@@ -137,7 +151,7 @@ export default function Blueprint() {
                 * Strategic blueprints delivered within 7 business days from briefing.
               </span>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
