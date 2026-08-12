@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daredevil Digital — Lead Generation Specialists, Singapore</title>
+<meta name="description" content="Singapore's only Meta lead-gen agency feeding CRM outcome data back to your campaigns. The Signal Loop finds real buyers, not form fills.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --black: #0D0D0D; --orange: #E8521A; --orange-dim: rgba(232,82,26,0.12);
+    --off-white: #F0EDE8; --grey: #5A5A5A; --grey-light: #2A2A2A;
+    --rule: rgba(240,237,232,0.1); --green: #22C55E; --green-dim: rgba(34,197,94,0.1);
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--black); color: var(--off-white); font-family: var(--font-body); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 48px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--rule); background: rgba(13,13,13,0.92); backdrop-filter: blur(12px); }
+  .nav-logo { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: -0.02em; color: var(--off-white); text-decoration: none; }
+  .nav-logo span { color: var(--orange); }
+  .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+  .nav-links a { font-size: 14px; color: var(--grey); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--off-white); }
+  .nav-cta { font-family: var(--font-display); font-weight: 600; font-size: 14px; background: var(--orange); color: #fff !important; padding: 10px 20px; border-radius: 4px; text-decoration: none; transition: opacity 0.2s; }
+  .nav-cta:hover { opacity: 0.88; }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--off-white); }
+  .mobile-menu { display: none; position: fixed; top: 65px; left: 0; right: 0; background: rgba(13,13,13,0.98); border-bottom: 1px solid var(--rule); padding: 24px; flex-direction: column; gap: 20px; z-index: 99; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-size: 16px; color: var(--grey); text-decoration: none; }
+  .mobile-menu a.btn-primary { color: #fff; text-align: center; }
+
+  section { border-bottom: 1px solid var(--rule); }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 48px; }
+  .section-eyebrow { font-family: var(--font-mono); font-size: 11px; color: var(--orange); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 24px; }
+  .section-headline { font-family: var(--font-display); font-size: clamp(24px, 3.5vw, 40px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 20px; }
+  .section-body { font-size: 16px; color: var(--grey); line-height: 1.7; max-width: 560px; }
+  .btn-primary { display: inline-block; font-family: var(--font-display); font-weight: 600; font-size: 15px; background: var(--orange); color: #fff; padding: 16px 32px; border-radius: 4px; text-decoration: none; transition: opacity 0.2s; }
+  .btn-primary:hover { opacity: 0.88; }
+  .btn-ghost { font-family: var(--font-body); font-size: 14px; color: var(--grey); text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+  .btn-ghost:hover { color: var(--off-white); border-color: var(--off-white); }
+  .cta-detail { font-family: var(--font-mono); font-size: 12px; color: var(--grey); margin-top: 16px; }
+  .price-was { font-family: var(--font-mono); font-size: 11px; color: var(--grey); text-decoration: line-through; margin-right: 6px; opacity: 0.6; }
+  .step-price-wrap { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+  .audit-price-was { font-family: var(--font-mono); font-size: 16px; color: var(--grey); text-decoration: line-through; opacity: 0.5; display: block; margin-bottom: 2px; }
+
+  /* HERO */
+  #hero { padding: 160px 0 100px; min-height: 100vh; display: flex; align-items: center; border-bottom: 1px solid var(--rule); }
+  .hero-inner { max-width: 1080px; margin: 0 auto; padding: 0 48px; }
+  .hero-eyebrow { font-family: var(--font-mono); font-size: 12px; color: var(--orange); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 32px; }
+  .hero-score-block { display: flex; align-items: flex-end; gap: 24px; margin-bottom: 32px; }
+  .score-number { font-family: var(--font-mono); font-size: clamp(80px, 16vw, 180px); font-weight: 500; color: var(--orange); line-height: 1; letter-spacing: -0.04em; }
+  .score-label { padding-bottom: 16px; }
+  .score-label .metric { font-family: var(--font-display); font-size: 13px; font-weight: 600; color: var(--grey); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+  .score-label .descriptor { font-family: var(--font-mono); font-size: 11px; color: var(--grey); }
+  .score-label .illustrative { font-family: var(--font-mono); font-size: 10px; color: var(--grey); opacity: 0.6; margin-top: 4px; font-style: italic; }
+  .hero-headline { font-family: var(--font-display); font-size: clamp(26px, 4vw, 48px); font-weight: 600; line-height: 1.15; letter-spacing: -0.03em; color: var(--off-white); max-width: 720px; margin-bottom: 24px; opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .hero-headline.visible { opacity: 1; transform: translateY(0); }
+  .hero-sub { font-size: 17px; color: var(--grey); max-width: 540px; line-height: 1.65; margin-bottom: 48px; opacity: 0; transform: translateY(12px); transition: opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s; }
+  .hero-sub.visible { opacity: 1; transform: translateY(0); }
+  .hero-actions { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; opacity: 0; transform: translateY(12px); transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s; }
+  .hero-actions.visible { opacity: 1; transform: translateY(0); }
+  .vertical-ticker { margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--rule); display: flex; align-items: center; gap: 24px; flex-wrap: wrap; opacity: 0; transition: opacity 0.6s ease 0.5s; }
+  .vertical-ticker.visible { opacity: 1; }
+  .ticker-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey); white-space: nowrap; }
+  .ticker-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+  .ticker-pill { font-family: var(--font-mono); font-size: 11px; padding: 5px 12px; border: 1px solid var(--rule); color: var(--grey); border-radius: 2px; }
+  .ticker-pill.active { border-color: rgba(232,82,26,0.4); color: var(--orange); background: var(--orange-dim); }
+
+  /* SIGNAL LOOP */
+  .signal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 64px; }
+  .signal-loop-visual { padding: 48px; border: 1px solid var(--rule); display: flex; flex-direction: column; }
+  .loop-step { display: flex; align-items: flex-start; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--rule); }
+  .loop-step:last-child { border-bottom: none; }
+  .loop-icon { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: var(--font-mono); font-size: 11px; font-weight: 500; }
+  .loop-icon.active { background: var(--orange); color: #fff; }
+  .loop-icon.inactive { background: var(--grey-light); color: var(--grey); }
+  .loop-step-text strong { display: block; font-family: var(--font-display); font-weight: 600; font-size: 14px; margin-bottom: 4px; color: var(--off-white); }
+  .loop-step-text p { font-size: 13px; color: var(--grey); line-height: 1.55; }
+  .signal-right { padding: 48px; border: 1px solid var(--rule); border-left: none; display: flex; flex-direction: column; justify-content: center; }
+  .signal-right .pull-quote { font-family: var(--font-display); font-size: clamp(17px, 2.2vw, 24px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 32px; }
+  .signal-right .pull-quote em { font-style: normal; color: var(--orange); }
+  .signal-stat { padding: 20px 0; border-top: 1px solid var(--rule); }
+  .signal-stat .stat-num { font-family: var(--font-mono); font-size: 32px; color: var(--orange); display: block; margin-bottom: 4px; }
+  .signal-stat .stat-label { font-size: 13px; color: var(--grey); }
+
+  /* HOW */
+  .how-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 64px; }
+  .how-track { border: 1px solid var(--rule); padding: 40px; }
+  .how-track-badge { display: inline-block; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 10px; border-radius: 2px; margin-bottom: 24px; }
+  .badge-a { background: var(--orange-dim); color: var(--orange); border: 1px solid rgba(232,82,26,0.3); }
+  .badge-b { background: var(--grey-light); color: var(--grey); border: 1px solid var(--rule); }
+  .how-track h3 { font-family: var(--font-display); font-size: 20px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 12px; }
+  .how-track .track-sub { font-size: 13px; color: var(--grey); margin-bottom: 32px; line-height: 1.55; }
+  .track-steps { display: flex; flex-direction: column; }
+  .track-step { padding: 16px 0; border-top: 1px solid var(--rule); display: grid; grid-template-columns: 20px 1fr auto; gap: 14px; align-items: start; }
+  .step-arrow { color: var(--orange); font-size: 12px; margin-top: 2px; }
+  .step-name { font-family: var(--font-display); font-size: 14px; font-weight: 500; line-height: 1.4; }
+  .step-price { font-family: var(--font-mono); font-size: 12px; color: var(--orange); white-space: nowrap; margin-top: 2px; }
+  .step-note { grid-column: 2 / 4; font-size: 12px; color: var(--grey); margin-top: -8px; }
+
+  /* AUDIT */
+  .audit-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .audit-layers { display: flex; flex-direction: column; margin-top: 48px; }
+  .audit-layer { display: grid; grid-template-columns: 1fr auto; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--rule); align-items: center; }
+  .audit-layer:first-child { border-top: 1px solid var(--rule); }
+  .layer-name { font-family: var(--font-display); font-size: 14px; font-weight: 500; }
+  .layer-desc { font-size: 12px; color: var(--grey); margin-top: 4px; }
+  .layer-weight { font-family: var(--font-mono); font-size: 13px; color: var(--orange); }
+  .audit-right { position: sticky; top: 100px; }
+  .audit-card { border: 1px solid var(--rule); padding: 40px; }
+  .audit-price { font-family: var(--font-mono); font-size: 48px; color: var(--orange); letter-spacing: -0.03em; display: block; margin-bottom: 4px; }
+  .audit-price-note { font-size: 13px; color: var(--grey); margin-bottom: 32px; }
+  .audit-includes { display: flex; flex-direction: column; margin-bottom: 32px; }
+  .audit-include-item { display: flex; align-items: flex-start; gap: 12px; padding: 14px 0; border-top: 1px solid var(--rule); font-size: 14px; line-height: 1.45; }
+  .include-check { color: var(--orange); font-size: 12px; margin-top: 2px; flex-shrink: 0; }
+  .audit-gate { background: var(--grey-light); padding: 16px 20px; margin-bottom: 24px; }
+  .audit-gate p { font-family: var(--font-mono); font-size: 11px; color: var(--grey); line-height: 1.6; }
+  .audit-gate strong { color: var(--off-white); display: block; margin-bottom: 6px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* WHY */
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 64px; border: 1px solid var(--rule); }
+  .why-item { padding: 40px 36px; border-right: 1px solid var(--rule); }
+  .why-item:last-child { border-right: none; }
+  .why-number { font-family: var(--font-mono); font-size: 40px; color: var(--orange); display: block; margin-bottom: 16px; letter-spacing: -0.03em; }
+  .why-item h3 { font-family: var(--font-display); font-size: 16px; font-weight: 600; margin-bottom: 12px; }
+  .why-item p { font-size: 13px; color: var(--grey); line-height: 1.65; }
+
+  /* ABOUT */
+  .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .founder-proof { display: flex; flex-direction: column; margin-top: 40px; }
+  .proof-item { display: flex; gap: 20px; padding: 20px 0; border-top: 1px solid var(--rule); align-items: flex-start; }
+  .proof-num { font-family: var(--font-mono); font-size: 22px; color: var(--orange); flex-shrink: 0; line-height: 1.2; min-width: 56px; }
+  .proof-text strong { display: block; font-family: var(--font-display); font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .proof-text p { font-size: 13px; color: var(--grey); line-height: 1.55; }
+  .about-right blockquote { font-family: var(--font-display); font-size: clamp(17px, 2.2vw, 24px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.35; color: var(--off-white); margin-bottom: 32px; padding-left: 24px; border-left: 3px solid var(--orange); }
+  .about-bio { font-size: 15px; color: var(--grey); line-height: 1.75; }
+  .about-bio p { margin-bottom: 16px; }
+  .contact-strip { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--rule); }
+  .contact-link { display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; color: var(--grey); text-decoration: none; transition: color 0.2s; }
+  .contact-link:hover { color: var(--off-white); }
+  .contact-link .cl-icon { width: 28px; height: 28px; border: 1px solid var(--rule); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 13px; }
+
+  /* VERTICALS */
+  .vertical-grid-display { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 48px; border: 1px solid var(--rule); }
+  .vertical-card { padding: 32px 28px; border-right: 1px solid var(--rule); }
+  .vertical-card:last-child { border-right: none; }
+  .vertical-icon { font-size: 24px; display: block; margin-bottom: 16px; }
+  .vertical-card h4 { font-family: var(--font-display); font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+  .vertical-card p { font-size: 12px; color: var(--grey); line-height: 1.6; }
+  .v-tag { display: inline-block; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; margin-bottom: 16px; }
+  .v-tag.primary { background: var(--orange-dim); color: var(--orange); border: 1px solid rgba(232,82,26,0.3); }
+  .v-tag.secondary { background: var(--grey-light); color: var(--grey); border: 1px solid var(--rule); }
+
+  /* SOCIAL PROOF */
+  .testimonial-placeholder { border: 1px dashed rgba(240,237,232,0.15); padding: 56px 48px; text-align: center; margin-top: 48px; }
+  .testimonial-coming { font-family: var(--font-mono); font-size: 11px; color: var(--grey); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px; }
+  .testimonial-placeholder blockquote { font-family: var(--font-display); font-size: clamp(18px, 2.5vw, 28px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.3; color: rgba(240,237,232,0.2); max-width: 600px; margin: 0 auto 20px; }
+  .testimonial-placeholder .t-source { font-family: var(--font-mono); font-size: 11px; color: rgba(240,237,232,0.12); }
+
+  /* FAQ */
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 64px; border: 1px solid var(--rule); }
+  .faq-item { padding: 36px 40px; border-bottom: 1px solid var(--rule); border-right: 1px solid var(--rule); cursor: pointer; transition: background 0.2s; }
+  .faq-item:nth-child(even) { border-right: none; }
+  .faq-item:nth-last-child(-n+2) { border-bottom: none; }
+  .faq-item:hover { background: rgba(240,237,232,0.02); }
+  .faq-q { font-family: var(--font-display); font-size: 15px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+  .faq-toggle { color: var(--orange); font-size: 18px; line-height: 1; flex-shrink: 0; font-weight: 400; transition: transform 0.2s; }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); }
+  .faq-a { font-size: 13px; color: var(--grey); line-height: 1.7; display: none; }
+  .faq-item.open .faq-a { display: block; }
+
+  /* ============================================
+     EXCLUSIVITY TRACKER
+  ============================================ */
+  #exclusivity { padding: 96px 0; background: rgba(232,82,26,0.02); }
+
+  .excl-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: end;
+    margin-bottom: 48px;
+  }
+
+  .excl-legend {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--grey);
+  }
+
+  .legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .dot-taken { background: var(--orange); }
+  .dot-available { background: var(--green); }
+  .dot-na { background: var(--grey); }
+
+  .excl-filter-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .filter-btn {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    padding: 7px 14px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    background: none;
+    color: var(--grey);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .filter-btn:hover { border-color: rgba(240,237,232,0.3); color: var(--off-white); }
+  .filter-btn.active { border-color: var(--orange); color: var(--orange); background: var(--orange-dim); }
+
+  .excl-summary-bar {
+    display: flex;
+    gap: 32px;
+    padding: 20px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+  .excl-summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .excl-summary-num {
+    font-family: var(--font-mono);
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .excl-summary-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--grey);
+  }
+
+  .num-taken { color: var(--orange); }
+  .num-available { color: var(--green); }
+  .num-total { color: var(--off-white); }
+
+  /* Vertical accordion */
+  .excl-vertical {
+    border: 1px solid var(--rule);
+    margin-bottom: -1px;
+  }
+
+  .excl-vertical-header {
+    display: grid;
+    grid-template-columns: 28px 1fr auto auto;
+    gap: 16px;
+    align-items: center;
+    padding: 20px 28px;
+    cursor: pointer;
+    transition: background 0.15s;
+    user-select: none;
+  }
+
+  .excl-vertical-header:hover { background: rgba(240,237,232,0.02); }
+
+  .excl-vertical.open .excl-vertical-header { border-bottom: 1px solid var(--rule); }
+
+  .excl-chevron {
+    font-size: 10px;
+    color: var(--grey);
+    transition: transform 0.2s;
+    font-family: var(--font-mono);
+  }
+
+  .excl-vertical.open .excl-chevron { transform: rotate(90deg); }
+
+  .excl-vertical-name {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .excl-vertical-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .excl-slot-count {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--grey);
+  }
+
+  .excl-vertical-badge {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+
+  .vbadge-full { background: rgba(232,82,26,0.15); color: var(--orange); border: 1px solid rgba(232,82,26,0.3); }
+  .vbadge-open { background: var(--green-dim); color: var(--green); border: 1px solid rgba(34,197,94,0.3); }
+  .vbadge-partial { background: rgba(234,179,8,0.1); color: #EAB308; border: 1px solid rgba(234,179,8,0.3); }
+
+  .excl-niches {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .excl-vertical.open .excl-niches { display: grid; }
+
+  .niche-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 28px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    transition: background 0.15s;
+  }
+
+  .niche-row:nth-child(3n) { border-right: none; }
+
+  /* Remove bottom border from last full row */
+  .niche-row:nth-last-child(-n+3):nth-child(3n+1),
+  .niche-row:nth-last-child(-n+3):nth-child(3n+2),
+  .niche-row:nth-last-child(-n+3):nth-child(3n) { border-bottom: none; }
+
+  .niche-row:hover { background: rgba(240,237,232,0.02); }
+
+  .niche-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .status-available { background: var(--green); box-shadow: 0 0 6px rgba(34,197,94,0.5); }
+  .status-taken { background: var(--orange); }
+  .status-na { background: var(--grey); opacity: 0.5; }
+
+  .niche-name {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 500;
+    flex: 1;
+    color: var(--off-white);
+  }
+
+  .niche-name.is-taken { color: var(--grey); text-decoration: line-through; text-decoration-color: rgba(232,82,26,0.4); }
+  .niche-name.is-na { color: var(--grey); opacity: 0.5; }
+
+  .niche-label {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+
+  .nlabel-available { color: var(--green); background: var(--green-dim); border: 1px solid rgba(34,197,94,0.2); }
+  .nlabel-taken { color: var(--orange); background: var(--orange-dim); border: 1px solid rgba(232,82,26,0.2); }
+  .nlabel-na { color: var(--grey); background: transparent; border: 1px solid var(--rule); }
+
+  .excl-cta-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 32px;
+    border: 1px solid var(--rule);
+    margin-top: 32px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .excl-cta-text strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .excl-cta-text p {
+    font-size: 13px;
+    color: var(--grey);
+  }
+
+  /* CTA */
+  #cta { padding: 120px 0; }
+  .cta-inner { text-align: center; max-width: 640px; margin: 0 auto; }
+  .cta-headline { font-family: var(--font-display); font-size: clamp(30px, 5vw, 56px); font-weight: 700; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 20px; }
+  .cta-sub { font-size: 16px; color: var(--grey); margin-bottom: 48px; line-height: 1.65; }
+  .cta-channels { display: flex; justify-content: center; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
+  .cta-channel { display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; color: var(--grey); text-decoration: none; border: 1px solid var(--rule); padding: 10px 16px; border-radius: 4px; transition: border-color 0.2s, color 0.2s; }
+  .cta-channel:hover { border-color: rgba(240,237,232,0.3); color: var(--off-white); }
+
+  /* FOOTER */
+  footer { padding: 40px 0; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+  .footer-logo { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--off-white); text-decoration: none; }
+  .footer-logo span { color: var(--orange); }
+  .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; }
+  .footer-links a { font-size: 13px; color: var(--grey); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--off-white); }
+  .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+  .footer-contact { font-family: var(--font-mono); font-size: 11px; color: var(--grey); }
+  .footer-socials { display: flex; gap: 12px; }
+  .footer-socials a { font-family: var(--font-mono); font-size: 11px; color: var(--grey); text-decoration: none; transition: color 0.2s; }
+  .footer-socials a:hover { color: var(--orange); }
+  .footer-copy { font-family: var(--font-mono); font-size: 11px; color: var(--grey); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .hero-inner, .container { padding: 0 24px; }
+    #hero { padding: 120px 0 80px; }
+    .signal-grid, .how-grid, .audit-inner, .about-inner { grid-template-columns: 1fr; }
+    .signal-right { border-left: 1px solid var(--rule); border-top: none; }
+    .why-grid { grid-template-columns: 1fr; }
+    .why-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .why-item:last-child { border-bottom: none; }
+    .vertical-grid-display { grid-template-columns: 1fr 1fr; }
+    .vertical-card:nth-child(2) { border-right: none; }
+    .vertical-card:nth-child(3) { border-right: 1px solid var(--rule); }
+    .faq-grid { grid-template-columns: 1fr; }
+    .faq-item { border-right: none !important; }
+    .faq-item:last-child { border-bottom: none; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+    .footer-right { align-items: flex-start; }
+    .audit-right { position: static; }
+    .hero-score-block { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .excl-header { grid-template-columns: 1fr; }
+    .excl-niches { grid-template-columns: 1fr 1fr; }
+    .niche-row:nth-child(3n) { border-right: 1px solid var(--rule); }
+    .niche-row:nth-child(2n) { border-right: none; }
+    .excl-vertical-header { grid-template-columns: 20px 1fr auto; }
+    .excl-vertical-meta { flex-direction: column; align-items: flex-end; gap: 4px; }
+  }
+
+  @media (max-width: 480px) {
+    .excl-niches { grid-template-columns: 1fr; }
+    .niche-row { border-right: none !important; }
+    .niche-row:last-child { border-bottom: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-headline, .hero-sub, .hero-actions, .vertical-ticker { transition: none; opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">D<span>3</span></a>
+  <ul class="nav-links">
+    <li><a href="#signal">Signal Loop</a></li>
+    <li><a href="#how">Services</a></li>
+    <li><a href="#audit">Audit</a></li>
+    <li><a href="#blueprint">Blueprint</a></li>
+    <li><a href="#exclusivity">Exclusivity</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#cta" class="nav-cta">Book an Audit</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#signal" onclick="closeMenu()">Signal Loop</a>
+  <a href="#how" onclick="closeMenu()">Services</a>
+  <a href="#audit" onclick="closeMenu()">Audit</a>
+  <a href="#blueprint" onclick="closeMenu()">Blueprint</a>
+  <a href="#exclusivity" onclick="closeMenu()">Exclusivity</a>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#faq" onclick="closeMenu()">FAQ</a>
+  <a href="#cta" class="btn-primary" onclick="closeMenu()">Book an Audit</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Configuration Health Score · Singapore Lead-Gen Accounts</div>
+    <div class="hero-score-block">
+      <div class="score-number" id="scoreCounter">0</div>
+      <div class="score-label">
+        <div class="metric">/ 100</div>
+        <div class="descriptor">Typical score · Active Meta spenders</div>
+        <div class="illustrative">Illustrative — book an audit to see yours</div>
+      </div>
+    </div>
+    <h1 class="hero-headline" id="heroHeadline">Most Singapore lead-gen accounts are optimising toward the wrong signal.</h1>
+    <p class="hero-sub" id="heroSub">D3 finds where your Meta campaigns break down — signal, structure, saturation, creative, lead handling — then fixes them. One loop closes it all: your CRM outcome data fed back to Meta so it stops chasing form fills and starts finding buyers.</p>
+    <div class="hero-actions" id="heroActions">
+      <a href="#cta" class="btn-primary">Book a Lead Engine Audit — S$999</a>
+      <a href="#signal" class="btn-ghost">See how it works</a>
+    </div>
+    <div class="vertical-ticker" id="verticalTicker">
+      <span class="ticker-label">Active verticals</span>
+      <div class="ticker-pills">
+        <span class="ticker-pill active">Aircon</span>
+        <span class="ticker-pill active">Renovation</span>
+        <span class="ticker-pill active">Electrical</span>
+        <span class="ticker-pill">Aesthetics</span>
+        <span class="ticker-pill">Education</span>
+        <span class="ticker-pill">Financial Services</span>
+        <span class="ticker-pill">Legal</span>
+        <span class="ticker-pill">Real Estate</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNAL LOOP -->
+<section id="signal">
+  <div class="container" style="padding-top:96px;padding-bottom:96px;">
+    <div class="section-eyebrow">The Signal Loop</div>
+    <h2 class="section-headline">Your Meta algorithm is learning<br>from the wrong outcome.</h2>
+    <p class="section-body">Every form fill trains your campaigns. But most form fills aren't buyers. D3 closes the loop by pushing your actual CRM outcomes — qualified lead, booked appointment, closed sale — back to Meta via offline conversions and CAPI. The algorithm stops optimising toward volume and starts finding the people who buy.</p>
+    <div class="signal-grid">
+      <div class="signal-loop-visual">
+        <div class="loop-step">
+          <div class="loop-icon active">01</div>
+          <div class="loop-step-text"><strong>Ad is served</strong><p>Meta targets based on your conversion signals — whatever you've trained it on so far.</p></div>
+        </div>
+        <div class="loop-step">
+          <div class="loop-icon active">02</div>
+          <div class="loop-step-text"><strong>Lead submits form</strong><p>A browser-pixel fires. Meta logs a conversion. Your account celebrates.</p></div>
+        </div>
+        <div class="loop-step">
+          <div class="loop-icon inactive">03</div>
+          <div class="loop-step-text"><strong>Lead qualifies — or doesn't</strong><p>Your team calls. Most aren't a fit. This information never reaches Meta. The algorithm doesn't know. It keeps finding more of the same.</p></div>
+        </div>
+        <div class="loop-step">
+          <div class="loop-icon active">04</div>
+          <div class="loop-step-text"><strong>D3 closes the loop</strong><p>Qualified lead, appointment, sale — pushed back to Meta via CAPI as offline conversion events. Now the algorithm trains on buyers, not browsers.</p></div>
+        </div>
+      </div>
+      <div class="signal-right">
+        <p class="pull-quote">Most Singapore agencies set up the Pixel and stop. Nobody at this price point is closing the loop — pushing <em>qualified leads, appointments, and sales</em> back to Meta so the algorithm trains on buyers, not form fills.</p>
+        <div class="signal-stat"><span class="stat-num">6</span><span class="stat-label">Diagnostic layers scored in every Lead Engine Audit</span></div>
+        <div class="signal-stat"><span class="stat-num">4M</span><span class="stat-label">Reachable Singapore adults on Meta. Saturation happens faster than any AU or US playbook prepares you for.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="how">
+  <div class="container" style="padding-top:96px;padding-bottom:96px;">
+    <div class="section-eyebrow">Services</div>
+    <h2 class="section-headline">Two tracks. One standard.</h2>
+    <p class="section-body">Active Meta spenders who need performance fixed. Early-stage businesses who need it built right from day one. Both tracks run the same Signal Loop logic.</p>
+    <div class="how-grid">
+      <div class="how-track">
+        <span class="how-track-badge badge-a">Option A — Active Spenders</span>
+        <h3>Lead Engine Management</h3>
+        <p class="track-sub">For businesses already running Meta at S$5,000/month or more. You have spend, you have data. The problem is configuration — signal, structure, creative, and lead handling. We audit it, fix it, then manage it.</p>
+        <div class="track-steps">
+          <div class="track-step"><span class="step-arrow">→</span><span class="step-name">Lead Engine Audit</span><span class="step-price-wrap"><span class="price-was">S$1,299</span><span class="step-price">S$999</span></span><span class="step-note">Credited against month one. Six-layer diagnostic. Configuration Health score + written fix list.</span></div>
+          <div class="track-step"><span class="step-arrow">→</span><span class="step-name">Launch Management</span><span class="step-price">S$1,200/mo</span><span class="step-note">Fixes implemented. Campaign management. Reporting.</span></div>
+          <div class="track-step"><span class="step-arrow">→</span><span class="step-name">Engine Management</span><span class="step-price">S$1,999/mo</span><span class="step-note">Signal Loop active. CAPI + offline conversions. Creative iteration. Full reporting stack.</span></div>
+          <div class="track-step"><span class="step-arrow">→</span><span class="step-name">Exclusive Management</span><span class="step-price">S$3,499/mo</span><span class="step-note">Category exclusivity in your vertical. One client per niche. See the Exclusivity Tracker below.</span></div>
+        </div>
+      </div>
+      <div class="how-track">
+        <span class="how-track-badge badge-b">Option B — Early Stage</span>
+        <h3>Digital Marketing Blueprint</h3>
+        <p class="track-sub">For home-based and early-stage businesses ready to run Meta properly. Starts with a strategic blueprint, moves into managed execution. Clear scope — no drift into brand strategy, pricing, or business model advice.</p>
+        <div class="track-steps">
+          <div class="track-step"><span class="step-arrow">→</span><span class="step-name">Digital Marketing Blueprint</span><span class="step-price-wrap"><span class="price-was">S$1,149</span><span class="step-price">S$888</span></span><span class="step-note">Credited against Starter management. Six-layer marketing blueprint and 90-day execution roadmap.</span></div>
+          <div class="track-step"><span class="step-arrow">→</span><span class="step-name">Starter Management</span><span class="step-price">S$699/mo</span><span class="step-note">Campaign build, management, and reporting for early-stage Meta spend.</span></div>
+          <div class="track-step"><span class="step-arrow">→</span><span class="step-name">Graduation Clause</span><span class="step-price">—</span><span class="step-note">When monthly ad spend consistently clears S$3,000, you graduate to Option A. Written into the agreement from day one.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIT -->
+<section id="audit" style="background:rgba(232,82,26,0.03);">
+  <div class="container" style="padding-top:96px;padding-bottom:96px;">
+    <div class="audit-inner">
+      <div>
+        <div class="section-eyebrow">The Lead Engine Audit</div>
+        <h2 class="section-headline">Six layers. Every place your Meta campaign can break.</h2>
+        <p class="section-body" style="margin-bottom:0;">We score your account on configuration — not vague benchmarks. Every finding maps to Meta's own documented logic. Every Critical issue comes with a fix, not just a flag.</p>
+        <div class="audit-layers">
+          <div class="audit-layer"><div><div class="layer-name">Signal Integrity</div><div class="layer-desc">Event Match Quality, CAPI, deduplication, optimization event, offline conversions</div></div><div class="layer-weight">25%</div></div>
+          <div class="audit-layer"><div><div class="layer-name">Account Structure</div><div class="layer-desc">Learning-limited ad sets, conversions per ad set, learning resets, audience overlap</div></div><div class="layer-weight">20%</div></div>
+          <div class="audit-layer"><div><div class="layer-name">Saturation</div><div class="layer-desc">Audience size, frequency trend, CPM trajectory, first-impression ratio — the Singapore killer</div></div><div class="layer-weight">15%</div></div>
+          <div class="audit-layer"><div><div class="layer-name">Creative</div><div class="layer-desc">Hook rate, hold rate, concept diversity, winner concentration, format mix</div></div><div class="layer-weight">15%</div></div>
+          <div class="audit-layer"><div><div class="layer-name">Lead Layer</div><div class="layer-desc">Form friction, qualifying questions, speed-to-lead, follow-up system, lead-to-qualified tracking</div></div><div class="layer-weight">15%</div></div>
+          <div class="audit-layer"><div><div class="layer-name">Business Layer</div><div class="layer-desc">CPL known, cost per qualified lead, close rate by source, CAC vs LTV, true Meta ROI</div></div><div class="layer-weight">10%</div></div>
+        </div>
+      </div>
+      <div class="audit-right">
+        <div class="audit-card">
+          <span class="audit-price-was">S$1,299</span>
+          <span class="audit-price">S$999</span>
+          <p class="audit-price-note">Credited in full against month one of management.</p>
+          <div class="audit-gate"><strong>Qualification gate</strong><p>Singapore-targeted lead-gen businesses spending S$5,000/month or more on Meta, running continuously for 60+ days. Not there yet? Option B is the right start.</p></div>
+          <div class="audit-includes">
+            <div class="audit-include-item"><span class="include-check">✦</span>Configuration Health score across six diagnostic layers</div>
+            <div class="audit-include-item"><span class="include-check">✦</span>Every Critical issue with a written fix — not just a finding</div>
+            <div class="audit-include-item"><span class="include-check">✦</span>Signal Loop gap analysis — where your CRM data is and isn't reaching Meta</div>
+            <div class="audit-include-item"><span class="include-check">✦</span>Saturation read — frequency, CPM, and CPL trend overlaid on your account</div>
+            <div class="audit-include-item"><span class="include-check">✦</span>30-minute debrief call — findings, fixes, and what a managed engagement looks like</div>
+          </div>
+          <a href="https://wa.me/6588240612" class="btn-primary" style="display:block;text-align:center;width:100%;">Book your Lead Engine Audit</a>
+          <p class="cta-detail" style="text-align:center;margin-top:12px;">Intake via appointment. View access to Business Manager required.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLUEPRINT SECTION -->
+<section id="blueprint">
+  <div class="container" style="padding-top:96px;padding-bottom:96px;">
+    <div class="audit-inner">
+      <div>
+        <div class="section-eyebrow">The Digital Marketing Blueprint</div>
+        <h2 class="section-headline">Six layers. Your entire marketing execution, mapped before you spend a dollar.</h2>
+        <p class="section-body" style="margin-bottom:0;">The audit diagnoses what's broken. The Blueprint builds what doesn't exist yet. Six forward-looking layers that give early-stage businesses a clear, actionable specification — not a generic strategy deck.</p>
+
+        <div class="audit-layers">
+          <div class="audit-layer">
+            <div>
+              <div class="layer-name">Layer 1 — Business Snapshot</div>
+              <div class="layer-desc">Who you're selling to, what the offer is, what a qualified lead looks like. The foundation everything else is built on.</div>
+            </div>
+          </div>
+          <div class="audit-layer">
+            <div>
+              <div class="layer-name">Layer 2 — Audience Architecture</div>
+              <div class="layer-desc">Primary and secondary audience definition. Demographics, psychographics, Singapore-specific trigger events. Who Meta should find and why.</div>
+            </div>
+          </div>
+          <div class="audit-layer">
+            <div>
+              <div class="layer-name">Layer 3 — Offer and Lead Mechanism</div>
+              <div class="layer-desc">Instant Form vs landing page, friction level, qualifying questions, form copy. What you put in front of cold traffic and how it filters for quality.</div>
+            </div>
+          </div>
+          <div class="audit-layer">
+            <div>
+              <div class="layer-name">Layer 4 — Campaign Blueprint</div>
+              <div class="layer-desc">Recommended campaign structure, objective, budget allocation, ad set logic. A build-ready specification — not a live account, a plan to build one correctly.</div>
+            </div>
+          </div>
+          <div class="audit-layer">
+            <div>
+              <div class="layer-name">Layer 5 — Creative Direction</div>
+              <div class="layer-desc">Content pillars, format recommendations, hook angles for your vertical. Not production — direction. What to make, why it works, what to say in the first three seconds.</div>
+            </div>
+          </div>
+          <div class="audit-layer">
+            <div>
+              <div class="layer-name">Layer 6 — 90-Day Execution Roadmap</div>
+              <div class="layer-desc">Weeks 1–4 (launch), weeks 5–8 (optimise), weeks 9–12 (scale or adjust). Milestones, decision points, and the metrics that tell you what to do next.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;padding:16px 20px;background:var(--grey-light);">
+          <p style="font-family:var(--font-mono);font-size:11px;color:var(--grey);line-height:1.6;">
+            <strong style="color:var(--off-white);display:block;margin-bottom:6px;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;">What this excludes</strong>
+            Pricing strategy, brand identity, COGS analysis, and business model advice. The Blueprint is a marketing execution document — scope is fixed by design.
+          </p>
+        </div>
+      </div>
+
+      <div class="audit-right">
+        <div class="audit-card">
+          <span class="audit-price-was">S$1,149</span>
+          <span class="audit-price">S$888</span>
+          <p class="audit-price-note">Credited in full against your first month of Starter Management.</p>
+
+          <div class="audit-gate">
+            <strong>Who this is for</strong>
+            <p>Home-based and early-stage businesses ready to run Meta properly. Not yet at S$5,000/month ad spend. Want a clear plan before committing to ongoing management.</p>
+          </div>
+
+          <div class="audit-includes">
+            <div class="audit-include-item">
+              <span class="include-check">✦</span>
+              Business Snapshot — offer clarity, ideal lead profile, qualification criteria
+            </div>
+            <div class="audit-include-item">
+              <span class="include-check">✦</span>
+              Audience Architecture — primary and secondary targeting built for Singapore
+            </div>
+            <div class="audit-include-item">
+              <span class="include-check">✦</span>
+              Lead mechanism design — form structure, qualifying questions, friction level
+            </div>
+            <div class="audit-include-item">
+              <span class="include-check">✦</span>
+              Campaign Blueprint — structure, objective, budget logic, ad set specification
+            </div>
+            <div class="audit-include-item">
+              <span class="include-check">✦</span>
+              Creative Direction — content pillars, hook angles, format recommendations
+            </div>
+            <div class="audit-include-item">
+              <span class="include-check">✦</span>
+              90-Day Execution Roadmap — launch, optimise, scale milestones and decision points
+            </div>
+            <div class="audit-include-item">
+              <span class="include-check">✦</span>
+              30-minute delivery call — walkthrough and Q&A on the full Blueprint
+            </div>
+          </div>
+
+          <a href="https://wa.me/6588240612" class="btn-primary" style="display:block;text-align:center;width:100%;">Get the Blueprint — S$888</a>
+          <p class="cta-detail" style="text-align:center;margin-top:12px;">Already spending S$5K+/month? <a href="#audit" style="color:var(--off-white);text-decoration:underline;text-underline-offset:3px;">The audit is for you →</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY D3 -->
+<section id="why">
+  <div class="container" style="padding-top:96px;padding-bottom:96px;">
+    <div class="section-eyebrow">Why D3</div>
+    <h2 class="section-headline">What a boutique looks like<br>when it's built around one thing.</h2>
+    <div class="why-grid">
+      <div class="why-item"><span class="why-number">5yr</span><h3>APAC account management at Meta</h3><p>Across 100+ advertisers and significant spend. The pattern recognition on how Singapore saturates — and when — comes from watching it happen at scale across the region.</p></div>
+      <div class="why-item"><span class="why-number">SG</span><h3>Singapore-specific, not adapted</h3><p>Australian and US playbooks break here. Four million reachable adults is not a US market. WhatsApp is not SMS. The Signal Loop is built for this market's constraints, not bolted onto another market's model.</p></div>
+      <div class="why-item"><span class="why-number">1:1</span><h3>Boutique means you deal with the operator</h3><p>No account managers between you and the person who understands your campaigns. One client per vertical at Exclusive tier. The work is the product.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXCLUSIVITY TRACKER -->
+<section id="exclusivity">
+  <div class="container" style="padding-top:96px;padding-bottom:96px;">
+
+    <div class="excl-header">
+      <div>
+        <div class="section-eyebrow">Exclusivity Tracker</div>
+        <h2 class="section-headline">One client per niche.<br>Check if yours is still open.</h2>
+        <p class="section-body">At the Exclusive tier, D3 works with one business per niche. No conflict of interest. No sharing strategy with your direct competitor. Once a slot is taken, it's closed until that client leaves.</p>
+      </div>
+      <div class="excl-legend">
+        <div class="legend-item"><span class="legend-dot dot-available"></span>Available</div>
+        <div class="legend-item"><span class="legend-dot dot-taken"></span>Taken</div>
+        <div class="legend-item"><span class="legend-dot dot-na"></span>Not applicable</div>
+      </div>
+    </div>
+
+    <div class="excl-summary-bar">
+      <div class="excl-summary-item">
+        <span class="excl-summary-num num-total" id="totalNiches">0</span>
+        <span class="excl-summary-label">Total niches tracked</span>
+      </div>
+      <div class="excl-summary-item">
+        <span class="excl-summary-num num-available" id="availableNiches">0</span>
+        <span class="excl-summary-label">Slots available</span>
+      </div>
+      <div class="excl-summary-item">
+        <span class="excl-summary-num num-taken" id="takenNiches">0</span>
+        <span class="excl-summary-label">Slots taken</span>
+      </div>
+    </div>
+
+    <div class="excl-filter-bar">
+      <button class="filter-btn active" onclick="filterVerticals('all', this)">All verticals</button>
+      <button class="filter-btn" onclick="filterVerticals('available', this)">Available only</button>
+      <button class="filter-btn" onclick="filterVerticals('taken', this)">Taken</button>
+    </div>
+
+    <div id="exclusivityList"></div>
+
+    <div class="excl-cta-strip">
+      <div class="excl-cta-text">
+        <strong>Your niche is open. Move before it isn't.</strong>
+        <p>Exclusivity is first-come, confirmed-client. An audit is how it starts.</p>
+      </div>
+      <a href="https://wa.me/6588240612" class="btn-primary">Book a Lead Engine Audit</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container" style="padding-top:96px;padding-bottom:96px;">
+    <div class="about-inner">
+      <div>
+        <div class="section-eyebrow">About</div>
+        <h2 class="section-headline">The agency is the operator.<br>That's the point.</h2>
+        <div class="founder-proof">
+          <div class="proof-item"><div class="proof-num">5yr</div><div class="proof-text"><strong>Meta Account Manager, APAC</strong><p>Overseeing substantial ad spend across 100+ advertisers. Not agency-side — inside Meta, where the platform logic is visible from the source.</p></div></div>
+          <div class="proof-item"><div class="proof-num">100+</div><div class="proof-text"><strong>Advertisers across APAC</strong><p>Covering verticals from e-commerce to lead generation across Singapore, Australia, and Southeast Asia. The saturation pattern in small markets is something you only see at volume.</p></div></div>
+          <div class="proof-item"><div class="proof-num">SG</div><div class="proof-text"><strong>Built for this market specifically</strong><p>D3 launched in Singapore because this is where the gap is clearest. No agency at this price point is running offline conversions and CAPI together for lead-gen clients here.</p></div></div>
+        </div>
+      </div>
+      <div class="about-right">
+        <blockquote>"I spent five years watching Singapore advertisers burn budget on the wrong signal. The fix isn't complicated — but it requires someone who knows where Meta's algorithm actually breaks."</blockquote>
+        <div class="about-bio">
+          <p>Daredevil Digital is a boutique paid social agency built on one thesis: that closing the loop between your CRM and your Meta campaigns changes the economics of lead generation entirely.</p>
+          <p>The Signal Loop — pushing qualified-lead, appointment, and sale outcomes back to Meta via CAPI and offline conversions — is not a new idea. It's just one that almost no Singapore agency at this price point is actually running. D3 exists to fix that.</p>
+          <p>Every engagement is run directly by the founder. No handoff to juniors. No opaque reporting. You see exactly what the account is doing and why.</p>
+        </div>
+        <div class="contact-strip">
+          <a href="https://wa.me/6588240612" class="contact-link" target="_blank"><span class="cl-icon">💬</span>+65 8824 0612</a>
+          <a href="mailto:info@daredevildigital.com" class="contact-link"><span class="cl-icon">✉</span>info@daredevildigital.com</a>
+          <a href="https://www.instagram.com/daredevil_digital/" class="contact-link" target="_blank"><span class="cl-icon">📷</span>@daredevil_digital</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section id="social-proof">
+  <div class="container" style="padding-top:96px;padding-bottom:96px;">
+    <div class="section-eyebrow">Results</div>
+    <h2 class="section-headline">The Signal Loop in practice.</h2>
+    <div class="testimonial-placeholder">
+      <p class="testimonial-coming">First client results — coming soon</p>
+      <blockquote>"This is where your first client quote goes. One sharp sentence about what changed after the audit."</blockquote>
+      <p class="t-source">Business Owner · Vertical · Singapore</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container" style="padding-top:96px;padding-bottom:96px;">
+    <div class="section-eyebrow">FAQ</div>
+    <h2 class="section-headline">Questions we get before the audit call.</h2>
+    <div class="faq-grid">
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What does the S$999 audit actually cover?<span class="faq-toggle">+</span></div><div class="faq-a">A six-layer diagnostic of your Meta account — Signal Integrity, Account Structure, Saturation, Creative, Lead Layer, and Business Layer. You get a Configuration Health score, a written list of every Critical issue with a fix attached, a Signal Loop gap analysis, and a 30-minute debrief call. If you move to a management engagement, the S$999 is credited in full against month one.</div></div>
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">I'm not spending S$5K/month yet. Can I still work with D3?<span class="faq-toggle">+</span></div><div class="faq-a">Yes — Option B is the right entry point. The Digital Marketing Blueprint (S$888) covers six layers: business snapshot, audience architecture, offer and lead mechanism, campaign blueprint, creative direction, and a 90-day execution roadmap. You move into Starter Management at S$699/month, with a written graduation clause: when monthly ad spend consistently clears S$3,000, you move to Option A terms.</div></div>
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What happens after the audit if I don't proceed to management?<span class="faq-toggle">+</span></div><div class="faq-a">You keep the full audit report. Every Critical issue is documented with a fix — you can implement it yourself or with whoever manages your account. The audit stands alone as a diagnostic. That said, the most common outcome of seeing a Configuration Health score is wanting someone to fix it properly.</div></div>
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What is the Signal Loop and why does it matter?<span class="faq-toggle">+</span></div><div class="faq-a">Most Meta lead-gen accounts optimise toward form fills. But a form fill isn't a buyer — it's just someone who clicked. The Signal Loop pushes your actual CRM outcomes (qualified lead, booked appointment, closed sale) back to Meta via CAPI and offline conversion events. Meta then trains your campaigns toward the people who buy, not just the people who fill in forms.</div></div>
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">How does the exclusivity work exactly?<span class="faq-toggle">+</span></div><div class="faq-a">At the Exclusive Management tier (S$3,499/month), D3 works with one business per niche. Once your niche is confirmed and you're a paying client, no direct competitor in that niche gets taken on. The slot is held for the duration of your engagement. Check the Exclusivity Tracker above to see if your niche is still open.</div></div>
+      <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What access do you need to run the audit?<span class="faq-toggle">+</span></div><div class="faq-a">View access to your Meta Business Manager and Ads Manager. No admin access, no ability to make changes. We also need 30 minutes with someone who knows your close rate and what happens to leads after they come in — without that, we can only audit half the machine.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="cta">
+  <div class="container" style="padding-top:120px;padding-bottom:120px;">
+    <div class="cta-inner">
+      <div class="section-eyebrow">Get started</div>
+      <h2 class="cta-headline">Know your Configuration Health score.</h2>
+      <p class="cta-sub">A 30-second look at Event Match Quality usually tells the story. The audit tells the rest. S$999, credited against month one if you move forward.</p>
+      <a href="https://wa.me/6588240612" class="btn-primary" style="font-size:16px;padding:18px 40px;">Book a Lead Engine Audit</a>
+      <p class="cta-detail" style="margin-top:16px;">Or not ready for the audit? <a href="#blueprint" style="color:var(--off-white);text-decoration:underline;text-underline-offset:3px;">Start with the Blueprint →</a></p>
+      <div class="cta-channels">
+        <a href="https://wa.me/6588240612" class="cta-channel" target="_blank">💬 WhatsApp</a>
+        <a href="mailto:info@daredevildigital.com" class="cta-channel">✉ Email</a>
+        <a href="https://www.instagram.com/daredevil_digital/" class="cta-channel" target="_blank">📷 Instagram</a>
+        <a href="https://www.facebook.com/daredevildigital24/" class="cta-channel" target="_blank">📘 Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <a href="#" class="footer-logo">D<span>3</span> Daredevil Digital</a>
+      <ul class="footer-links">
+        <li><a href="#signal">Signal Loop</a></li>
+        <li><a href="#how">Services</a></li>
+        <li><a href="#audit">Audit</a></li>
+        <li><a href="#blueprint">Blueprint</a></li>
+        <li><a href="#exclusivity">Exclusivity</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="footer-right">
+        <div class="footer-contact">+65 8824 0612 · info@daredevildigital.com</div>
+        <div class="footer-socials">
+          <a href="https://wa.me/6588240612" target="_blank">WhatsApp</a>
+          <a href="https://www.instagram.com/daredevil_digital/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/daredevildigital24/" target="_blank">Facebook</a>
+        </div>
+        <span class="footer-copy">© 2026 Daredevil Digital. Singapore.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ============================================
+// EXCLUSIVITY DATA
+// To update: change "taken" to true when a slot is filled.
+// "na" means this niche is outside D3's scope (e.g. not lead-gen friendly).
+// ============================================
+const VERTICALS = [
+  {
+    id: "home-services",
+    name: "Home Services",
+    niches: [
+      { name: "Aircon Installation", taken: false },
+      { name: "Aircon Servicing & Maintenance", taken: false },
+      { name: "Aircon Chemical Wash", taken: false },
+      { name: "Aircon Repair", taken: false },
+      { name: "Interior Design", taken: false },
+      { name: "General Renovation Contractor", taken: false },
+      { name: "Carpentry & Custom Furniture", taken: false },
+      { name: "Painting Services", taken: false },
+      { name: "Flooring & Tiling", taken: false },
+      { name: "Electrical Services", taken: false },
+      { name: "Plumbing Services", taken: false },
+      { name: "Home Cleaning", taken: false },
+      { name: "Post-Renovation Cleaning", taken: false },
+      { name: "Pest Control", taken: false },
+      { name: "Movers & Relocation", taken: false },
+      { name: "Locksmith Services", taken: false },
+      { name: "Home Security / CCTV Installation", taken: false },
+      { name: "Curtains & Blinds", taken: false },
+      { name: "Waterproofing", taken: false },
+      { name: "Roofing & Roof Repair", taken: false },
+    ]
+  },
+  {
+    id: "aesthetics-wellness",
+    name: "Aesthetics & Wellness",
+    niches: [
+      { name: "Aesthetics Clinic (Medical)", taken: false },
+      { name: "Beauty Salon / Facial", taken: false },
+      { name: "Hair Salon", taken: false },
+      { name: "Hair Transplant / Restoration", taken: false },
+      { name: "Dental Clinic", taken: false },
+      { name: "Orthodontics / Invisalign", taken: false },
+      { name: "Slimming Centre", taken: false },
+      { name: "TCM / Acupuncture", taken: false },
+      { name: "Massage / Spa", taken: false },
+      { name: "Personal Training / Fitness Coach", taken: false },
+      { name: "Gym / Fitness Studio", taken: false },
+      { name: "Yoga Studio", taken: false },
+      { name: "Pilates Studio", taken: false },
+      { name: "Nail Salon", taken: false },
+      { name: "Tattoo Studio", taken: false },
+      { name: "Laser Eye Surgery Clinic", taken: false },
+    ]
+  },
+  {
+    id: "education",
+    name: "Education",
+    niches: [
+      { name: "Academic Tuition Centre", taken: false },
+      { name: "Music School", taken: false },
+      { name: "Art School / Creative Classes", taken: false },
+      { name: "Sports Academy / Coaching", taken: false },
+      { name: "Language School (English)", taken: false },
+      { name: "Language School (Mandarin / Mother Tongue)", taken: false },
+      { name: "Language School (Foreign Language)", taken: false },
+      { name: "Enrichment Centre (STEM)", taken: false },
+      { name: "Preschool / Childcare", taken: false },
+      { name: "Swimming Lessons", taken: false },
+      { name: "Dance Academy", taken: false },
+      { name: "Coding / Programming School", taken: false },
+      { name: "Adult Skills Upgrading", taken: false },
+      { name: "Driving School", taken: false },
+    ]
+  },
+  {
+    id: "financial-services",
+    name: "Financial Services",
+    niches: [
+      { name: "Life Insurance Advisory", taken: false },
+      { name: "Health Insurance Advisory", taken: false },
+      { name: "General Insurance", taken: false },
+      { name: "Mortgage / Home Loan Advisory", taken: false },
+      { name: "Business Loan / SME Financing", taken: false },
+      { name: "Personal Loan", taken: false },
+      { name: "Investment / Wealth Advisory", taken: false },
+      { name: "Accounting & Tax Advisory", taken: false },
+      { name: "Bookkeeping Services", taken: false },
+      { name: "Corporate Secretarial Services", taken: false },
+      { name: "Payroll Services", taken: false },
+      { name: "Financial Planning (IFA)", taken: false },
+    ]
+  },
+  {
+    id: "legal",
+    name: "Legal Services",
+    niches: [
+      { name: "Family Law / Divorce", taken: false },
+      { name: "Conveyancing / Property Law", taken: false },
+      { name: "Employment Law", taken: false },
+      { name: "Corporate / Commercial Law", taken: false },
+      { name: "Wills, Trusts & Estate Planning", taken: false },
+      { name: "Criminal Defence", taken: false },
+      { name: "Immigration Law", taken: false },
+      { name: "Debt Recovery", taken: false },
+    ]
+  },
+  {
+    id: "real-estate",
+    name: "Real Estate",
+    niches: [
+      { name: "Residential Property Agent (HDB)", taken: false },
+      { name: "Residential Property Agent (Private)", taken: false },
+      { name: "New Launch Condo Marketing", taken: false },
+      { name: "Commercial Property Agent", taken: false },
+      { name: "Property Investment Advisory", taken: false },
+      { name: "Rental / Property Management", taken: false },
+      { name: "Real Estate Agency (Team)", taken: false },
+    ]
+  },
+  {
+    id: "automotive",
+    name: "Automotive",
+    niches: [
+      { name: "New Car Dealership", taken: false },
+      { name: "Used Car Dealership", taken: false },
+      { name: "Car Grooming / Detailing", taken: false },
+      { name: "Car Workshop / Servicing", taken: false },
+      { name: "Tinting / PPF / Wrapping", taken: false },
+      { name: "COE Renewal / Car Financing", taken: false },
+      { name: "Commercial Vehicle / Van Sales", taken: false },
+      { name: "EV Charging Installation", taken: false },
+    ]
+  },
+  {
+    id: "healthcare",
+    name: "Healthcare",
+    niches: [
+      { name: "GP / General Practice Clinic", taken: false },
+      { name: "Physiotherapy", taken: false },
+      { name: "Chiropractic / Osteopathy", taken: false },
+      { name: "Sports Medicine", taken: false },
+      { name: "Mental Health / Psychology", taken: false },
+      { name: "Podiatry", taken: false },
+      { name: "Hearing Care / Audiology", taken: false },
+      { name: "Specialist Clinic (Ortho, Cardio, etc.)", taken: false },
+    ]
+  },
+  {
+    id: "b2b-services",
+    name: "B2B Services",
+    niches: [
+      { name: "IT Services / Managed Service Provider", taken: false },
+      { name: "Cybersecurity", taken: false },
+      { name: "HR & Recruitment", taken: false },
+      { name: "Corporate Training & L&D", taken: false },
+      { name: "Office Design & Fit-Out", taken: false },
+      { name: "Commercial Cleaning", taken: false },
+      { name: "Business Coaching / Consultancy", taken: false },
+      { name: "Digital Marketing Agency (non-competing)", taken: false },
+      { name: "Printing & Branding", taken: false },
+      { name: "Logistics & Courier (B2B)", taken: false },
+    ]
+  },
+  {
+    id: "fnb",
+    name: "Food & Beverage",
+    niches: [
+      { name: "Catering Services (Corporate)", taken: false },
+      { name: "Catering Services (Events / Weddings)", taken: false },
+      { name: "Private Dining / Home Chef", taken: false },
+      { name: "Cloud Kitchen / Delivery Brand", taken: false },
+      { name: "Baking / Pastry (B2C orders)", taken: false },
+    ]
+  },
+  {
+    id: "events-lifestyle",
+    name: "Events & Lifestyle",
+    niches: [
+      { name: "Wedding Photography", taken: false },
+      { name: "Wedding Videography", taken: false },
+      { name: "Wedding Planning", taken: false },
+      { name: "Event Management", taken: false },
+      { name: "Photography Studio", taken: false },
+      { name: "Videography / Corporate Production", taken: false },
+      { name: "Travel Agency", taken: false },
+      { name: "Pet Grooming", taken: false },
+      { name: "Pet Boarding / Daycare", taken: false },
+      { name: "Childcare / Babysitting Platform", taken: false },
+    ]
+  },
+];
+
+// ============================================
+// RENDER ENGINE
+// ============================================
+function getVerticalStatus(vertical) {
+  const active = vertical.niches.filter(n => !n.na);
+  const taken = active.filter(n => n.taken);
+  if (taken.length === 0) return { badge: 'vbadge-open', label: 'All open' };
+  if (taken.length === active.length) return { badge: 'vbadge-full', label: 'Full' };
+  return { badge: 'vbadge-partial', label: `${taken.length} taken` };
+}
+
+function renderExclusivity(filter = 'all') {
+  const list = document.getElementById('exclusivityList');
+  let totalNiches = 0, availableCount = 0, takenCount = 0;
+
+  VERTICALS.forEach(v => {
+    v.niches.forEach(n => {
+      if (!n.na) {
+        totalNiches++;
+        n.taken ? takenCount++ : availableCount++;
+      }
+    });
+  });
+
+  document.getElementById('totalNiches').textContent = totalNiches;
+  document.getElementById('availableNiches').textContent = availableCount;
+  document.getElementById('takenNiches').textContent = takenCount;
+
+  list.innerHTML = '';
+
+  VERTICALS.forEach(v => {
+    const filteredNiches = v.niches.filter(n => {
+      if (filter === 'available') return !n.taken && !n.na;
+      if (filter === 'taken') return n.taken;
+      return true;
+    });
+
+    if (filteredNiches.length === 0) return;
+
+    const status = getVerticalStatus(v);
+    const takenInV = v.niches.filter(n => n.taken).length;
+    const totalInV = v.niches.filter(n => !n.na).length;
+
+    const vertEl = document.createElement('div');
+    vertEl.className = 'excl-vertical';
+    vertEl.dataset.id = v.id;
+
+    vertEl.innerHTML = `
+      <div class="excl-vertical-header" onclick="toggleVertical(this.parentElement)">
+        <span class="excl-chevron">▶</span>
+        <span class="excl-vertical-name">${v.name}</span>
+        <span class="excl-slot-count">${takenInV}/${totalInV} taken</span>
+        <span class="excl-vertical-badge ${status.badge}">${status.label}</span>
+      </div>
+      <div class="excl-niches">
+        ${filteredNiches.map(n => {
+          const dotClass = n.na ? 'status-na' : n.taken ? 'status-taken' : 'status-available';
+          const nameClass = n.na ? 'is-na' : n.taken ? 'is-taken' : '';
+          const labelClass = n.na ? 'nlabel-na' : n.taken ? 'nlabel-taken' : 'nlabel-available';
+          const labelText = n.na ? 'N/A' : n.taken ? 'Taken' : 'Available';
+          return `
+            <div class="niche-row">
+              <span class="niche-status-dot ${dotClass}"></span>
+              <span class="niche-name ${nameClass}">${n.name}</span>
+              <span class="niche-label ${labelClass}">${labelText}</span>
+            </div>`;
+        }).join('')}
+      </div>`;
+
+    list.appendChild(vertEl);
+  });
+}
+
+function toggleVertical(el) {
+  el.classList.toggle('open');
+}
+
+function filterVerticals(filter, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderExclusivity(filter);
+}
+
+// ============================================
+// FAQ
+// ============================================
+function toggleFaq(el) {
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) el.classList.add('open');
+}
+
+// ============================================
+// MOBILE MENU
+// ============================================
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+// ============================================
+// HERO COUNTER
+// ============================================
+function animateCounter(el, target, duration) {
+  const start = performance.now();
+  const update = (time) => {
+    const elapsed = time - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(eased * target);
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      el.textContent = target;
+      setTimeout(() => {
+        document.getElementById('heroHeadline').classList.add('visible');
+        setTimeout(() => document.getElementById('heroSub').classList.add('visible'), 150);
+        setTimeout(() => {
+          document.getElementById('heroActions').classList.add('visible');
+          document.getElementById('verticalTicker').classList.add('visible');
+        }, 300);
+      }, 300);
+    }
+  };
+  requestAnimationFrame(update);
+}
+
+window.addEventListener('load', () => {
+  renderExclusivity();
+  setTimeout(() => {
+    animateCounter(document.getElementById('scoreCounter'), 43, 2000);
+  }, 400);
+});
+</script>
+</body>
+</html>

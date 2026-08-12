@@ -23,6 +23,7 @@ export default function Contact() {
             description="Tell us about your business, your challenge and where you want to go. We'll build the strategy to get you there."
             theme="dark"
             alignment="center"
+            as="h1"
           />
         </div>
       </section>

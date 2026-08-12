@@ -1,64 +1,90 @@
 import { Link } from 'react-router-dom';
 import { footerNavigation } from '../../data/navigation';
 import { contact } from '../../data/contact';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 import Logo from '../ui/Logo';
-
-const InstagramIcon = ({ className }: { className?: string }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-);
-
-const FacebookIcon = ({ className }: { className?: string }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-);
-
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-navy text-brand-offwhite" aria-labelledby="footer-heading">
+    <footer className="bg-brand-navy text-brand-offwhite border-t border-white/10" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8">
+          
+          {/* Logo / Brand statement */}
+          <div className="space-y-6">
             <Link to="/" className="inline-block transition-transform hover:scale-105">
               <Logo light />
             </Link>
-            <p className="text-sm leading-6 text-brand-offwhite/80 max-w-xs">
-              Bold strategy. Creative execution. Digital growth.
+            <p className="text-sm leading-relaxed text-brand-offwhite/85 max-w-xs">
+              Bold strategy. Creative execution. Performance digital growth partner for lead-generation businesses.
             </p>
-            <div className="flex space-x-6">
-              <a href={contact.instagram} target="_blank" rel="noreferrer" className="text-brand-offwhite/80 hover:text-brand-yellow">
-                <span className="sr-only">Instagram</span>
-                <InstagramIcon className="h-6 w-6" aria-hidden="true" />
+            <div className="flex space-x-4">
+              <a
+                href={contact.whatsapp}
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:border-brand-yellow flex items-center justify-center text-brand-offwhite hover:text-brand-yellow transition-all"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle className="w-5 h-5" />
               </a>
-              <a href={contact.facebook} target="_blank" rel="noreferrer" className="text-brand-offwhite/80 hover:text-brand-yellow">
-                <span className="sr-only">Facebook</span>
-                <FacebookIcon className="h-6 w-6" aria-hidden="true" />
+              <a
+                href={contact.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:border-brand-yellow flex items-center justify-center text-brand-offwhite hover:text-brand-yellow transition-all"
+                aria-label="Instagram"
+              >
+                <span className="font-mono text-xs">IG</span>
+              </a>
+              <a
+                href={contact.facebook}
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:border-brand-yellow flex items-center justify-center text-brand-offwhite hover:text-brand-yellow transition-all"
+                aria-label="Facebook"
+              >
+                <span className="font-mono text-xs">FB</span>
               </a>
             </div>
           </div>
+
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
+              {/* Explore Links */}
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-brand-purewhite">Explore</h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-brand-yellow">Explore</h3>
+                <ul role="list" className="mt-4 space-y-3">
                   {footerNavigation.explore.map((item) => (
                     <li key={item.name}>
-                      <Link to={item.href} className="text-sm leading-6 text-brand-offwhite/80 hover:text-brand-yellow">
+                      <Link to={item.href} className="text-sm leading-6 text-brand-offwhite/70 hover:text-brand-yellow transition-colors">
                         {item.name}
                       </Link>
                     </li>
                   ))}
+                  <li>
+                    <Link to="/#signal" className="text-sm leading-6 text-brand-offwhite/70 hover:text-brand-yellow transition-colors">
+                      Signal Loop
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/#exclusivity" className="text-sm leading-6 text-brand-offwhite/70 hover:text-brand-yellow transition-colors">
+                      Exclusivity Tracker
+                    </Link>
+                  </li>
                 </ul>
               </div>
+
+              {/* Service Links */}
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-brand-purewhite">Services</h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-brand-yellow">Services</h3>
+                <ul role="list" className="mt-4 space-y-3">
                   {footerNavigation.services.map((item) => (
                     <li key={item.name}>
-                      <Link to={item.href} className="text-sm leading-6 text-brand-offwhite/80 hover:text-brand-yellow">
+                      <Link to={item.href} className="text-sm leading-6 text-brand-offwhite/70 hover:text-brand-yellow transition-colors">
                         {item.name}
                       </Link>
                     </li>
@@ -66,30 +92,38 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
+
+            {/* Address & Direct contact details */}
             <div className="md:grid md:grid-cols-1 md:gap-8">
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-brand-purewhite">Contact</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  <li className="flex items-start gap-3 text-sm leading-6 text-brand-offwhite/80">
-                    <MapPin className="w-5 h-5 flex-shrink-0 text-brand-yellow" />
-                    <span>{contact.location}</span>
+                <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-brand-yellow">Contact Operator</h3>
+                <ul role="list" className="mt-4 space-y-4">
+                  <li className="flex items-start gap-3 text-sm leading-6 text-brand-offwhite/70">
+                    <MapPin className="w-5 h-5 flex-shrink-0 text-brand-yellow mt-0.5" />
+                    <span>Singapore · Boutique Agency Model</span>
                   </li>
-                  <li className="flex items-center gap-3 text-sm leading-6 text-brand-offwhite/80">
+                  <li className="flex items-center gap-3 text-sm leading-6 text-brand-offwhite/70 hover:text-brand-yellow transition-colors">
                     <Phone className="w-5 h-5 flex-shrink-0 text-brand-yellow" />
-                    <a href={`tel:${contact.phone.replace(/\s+/g, '')}`} className="hover:text-brand-yellow">{contact.phone}</a>
+                    <a href={`tel:${contact.phone.replace(/\s+/g, '')}`}>{contact.phone}</a>
                   </li>
-                  <li className="flex items-center gap-3 text-sm leading-6 text-brand-offwhite/80">
+                  <li className="flex items-center gap-3 text-sm leading-6 text-brand-offwhite/70 hover:text-brand-yellow transition-colors">
                     <Mail className="w-5 h-5 flex-shrink-0 text-brand-yellow" />
-                    <a href={`mailto:${contact.email}`} className="hover:text-brand-yellow">{contact.email}</a>
+                    <a href={`mailto:${contact.email}`}>{contact.email}</a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
+
         </div>
-        <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-brand-offwhite/60">
-            &copy; {new Date().getFullYear()} Daredevil Digital. All rights reserved.
+
+        {/* Bottom copyright line */}
+        <div className="mt-16 border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs leading-5 text-brand-offwhite/50">
+            &copy; 2026 Daredevil Digital. Singapore. All rights reserved.
+          </p>
+          <p className="text-[10px] font-mono text-brand-offwhite/30 tracking-wider">
+            DEEP NAVY · BURGUNDY · YELLOW · OFF-WHITE
           </p>
         </div>
       </div>

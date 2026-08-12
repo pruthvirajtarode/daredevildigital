@@ -4,6 +4,7 @@ interface SectionHeadingProps {
   description?: string;
   alignment?: 'left' | 'center' | 'right';
   theme?: 'light' | 'dark';
+  as?: 'h1' | 'h2' | 'h3';
 }
 
 export default function SectionHeading({
@@ -11,7 +12,8 @@ export default function SectionHeading({
   title,
   description,
   alignment = 'left',
-  theme = 'light'
+  theme = 'light',
+  as = 'h2'
 }: SectionHeadingProps) {
   const aligns = {
     left: 'text-left',
@@ -20,6 +22,7 @@ export default function SectionHeading({
   };
 
   const isDark = theme === 'dark';
+  const HeadingTag = as;
 
   return (
     <div className={`max-w-3xl mb-16 ${aligns[alignment]}`}>
@@ -28,9 +31,9 @@ export default function SectionHeading({
           {eyebrow}
         </span>
       )}
-      <h2 className={`font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 ${isDark ? 'text-brand-purewhite' : 'text-brand-navy'}`}>
+      <HeadingTag className={`font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6 ${isDark ? 'text-brand-purewhite' : 'text-brand-navy'}`}>
         {title}
-      </h2>
+      </HeadingTag>
       {description && (
         <p className={`text-lg md:text-xl leading-relaxed ${isDark ? 'text-brand-offwhite/80' : 'text-brand-charcoal/80'}`}>
           {description}

@@ -1,35 +1,100 @@
 import { Link } from 'react-router-dom';
 import SectionHeading from '../components/ui/SectionHeading';
 import CTASection from '../components/sections/CTASection';
+import PerformanceTracks from '../components/sections/PerformanceTracks';
 import { services } from '../data/services';
 import { company } from '../data/company';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 
 export default function Services() {
   return (
     <div className="pt-24 min-h-screen bg-brand-offwhite">
       {/* Hero */}
-      <section className="py-24 lg:py-32 bg-brand-purewhite border-b border-brand-charcoal/5">
+      <section className="py-24 lg:py-32 bg-brand-navy text-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <SectionHeading 
             eyebrow="OUR CAPABILITIES"
-            title="DIGITAL SERVICES THAT MOVE YOUR BUSINESS FORWARD."
-            description="We provide end-to-end digital marketing solutions designed to build your brand and drive measurable growth."
+            title="DIGITAL CAPABILITIES & PERFORMANCE MARKETING SYSTEMS."
+            description="We deliver full-scale social and creative execution alongside technical campaign structures optimized for business revenue."
+            theme="dark"
             alignment="center"
+            as="h1"
           />
         </div>
       </section>
 
-      {/* Services List */}
+      {/* 1. Performance Marketing Tracks Section */}
+      <section className="bg-brand-purewhite border-b border-brand-charcoal/5">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 py-20">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="inline-block px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-widest text-brand-burgundy bg-brand-burgundy/10 border border-brand-burgundy/20 rounded mb-4">
+              PERFORMANCE MARKETING
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-navy mb-4">
+              Meta Lead Generation & CAPI Signal Loop
+            </h2>
+            <p className="text-brand-charcoal/70 text-sm leading-relaxed">
+              We connect offline conversion outcomes directly to campaign target parameters. Read below about our specialized pricing tracks for early-stage and active advertisers.
+            </p>
+          </div>
+        </div>
+        <PerformanceTracks />
+      </section>
+
+      {/* 2. Core Agency Services list */}
       <section className="py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="max-w-3xl mb-16">
+            <span className="block mb-4 text-xs font-mono font-bold tracking-[0.2em] text-brand-burgundy uppercase">
+              GENERAL AGENCY SERVICES
+            </span>
+            <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-brand-navy leading-tight mb-4">
+              Core Digital Capabilities
+            </h2>
+            <p className="text-brand-charcoal/80 text-lg">
+              We help ambitious brands construct cohesive digital presences through active social channels, analytics structures, content pipelines, and custom web builds.
+            </p>
+          </div>
+
           <div className="flex flex-col gap-12 lg:gap-24">
             {services.map((service, index) => (
               <div 
                 key={service.id} 
-                className={`flex flex-col gap-12 lg:gap-24 ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center`}
+                className={`flex flex-col gap-12 lg:gap-24 ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center bg-brand-purewhite p-8 lg:p-12 rounded-3xl border border-brand-charcoal/5 shadow-sm`}
               >
-                {/* Service Image */}
+                {/* Service Details info */}
+                <div className="w-full lg:w-1/2">
+                  <span className="font-mono text-xs font-bold text-brand-burgundy bg-brand-burgundy/10 px-2 py-0.5 rounded">
+                    SERVICE {service.id}
+                  </span>
+                  <h2 className="font-display text-3xl font-bold text-brand-navy mt-4 mb-6">
+                    {service.title}
+                  </h2>
+                  <p className="text-base text-brand-charcoal/80 mb-8 leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <div className="mb-10">
+                    <h4 className="text-xs font-mono font-bold tracking-widest uppercase text-brand-navy mb-4 border-b border-brand-charcoal/10 pb-2">Capabilities</h4>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                      {service.capabilities.map((cap) => (
+                        <li key={cap} className="flex items-center gap-2 text-brand-charcoal/70">
+                          <Check className="w-4 h-4 text-brand-yellow shrink-0" />
+                          {cap}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <Link 
+                    to={`/services/${service.slug}`}
+                    className="inline-flex items-center font-bold text-brand-navy hover:text-brand-burgundy transition-colors uppercase tracking-widest text-xs"
+                  >
+                    View Details <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </div>
+
+                {/* Service Image placeholder */}
                 <div className="w-full lg:w-1/2 aspect-square md:aspect-[4/3] rounded-3xl bg-brand-navy flex items-center justify-center relative overflow-hidden group shadow-lg">
                   <img 
                     src={[
@@ -43,36 +108,7 @@ export default function Services() {
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                   />
                   <div className="absolute inset-0 bg-brand-navy/30 group-hover:bg-brand-navy/10 transition-colors duration-700" />
-                  <span className="font-display text-9xl font-bold text-brand-purewhite/90 z-10 drop-shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">{service.id}</span>
-                </div>
-                
-                {/* Content */}
-                <div className="w-full lg:w-1/2">
-                  <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-navy mb-6">
-                    {service.title}
-                  </h2>
-                  <p className="text-lg text-brand-charcoal/80 mb-8 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="mb-10">
-                    <h4 className="text-sm font-bold tracking-widest uppercase text-brand-burgundy mb-4">Capabilities</h4>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {service.capabilities.map((cap) => (
-                        <li key={cap} className="flex items-center gap-3 text-brand-charcoal/70">
-                          <div className="w-1.5 h-1.5 rounded-full bg-brand-yellow shrink-0" />
-                          {cap}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <Link 
-                    to={`/services/${service.slug}`}
-                    className="inline-flex items-center font-bold text-brand-navy hover:text-brand-burgundy transition-colors uppercase tracking-widest text-sm"
-                  >
-                    View Details <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
+                  <span className="font-display text-9xl font-bold text-brand-purewhite/95 z-10 drop-shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">{service.id}</span>
                 </div>
               </div>
             ))}
@@ -80,21 +116,21 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-24 lg:py-32 bg-brand-navy">
+      {/* 3. General Campaign Process */}
+      <section className="py-24 lg:py-32 bg-brand-navy text-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading 
-            eyebrow="HOW WE WORK"
-            title="A structured process for reliable growth."
+            eyebrow="OUR WORKFLOW"
+            title="A Structured Process for Reliable Growth."
             theme="dark"
             alignment="center"
           />
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {company.process.map((step) => (
-              <div key={step.id} className="bg-brand-purewhite/5 border border-brand-purewhite/10 p-8 rounded-3xl">
-                <span className="block font-display text-4xl font-bold text-brand-yellow mb-6">{step.id}</span>
+              <div key={step.id} className="bg-white/5 border border-white/10 p-8 rounded-3xl">
+                <span className="block font-mono text-3xl font-bold text-brand-yellow mb-6">{step.id}</span>
                 <h3 className="text-xl font-bold text-brand-purewhite mb-4">{step.title}</h3>
-                <p className="text-brand-offwhite/70">{step.description}</p>
+                <p className="text-xs text-brand-offwhite/70 leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>

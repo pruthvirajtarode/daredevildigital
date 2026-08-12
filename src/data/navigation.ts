@@ -1,9 +1,12 @@
 export const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
-  { name: 'Work', href: '/work' },
-  { name: 'Contact', href: '/contact' }
+  { name: 'Signal Loop', href: '/#signal' },
+  { name: 'Audit', href: '/#audit' },
+  { name: 'Blueprint', href: '/#blueprint' },
+  { name: 'Exclusivity', href: '/#exclusivity' },
+  { name: 'About', href: '/about' },
+  { name: 'FAQ', href: '/#faq' }
 ];
 
 export const footerNavigation = {
@@ -19,6 +22,7 @@ export const footerNavigation = {
     { name: 'Social Media Coaching', href: '/services/social-media-coaching' },
     { name: 'Analytics & Reporting', href: '/services/analytics-reporting' },
     { name: 'Content Creation', href: '/services/content-creation' },
-    { name: 'Website Development', href: '/services/website-development' }
+    { name: 'Website Development', href: '/services/website-development' },
+    { name: 'Performance Marketing', href: '/services/performance-marketing' }
   ]
 };

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -17,6 +17,14 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
+          
+          {/* Direct service redirect for Performance Marketing */}
+          <Route path="/performance-marketing" element={<Navigate to="/services/performance-marketing" replace />} />
+          
+          {/* Redirect main route paths to section anchors */}
+          <Route path="/audit" element={<Navigate to="/#audit" replace />} />
+          <Route path="/blueprint" element={<Navigate to="/#blueprint" replace />} />
+          
           <Route path="/work" element={<Work />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

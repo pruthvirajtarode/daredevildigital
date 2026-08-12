@@ -30,6 +30,7 @@ export default function Work() {
             title="SELECTED WORK"
             description="A showcase of our capabilities, strategic thinking, and digital execution."
             alignment="center"
+            as="h1"
           />
         </div>
       </section>

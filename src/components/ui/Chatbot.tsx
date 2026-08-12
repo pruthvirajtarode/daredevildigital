@@ -70,7 +70,7 @@ export default function Chatbot() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-brand-navy text-brand-purewhite shadow-xl transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:ring-offset-2 ${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100 duration-300'}`}
+        className={`fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-brand-navy text-brand-purewhite shadow-xl transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:ring-offset-2 ${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100 duration-300'}`}
         aria-label="Open chat"
       >
         <MessageSquare className="h-6 w-6" />
@@ -85,7 +85,7 @@ export default function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-96 overflow-hidden rounded-2xl bg-brand-purewhite shadow-2xl border border-brand-charcoal/10 flex flex-col h-[500px] max-h-[80vh]"
+            className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-50 w-[calc(100vw-2rem)] sm:w-96 overflow-hidden rounded-2xl bg-brand-purewhite shadow-2xl border border-brand-charcoal/10 flex flex-col h-[500px] max-h-[80vh]"
           >
             {/* Header */}
             <div className="bg-brand-navy p-4 text-brand-purewhite flex items-center justify-between">
