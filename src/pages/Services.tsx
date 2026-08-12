@@ -5,6 +5,7 @@ import PerformanceTracks from '../components/sections/PerformanceTracks';
 import { services } from '../data/services';
 import { company } from '../data/company';
 import { ArrowRight, Check } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Services() {
   return (
@@ -58,8 +59,12 @@ export default function Services() {
 
           <div className="flex flex-col gap-12 lg:gap-24">
             {services.map((service, index) => (
-              <div 
+              <motion.div 
                 key={service.id} 
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
                 className={`flex flex-col gap-12 lg:gap-24 ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center bg-brand-purewhite p-8 lg:p-12 rounded-3xl border border-brand-charcoal/5 shadow-sm`}
               >
                 {/* Service Details info */}
@@ -110,7 +115,7 @@ export default function Services() {
                   <div className="absolute inset-0 bg-brand-navy/30 group-hover:bg-brand-navy/10 transition-colors duration-700" />
                   <span className="font-display text-9xl font-bold text-brand-purewhite/95 z-10 drop-shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">{service.id}</span>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
