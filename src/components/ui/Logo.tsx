@@ -1,4 +1,4 @@
-import logoImg from '../../assets/logo.jpeg';
+import logoImg from '../../assets/logo.png';
 
 export default function Logo({ className = "", light = false }: { className?: string, light?: boolean }) {
   return (
@@ -15,7 +15,7 @@ export default function Logo({ className = "", light = false }: { className?: st
         <img 
           src={logoImg} 
           alt="Daredevil Digital" 
-          className="h-14 sm:h-16 w-auto object-contain mix-blend-multiply" 
+          className="h-14 sm:h-16 w-auto object-contain" 
         />
       )}
     </div>
