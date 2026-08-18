@@ -1,6 +1,6 @@
 import logoImg from '../../assets/logo.jpeg';
 
-export default function Logo({ className = "", light = false }: { className?: string, light?: boolean }) {
+export default function Logo({ className = "" }: { className?: string, light?: boolean }) {
   // Note: 'light' prop is kept for compatibility with existing components but 
   // the client provided a static jpeg logo image.
   return (
