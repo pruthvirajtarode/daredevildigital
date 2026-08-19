@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { footerNavigation } from '../../data/navigation';
 import { contact } from '../../data/contact';
-import { Phone, Mail, MapPin, MessageCircle, Instagram, Facebook } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 import Logo from '../ui/Logo';
 
 export default function Footer() {
@@ -38,7 +38,7 @@ export default function Footer() {
                 className="w-10 h-10 flex-none rounded-full bg-white/5 border border-white/10 hover:border-brand-yellow flex items-center justify-center text-brand-offwhite hover:text-brand-yellow transition-all"
                 aria-label="Instagram"
               >
-                <Instagram className="w-5 h-5" />
+                <span className="font-mono text-[11px] font-bold tracking-wider pt-[1px] pr-[1px]">IG</span>
               </a>
               <a
                 href={contact.facebook}
@@ -47,7 +47,7 @@ export default function Footer() {
                 className="w-10 h-10 flex-none rounded-full bg-white/5 border border-white/10 hover:border-brand-yellow flex items-center justify-center text-brand-offwhite hover:text-brand-yellow transition-all"
                 aria-label="Facebook"
               >
-                <Facebook className="w-5 h-5" />
+                <span className="font-mono text-[11px] font-bold tracking-wider pt-[1px] pr-[1px]">FB</span>
               </a>
             </div>
           </div>
