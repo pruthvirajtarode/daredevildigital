@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { footerNavigation } from '../../data/navigation';
 import { contact } from '../../data/contact';
-import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Instagram, Facebook } from 'lucide-react';
 import Logo from '../ui/Logo';
 
 export default function Footer() {
@@ -26,7 +26,7 @@ export default function Footer() {
                 href={contact.whatsapp}
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:border-brand-yellow flex items-center justify-center text-brand-offwhite hover:text-brand-yellow transition-all"
+                className="w-10 h-10 flex-none rounded-full bg-white/5 border border-white/10 hover:border-brand-yellow flex items-center justify-center text-brand-offwhite hover:text-brand-yellow transition-all"
                 aria-label="WhatsApp"
               >
                 <MessageCircle className="w-5 h-5" />
@@ -35,19 +35,19 @@ export default function Footer() {
                 href={contact.instagram}
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:border-brand-yellow flex items-center justify-center text-brand-offwhite hover:text-brand-yellow transition-all"
+                className="w-10 h-10 flex-none rounded-full bg-white/5 border border-white/10 hover:border-brand-yellow flex items-center justify-center text-brand-offwhite hover:text-brand-yellow transition-all"
                 aria-label="Instagram"
               >
-                <span className="font-mono text-xs">IG</span>
+                <Instagram className="w-5 h-5" />
               </a>
               <a
                 href={contact.facebook}
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:border-brand-yellow flex items-center justify-center text-brand-offwhite hover:text-brand-yellow transition-all"
+                className="w-10 h-10 flex-none rounded-full bg-white/5 border border-white/10 hover:border-brand-yellow flex items-center justify-center text-brand-offwhite hover:text-brand-yellow transition-all"
                 aria-label="Facebook"
               >
-                <span className="font-mono text-xs">FB</span>
+                <Facebook className="w-5 h-5" />
               </a>
             </div>
           </div>
