@@ -1,32 +1,82 @@
-# React + TypeScript + Vite
+<div align="center">
+  <img src="./public/daredevil_digital_hero.png" alt="Daredevil Digital Hero Banner" width="100%" />
+  
+  <br />
+  <br />
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+  # ⚡ Daredevil Digital
+  **High-Performance Digital Marketing & Lead Generation Specialists**
 
-Currently, two official plugins are available:
+  [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](#)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](#)
+  [![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](#)
+  [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](#)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+</div>
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 About Daredevil Digital
 
-## Expanding the Oxlint configuration
+Welcome to the **Daredevil Digital** repository! This project is the cutting-edge frontend for our lead generation web platform. Built with a focus on speed, conversions, and seamless user experiences, it utilizes modern web technologies to deliver outstanding performance and aesthetics.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## ✨ Features
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- **Blazing Fast Performance**: Powered by Vite and React for instantaneous loads and seamless HMR.
+- **Type-Safe Code**: Fully written in TypeScript to ensure reliability and an excellent developer experience.
+- **Modern UI/UX**: Designed with sleek, high-conversion aesthetics (optimized for Dark Mode).
+- **Component-Driven Architecture**: Built with highly reusable and modular React components.
+- **Optimized for Lead Generation**: Features strategically placed trust strips, audit sections, and contact forms.
+
+## 🛠️ Core Tech Stack
+
+- **Framework**: [React 18](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Linting**: [Oxlint](https://oxc.rs/)
+
+## 📂 Project Structure Highlights
+
+```text
+src/
+├── components/
+│   ├── layout/         # Core structural components (Navbar, Layout wrappers)
+│   └── sections/       # Key landing page sections (LeadEngineAudit, TrustStrip, ContactForm)
+├── data/               # Static content and models (e.g., FAQ data)
+└── ...
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 💻 Getting Started
+
+### Prerequisites
+Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/pruthvirajtarode/daredevildigital.git
+   cd daredevildigital
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   *Your app will be available at `http://localhost:5173`*
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+---
+
+<div align="center">
+  <i>Designed for conversions. Built for scale. 🚀</i>
+</div>
