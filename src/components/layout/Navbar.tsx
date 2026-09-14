@@ -32,6 +32,9 @@ export default function Navbar() {
     return location.pathname === href && !location.hash;
   };
 
+  const isDarkPage = location.pathname === '/audit';
+  const isDarkTop = isDarkPage && !isScrolled;
+
   return (
     <>
       <header
@@ -44,14 +47,16 @@ export default function Navbar() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5 transition-transform hover:scale-105">
-              <Logo />
+              <Logo light={isDarkTop} />
             </Link>
           </div>
           
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-brand-navy focus:outline-none"
+              className={`-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 focus:outline-none ${
+                isDarkTop ? 'text-brand-purewhite' : 'text-brand-navy'
+              }`}
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
@@ -62,13 +67,23 @@ export default function Navbar() {
           <nav className="hidden lg:flex lg:gap-x-8">
             {navigation.map((item) => {
               const active = isActive(item.href);
+              
+              let linkColor = 'text-brand-charcoal';
+              if (active) {
+                linkColor = isDarkTop 
+                  ? 'text-brand-yellow font-bold border-b-2 border-brand-yellow/30 pb-0.5'
+                  : 'text-brand-burgundy font-bold border-b-2 border-brand-burgundy/30 pb-0.5';
+              } else if (isDarkTop) {
+                linkColor = 'text-brand-purewhite hover:text-brand-yellow';
+              } else {
+                linkColor = 'text-brand-charcoal hover:text-brand-burgundy';
+              }
+
               return (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-sm font-semibold leading-6 transition-colors hover:text-brand-burgundy ${
-                    active ? 'text-brand-burgundy font-bold border-b-2 border-brand-burgundy/30 pb-0.5' : 'text-brand-charcoal'
-                  }`}
+                  className={`text-sm font-semibold leading-6 transition-colors ${linkColor}`}
                 >
                   {item.name}
                 </Link>
@@ -79,7 +94,11 @@ export default function Navbar() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
               to="/audit"
-              className="rounded-full bg-brand-navy px-6 py-2.5 text-sm font-semibold text-brand-purewhite shadow-sm transition-all hover:bg-brand-yellow hover:text-brand-navy"
+              className={`rounded-full px-6 py-2.5 text-sm font-semibold shadow-sm transition-all ${
+                isDarkTop
+                  ? 'bg-brand-yellow text-brand-navy hover:bg-brand-purewhite'
+                  : 'bg-brand-navy text-brand-purewhite hover:bg-brand-yellow hover:text-brand-navy'
+              }`}
             >
               Book an Audit <span aria-hidden="true">&rarr;</span>
             </Link>
