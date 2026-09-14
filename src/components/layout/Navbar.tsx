@@ -39,9 +39,11 @@ export default function Navbar() {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? (isDarkNav ? 'bg-brand-navy/95 py-4 backdrop-blur-md shadow-sm border-b border-white/10' : 'bg-brand-offwhite/90 py-4 backdrop-blur-md shadow-sm border-b border-brand-charcoal/5')
-            : 'bg-transparent py-6'
+          isDarkNav
+            ? 'bg-brand-navy py-4 backdrop-blur-md border-b border-white/10'
+            : isScrolled
+              ? 'bg-brand-offwhite/90 py-4 backdrop-blur-md shadow-sm border-b border-brand-charcoal/5'
+              : 'bg-transparent py-6'
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
