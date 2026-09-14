@@ -33,21 +33,21 @@ export default function Navbar() {
   };
 
   const isDarkPage = location.pathname === '/audit';
-  const isDarkTop = isDarkPage && !isScrolled;
+  const isDarkNav = isDarkPage;
 
   return (
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-brand-offwhite/90 py-4 backdrop-blur-md shadow-sm border-b border-brand-charcoal/5'
+            ? (isDarkNav ? 'bg-brand-navy/95 py-4 backdrop-blur-md shadow-sm border-b border-white/10' : 'bg-brand-offwhite/90 py-4 backdrop-blur-md shadow-sm border-b border-brand-charcoal/5')
             : 'bg-transparent py-6'
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5 transition-transform hover:scale-105">
-              <Logo light={isDarkTop} />
+              <Logo light={isDarkNav} />
             </Link>
           </div>
           
@@ -55,7 +55,7 @@ export default function Navbar() {
             <button
               type="button"
               className={`-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 focus:outline-none ${
-                isDarkTop ? 'text-brand-purewhite' : 'text-brand-navy'
+                isDarkNav ? 'text-brand-purewhite' : 'text-brand-navy'
               }`}
               onClick={() => setMobileMenuOpen(true)}
             >
@@ -70,10 +70,10 @@ export default function Navbar() {
               
               let linkColor = 'text-brand-charcoal';
               if (active) {
-                linkColor = isDarkTop 
+                linkColor = isDarkNav 
                   ? 'text-brand-yellow font-bold border-b-2 border-brand-yellow/30 pb-0.5'
                   : 'text-brand-burgundy font-bold border-b-2 border-brand-burgundy/30 pb-0.5';
-              } else if (isDarkTop) {
+              } else if (isDarkNav) {
                 linkColor = 'text-brand-purewhite hover:text-brand-yellow';
               } else {
                 linkColor = 'text-brand-charcoal hover:text-brand-burgundy';
@@ -95,7 +95,7 @@ export default function Navbar() {
             <Link
               to="/audit"
               className={`rounded-full px-6 py-2.5 text-sm font-semibold shadow-sm transition-all ${
-                isDarkTop
+                isDarkNav
                   ? 'bg-brand-yellow text-brand-navy hover:bg-brand-purewhite'
                   : 'bg-brand-navy text-brand-purewhite hover:bg-brand-yellow hover:text-brand-navy'
               }`}
