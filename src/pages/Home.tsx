@@ -1,10 +1,7 @@
 import Hero from '../components/sections/Hero';
 import ConfigurationHealthScore from '../components/sections/ConfigurationHealthScore';
 import TrustStrip from '../components/sections/TrustStrip';
-import SignalLoop from '../components/sections/SignalLoop';
 import PerformanceTracks from '../components/sections/PerformanceTracks';
-import LeadEngineAudit from '../components/sections/LeadEngineAudit';
-import Blueprint from '../components/sections/Blueprint';
 import WhyD3 from '../components/sections/WhyD3';
 import ExclusivityTracker from '../components/sections/ExclusivityTracker';
 import Results from '../components/sections/Results';
@@ -28,9 +25,6 @@ export default function Home() {
 
       {/* 3. TRUST STRIP */}
       <TrustStrip />
-
-      {/* 4. SIGNAL LOOP */}
-      <SignalLoop />
 
       {/* 5. GENERAL & AGENCY SERVICES OVERVIEW */}
       <section id="services-overview" className="py-24 lg:py-32 bg-brand-offwhite border-b border-brand-charcoal/5">
@@ -69,12 +63,6 @@ export default function Home() {
 
       {/* 6. PERFORMANCE TRACKS COMPARISON */}
       <PerformanceTracks />
-
-      {/* 7. LEAD ENGINE AUDIT */}
-      <LeadEngineAudit />
-
-      {/* 8. DIGITAL MARKETING BLUEPRINT */}
-      <Blueprint />
 
       {/* 9. WHY D3 STATS */}
       <WhyD3 />

@@ -1,9 +1,9 @@
 export const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Services', href: '/services' },
-  { name: 'Signal Loop', href: '/#signal' },
-  { name: 'Audit', href: '/#audit' },
-  { name: 'Blueprint', href: '/#blueprint' },
+  { name: 'Signal Loop', href: '/signal-loop' },
+  { name: 'Audit', href: '/audit' },
+  { name: 'Blueprint', href: '/blueprint' },
   { name: 'Exclusivity', href: '/#exclusivity' },
   { name: 'About', href: '/about' },
   { name: 'FAQ', href: '/#faq' }

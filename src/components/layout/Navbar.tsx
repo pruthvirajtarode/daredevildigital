@@ -78,7 +78,7 @@ export default function Navbar() {
           
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
-              to="/#audit"
+              to="/audit"
               className="rounded-full bg-brand-navy px-6 py-2.5 text-sm font-semibold text-brand-purewhite shadow-sm transition-all hover:bg-brand-yellow hover:text-brand-navy"
             >
               Book an Audit <span aria-hidden="true">&rarr;</span>
@@ -132,7 +132,7 @@ export default function Navbar() {
             
             <div className="py-6 flex justify-center border-t border-white/10">
               <Link
-                to="/#audit"
+                to="/audit"
                 onClick={() => setMobileMenuOpen(false)}
                 className="rounded-full bg-brand-yellow px-8 py-4 text-base font-semibold text-brand-navy shadow-sm transition-all hover:bg-brand-purewhite hover:text-brand-navy w-full text-center"
               >
