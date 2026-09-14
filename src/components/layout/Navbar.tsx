@@ -32,33 +32,26 @@ export default function Navbar() {
     return location.pathname === href && !location.hash;
   };
 
-  const isDarkPage = location.pathname === '/audit';
-  const isDarkNav = isDarkPage;
-
   return (
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-          isDarkNav
-            ? 'bg-brand-navy py-4 backdrop-blur-md border-b border-white/10'
-            : isScrolled
-              ? 'bg-brand-offwhite/90 py-4 backdrop-blur-md shadow-sm border-b border-brand-charcoal/5'
-              : 'bg-transparent py-6'
+          isScrolled
+            ? 'bg-brand-offwhite/90 py-4 backdrop-blur-md shadow-sm border-b border-brand-charcoal/5'
+            : 'bg-brand-offwhite/80 py-4 backdrop-blur-sm border-b border-brand-charcoal/5'
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5 transition-transform hover:scale-105">
-              <Logo light={isDarkNav} />
+              <Logo />
             </Link>
           </div>
           
           <div className="flex lg:hidden">
             <button
               type="button"
-              className={`-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 focus:outline-none ${
-                isDarkNav ? 'text-brand-purewhite' : 'text-brand-navy'
-              }`}
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-brand-navy focus:outline-none"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
@@ -69,23 +62,13 @@ export default function Navbar() {
           <nav className="hidden lg:flex lg:gap-x-8">
             {navigation.map((item) => {
               const active = isActive(item.href);
-              
-              let linkColor = 'text-brand-charcoal';
-              if (active) {
-                linkColor = isDarkNav 
-                  ? 'text-brand-yellow font-bold border-b-2 border-brand-yellow/30 pb-0.5'
-                  : 'text-brand-burgundy font-bold border-b-2 border-brand-burgundy/30 pb-0.5';
-              } else if (isDarkNav) {
-                linkColor = 'text-brand-purewhite hover:text-brand-yellow';
-              } else {
-                linkColor = 'text-brand-charcoal hover:text-brand-burgundy';
-              }
-
               return (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-sm font-semibold leading-6 transition-colors ${linkColor}`}
+                  className={`text-sm font-semibold leading-6 transition-colors hover:text-brand-burgundy ${
+                    active ? 'text-brand-burgundy font-bold border-b-2 border-brand-burgundy/30 pb-0.5' : 'text-brand-charcoal'
+                  }`}
                 >
                   {item.name}
                 </Link>
@@ -96,11 +79,7 @@ export default function Navbar() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
               to="/audit"
-              className={`rounded-full px-6 py-2.5 text-sm font-semibold shadow-sm transition-all ${
-                isDarkNav
-                  ? 'bg-brand-yellow text-brand-navy hover:bg-brand-purewhite'
-                  : 'bg-brand-navy text-brand-purewhite hover:bg-brand-yellow hover:text-brand-navy'
-              }`}
+              className="rounded-full bg-brand-navy px-6 py-2.5 text-sm font-semibold text-brand-purewhite shadow-sm transition-all hover:bg-brand-yellow hover:text-brand-navy"
             >
               Book an Audit <span aria-hidden="true">&rarr;</span>
             </Link>

@@ -44,7 +44,7 @@ export default function LeadEngineAudit() {
   ];
 
   return (
-    <section id="audit" className="pt-32 lg:pt-40 pb-24 lg:pb-32 bg-brand-navy text-brand-offwhite border-b border-white/10">
+    <section id="audit" className="py-24 lg:py-32 bg-brand-navy text-brand-offwhite border-b border-white/10">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* Left Column: Diagnostics */}
