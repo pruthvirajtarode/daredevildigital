@@ -1,4 +1,3 @@
-import SectionHeading from '../ui/SectionHeading';
 import { motion } from 'framer-motion';
 
 export default function WhyD3() {
