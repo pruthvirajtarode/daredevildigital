@@ -80,10 +80,24 @@ export default function ExclusivityTracker() {
   };
 
   return (
-    <section id="exclusivity" className="relative py-24 lg:py-32 bg-brand-navy text-brand-offwhite border-b border-white/10 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('/images/handshake-bg.png')" }}>
+    <section id="exclusivity" className="relative py-24 lg:py-32 bg-brand-navy text-brand-offwhite border-b border-white/10 overflow-hidden">
+      {/* Animated Background Image */}
+      <motion.div 
+        className="absolute inset-[-5%] bg-cover bg-center bg-fixed z-0"
+        style={{ backgroundImage: "url('/images/handshake-bg.png')" }}
+        animate={{ 
+          scale: [1, 1.08, 1],
+          x: ['0%', '-1.5%', '0%']
+        }}
+        transition={{ 
+          duration: 18, 
+          repeat: Infinity,
+          ease: "easeInOut" 
+        }}
+      />
       {/* Decorative overlay for readability while keeping image natural */}
-      <div className="absolute inset-0 bg-black/40" />
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent" />
+      <div className="absolute inset-0 bg-black/40 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent z-0" />
       
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         

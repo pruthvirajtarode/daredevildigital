@@ -21,8 +21,15 @@ export default function WhyD3() {
 
   return (
     <section id="why-d3" className="bg-brand-offwhite border-b border-brand-charcoal/5 flex flex-col lg:flex-row min-h-[80vh]">
-      {/* Left side Image */}
-      <div className="w-full lg:w-1/2 min-h-[40vh] lg:min-h-full bg-cover bg-center" style={{ backgroundImage: "url('/images/office-bg.png')" }} />
+      {/* Left side Animated Image */}
+      <div className="w-full lg:w-1/2 min-h-[40vh] lg:min-h-full relative overflow-hidden">
+        <motion.div 
+          className="absolute inset-[-5%] bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/office-bg.png')" }}
+          animate={{ scale: [1, 1.08, 1], x: ['0%', '-2%', '0%'] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
       
       {/* Right side Content */}
       <div className="w-full lg:w-1/2 py-24 lg:py-32 px-8 lg:px-16 xl:px-24 flex items-center bg-brand-purewhite">
