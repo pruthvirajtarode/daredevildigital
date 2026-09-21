@@ -1,12 +1,10 @@
 export const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Services', href: '/services' },
-  { name: 'Signal Loop', href: '/signal-loop' },
-  { name: 'Audit', href: '/audit' },
+  { name: 'Signal Audit', href: '/signal-audit' },
   { name: 'Blueprint', href: '/blueprint' },
-  { name: 'Exclusivity', href: '/#exclusivity' },
   { name: 'About', href: '/about' },
-  { name: 'FAQ', href: '/#faq' }
+  { name: 'FAQ', href: '/faq' }
 ];
 
 export const footerNavigation = {

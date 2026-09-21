@@ -81,7 +81,7 @@ export default function Navbar() {
               to="/audit"
               className="rounded-full bg-brand-navy px-6 py-2.5 text-sm font-semibold text-brand-purewhite shadow-sm transition-all hover:bg-brand-yellow hover:text-brand-navy"
             >
-              Book an Audit <span aria-hidden="true">&rarr;</span>
+              Book Your Audit <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
         </div>
@@ -136,7 +136,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="rounded-full bg-brand-yellow px-8 py-4 text-base font-semibold text-brand-navy shadow-sm transition-all hover:bg-brand-purewhite hover:text-brand-navy w-full text-center"
               >
-                Book an Audit <span aria-hidden="true">&rarr;</span>
+                Book Your Audit <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
           </motion.div>

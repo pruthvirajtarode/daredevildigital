@@ -7,7 +7,8 @@ import ServiceDetail from './pages/ServiceDetail';
 import Work from './pages/Work';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
-import SignalLoopPage from './pages/SignalLoopPage';
+import SignalAuditPage from './pages/SignalAuditPage';
+import FAQPage from './pages/FAQPage';
 import AuditPage from './pages/AuditPage';
 import BlueprintPage from './pages/BlueprintPage';
 
@@ -25,9 +26,10 @@ function App() {
           <Route path="/performance-marketing" element={<Navigate to="/services/performance-marketing" replace />} />
           
           {/* Separate pages for sections */}
-          <Route path="/signal-loop" element={<SignalLoopPage />} />
+          <Route path="/signal-audit" element={<SignalAuditPage />} />
           <Route path="/audit" element={<AuditPage />} />
           <Route path="/blueprint" element={<BlueprintPage />} />
+          <Route path="/faq" element={<FAQPage />} />
           
           <Route path="/work" element={<Work />} />
           <Route path="/contact" element={<Contact />} />
