@@ -3,29 +3,36 @@ import Button from '../ui/Button';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-28 pb-16 bg-brand-offwhite overflow-hidden border-b border-brand-charcoal/5">
+    <section 
+      className="relative min-h-[90vh] flex items-center pt-28 pb-16 bg-brand-navy overflow-hidden border-b border-brand-charcoal/5 bg-cover bg-center"
+      style={{ backgroundImage: "url('/images/hero-bg.png')" }}
+    >
+      {/* Decorative overlay for readability and moody look */}
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 to-brand-navy/70" />
+      <div className="absolute inset-0 bg-black/30 mix-blend-multiply" />
+      
       {/* Decorative background glows */}
-      <div className="absolute top-1/4 -right-48 w-96 h-96 bg-brand-yellow/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 -left-48 w-96 h-96 bg-brand-burgundy/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 -right-48 w-96 h-96 bg-brand-yellow/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 -left-48 w-96 h-96 bg-brand-burgundy/20 rounded-full blur-3xl pointer-events-none" />
       
       <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
         
         {/* Left Copy Column */}
         <div className="max-w-2xl lg:col-span-7">
-          <span className="inline-block mb-6 text-xs font-mono font-bold tracking-[0.2em] text-brand-burgundy uppercase">
+          <span className="inline-block mb-6 text-xs font-mono font-bold tracking-[0.2em] text-brand-yellow uppercase">
             DAREDEVIL DIGITAL · SINGAPORE
           </span>
           
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-brand-navy leading-[1.05] mb-8 uppercase">
+          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-brand-purewhite leading-[1.05] mb-8 uppercase">
             BOLD DIGITAL STRATEGY.<br />
             BUILT FOR REAL GROWTH.
           </h1>
           
-          <p className="text-lg md:text-xl leading-relaxed text-brand-charcoal/80 mb-6">
+          <p className="text-lg md:text-xl leading-relaxed text-brand-offwhite/90 mb-6">
             From social strategy and creative execution to performance marketing and lead-generation systems, Daredevil Digital helps businesses turn digital attention into measurable opportunity.
           </p>
 
-          <p className="text-base leading-relaxed text-brand-charcoal/80 mb-10 border-l-2 border-brand-yellow pl-4 italic">
+          <p className="text-base leading-relaxed text-brand-offwhite/80 mb-10 border-l-2 border-brand-yellow pl-4 italic">
             Built around a simple principle: your campaigns should learn from the customers you actually want — not just the people who submit forms.
           </p>
 
@@ -33,19 +40,19 @@ export default function Hero() {
             <Button href="/contact" variant="primary" size="lg">
               START A CONVERSATION
             </Button>
-            <Button href="#signal" variant="outline" size="lg">
+            <Button href="/signal-audit" variant="outline" size="lg">
               SEE HOW THE SIGNAL LOOP WORKS
             </Button>
           </div>
           
           {/* Active Verticals Pill Strip */}
-          <div className="mt-16 pt-8 border-t border-brand-charcoal/10 flex flex-col sm:flex-row sm:items-center gap-4">
-            <span className="font-mono text-[10px] font-bold text-brand-charcoal/50 uppercase tracking-widest shrink-0">
+          <div className="mt-16 pt-8 border-t border-white/20 flex flex-col sm:flex-row sm:items-center gap-4">
+            <span className="font-mono text-[10px] font-bold text-white/60 uppercase tracking-widest shrink-0">
               Active Verticals
             </span>
             <div className="flex flex-wrap gap-2">
               {['Renovation', 'Electrical', 'Aesthetics', 'Tuition', 'Finance', 'Legal', 'Real Estate'].map((v) => (
-                <span key={v} className="font-mono text-[10px] text-brand-navy border border-brand-navy/15 px-2.5 py-1 rounded bg-brand-navy/5">
+                <span key={v} className="font-mono text-[10px] text-white border border-white/20 px-2.5 py-1 rounded bg-white/10">
                   {v}
                 </span>
               ))}
@@ -58,13 +65,13 @@ export default function Hero() {
           <motion.div 
             animate={{ rotate: 360 }}
             transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-            className="absolute w-[110%] h-[110%] bg-brand-yellow/5 rounded-full blur-3xl -z-10"
+            className="absolute w-[110%] h-[110%] bg-brand-yellow/10 rounded-full blur-3xl -z-10"
           />
           <div className="relative w-full h-full max-w-sm lg:max-w-md mx-auto">
             {/* Visual stacked card aesthetics */}
-            <div className="absolute inset-0 bg-brand-navy rounded-3xl shadow-2xl transform rotate-3 scale-105" />
-            <div className="absolute inset-0 bg-brand-yellow rounded-3xl shadow-xl transform -rotate-2" />
-            <div className="absolute inset-0 bg-brand-purewhite rounded-3xl shadow-lg border border-brand-charcoal/10 overflow-hidden z-10 flex flex-col">
+            <div className="absolute inset-0 bg-brand-purewhite/10 backdrop-blur-sm rounded-3xl shadow-2xl transform rotate-3 scale-105" />
+            <div className="absolute inset-0 bg-brand-yellow/80 rounded-3xl shadow-xl transform -rotate-2" />
+            <div className="absolute inset-0 bg-brand-purewhite/95 rounded-3xl shadow-lg border border-brand-charcoal/10 overflow-hidden z-10 flex flex-col">
               
               {/* Fake dashboard UI header */}
               <div className="bg-brand-navy p-4 flex justify-between items-center border-b border-white/10">
