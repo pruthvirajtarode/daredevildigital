@@ -8,14 +8,14 @@ export default function Hero() {
       <motion.div 
         className="absolute inset-[-5%] z-0"
         animate={{ 
-          scale: [1, 1.05, 1],
-          x: ['0%', '-1%', '0%'],
+          scale: [1, 1.08, 1],
+          x: ['0%', '-2%', '0%'],
           y: ['0%', '1%', '0%']
         }}
         transition={{ 
-          duration: 30, 
+          duration: 15, 
           repeat: Infinity,
-          ease: "linear" 
+          ease: "easeInOut" 
         }}
       >
         <div 
@@ -38,16 +38,16 @@ export default function Hero() {
                 top: Math.random() * 100 + '%',
                 left: Math.random() * 100 + '%',
               }}
+              initial={{ opacity: Math.random() * 0.4 + 0.2, y: Math.random() * 100 }}
               animate={{
-                y: [0, -150 - Math.random() * 100],
-                x: [0, (Math.random() - 0.5) * 100],
-                opacity: [0, Math.random() * 0.4 + 0.2, 0],
+                y: [Math.random() * 100, -200],
+                x: [0, (Math.random() - 0.5) * 50],
+                opacity: [Math.random() * 0.4 + 0.2, 0, Math.random() * 0.4 + 0.2],
               }}
               transition={{
-                duration: Math.random() * 15 + 15,
+                duration: Math.random() * 8 + 8,
                 repeat: Infinity,
                 ease: "linear",
-                delay: Math.random() * 20,
               }}
             />
           );
