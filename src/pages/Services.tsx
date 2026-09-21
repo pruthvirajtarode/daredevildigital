@@ -105,7 +105,10 @@ export default function Services() {
                 </div>
 
                 {/* Service Image placeholder */}
-                <div className="w-full lg:w-1/2 aspect-square md:aspect-[4/3] rounded-3xl bg-brand-navy flex items-center justify-center relative overflow-hidden group shadow-lg">
+                <div 
+                  className="w-full lg:w-1/2 aspect-square md:aspect-[4/3] rounded-3xl bg-brand-navy flex items-center justify-center relative overflow-hidden group shadow-lg cursor-pointer outline-none"
+                  tabIndex={0}
+                >
                   <img 
                     src={[
                       '/images/service_social_media_1786441004737.png',
@@ -115,10 +118,10 @@ export default function Services() {
                       '/images/service_webdev_1786441294976.png'
                     ][index] || '/images/hero_dashboard_1786440656238.png'}
                     alt={service.title} 
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 group-focus:scale-105 group-active:scale-105" 
                   />
-                  <div className="absolute inset-0 bg-brand-navy/30 group-hover:bg-brand-navy/10 transition-colors duration-700" />
-                  <span className="font-display text-9xl font-bold text-brand-purewhite/95 z-10 drop-shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">{service.id}</span>
+                  <div className="absolute inset-0 bg-brand-navy/30 group-hover:bg-brand-navy/10 group-focus:bg-brand-navy/10 group-active:bg-brand-navy/10 transition-colors duration-700" />
+                  <span className="font-display text-9xl font-bold text-brand-purewhite/95 z-10 drop-shadow-xl opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 transition-opacity duration-500">{service.id}</span>
                 </div>
               </motion.div>
             ))}
