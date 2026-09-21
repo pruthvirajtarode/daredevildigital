@@ -16,7 +16,7 @@ export default function SignalLoop() {
     {
       num: "02",
       title: "Lead submits form",
-      desc: "A browser-based pixel fires. Meta logs a conversion. Your account dashboard records a lead. Ad spend is optimized toward form fills."
+      desc: "A browser based pixel fires. Meta logs a conversion. Your account dashboard records a lead. Ad spend is optimized toward form fills."
     },
     {
       num: "03",

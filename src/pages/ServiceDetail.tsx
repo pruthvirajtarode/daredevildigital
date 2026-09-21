@@ -22,7 +22,7 @@ export default function ServiceDetail() {
       <div className="pt-20 min-h-screen bg-brand-offwhite">
         <SEO 
           title="Performance Marketing & Lead Gen"
-          description="A Singapore-based marketing engineering service feeding CRM outcome data directly back to ad platform machine learning algorithms."
+          description="A Singapore based marketing engineering service feeding CRM outcome data directly back to ad platform machine learning algorithms."
         />
         {/* Subpage Header */}
         <section className="py-24 lg:py-32 bg-brand-navy text-brand-offwhite">
@@ -30,7 +30,7 @@ export default function ServiceDetail() {
             <SectionHeading 
               eyebrow="SPECIALIZED SYSTEM"
               title="PERFORMANCE SOCIAL & LEAD GENERATION SYSTEMS"
-              description="A Singapore-based marketing engineering service feeding CRM outcome data directly back to ad platform machine learning algorithms."
+              description="A Singapore based marketing engineering service feeding CRM outcome data directly back to ad platform machine learning algorithms."
               theme="dark"
               alignment="center"
               as="h1"
@@ -96,7 +96,7 @@ export default function ServiceDetail() {
             <div>
               <h3 className="text-xl font-bold text-brand-burgundy uppercase tracking-widest mb-4">The Challenge</h3>
               <p className="text-lg leading-relaxed text-brand-charcoal/80">
-                Most businesses struggle to maintain a consistent, high-quality digital presence. Without a clear strategy, marketing efforts become fragmented, inconsistent, and fail to generate a meaningful return on investment.
+                Most businesses struggle to maintain a consistent, high quality digital presence. Without a clear strategy, marketing efforts become fragmented, inconsistent, and fail to generate a meaningful return on investment.
               </p>
             </div>
             <div>

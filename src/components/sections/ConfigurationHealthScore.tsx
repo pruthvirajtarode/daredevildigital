@@ -60,7 +60,7 @@ export default function ConfigurationHealthScore() {
               Most Singapore lead gen accounts are optimizing toward the wrong signal.
             </h2>
             <p className="text-brand-offwhite/80 text-lg leading-relaxed mb-8">
-              Based on our analysis of active campaigns in Singapore, the average setup fails to feed post-click conversion events back to ad platforms. Meta's algorithm is forced to optimize for volume (form clicks) rather than value (closed sales).
+              Based on our analysis of active campaigns in Singapore, the average setup fails to feed post click conversion events back to ad platforms. Meta's algorithm is forced to optimize for volume (form clicks) rather than value (closed sales).
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start text-center sm:text-left">
               <Button href="#audit" variant="secondary" size="md">

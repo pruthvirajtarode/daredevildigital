@@ -35,7 +35,7 @@ export default function CTASection() {
           </h2>
           
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-brand-offwhite/80 mb-10">
-            A 30-second look at Event Match Quality usually tells the story. The audit tells the rest. {pricing.audit.current}, credited against month one if you move forward with management.
+            A 30 second look at Event Match Quality usually tells the story. The audit tells the rest. {pricing.audit.current}, credited against month one if you move forward with management.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">

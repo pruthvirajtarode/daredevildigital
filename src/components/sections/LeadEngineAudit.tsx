@@ -15,7 +15,7 @@ export default function LeadEngineAudit() {
       num: "02",
       name: "Account Structure",
       weight: "20%",
-      desc: "Learning-limited ad sets, conversions per ad set, learning resets, and audience overlap constraints."
+      desc: "Learning limited ad sets, conversions per ad set, learning resets, and audience overlap constraints."
     },
     {
       num: "03",
@@ -33,7 +33,7 @@ export default function LeadEngineAudit() {
       num: "05",
       name: "Lead Handling Layer",
       weight: "15%",
-      desc: "Form friction mechanics, qualifying filtering questions, speed-to-lead times, follow-up automations, and outcome tracking."
+      desc: "Form friction mechanics, qualifying filtering questions, speed to lead times, follow up automations, and outcome tracking."
     },
     {
       num: "06",
@@ -110,7 +110,7 @@ export default function LeadEngineAudit() {
                   QUALIFICATION CRITERIA
                 </div>
                 <p className="text-xs text-brand-charcoal/70 leading-relaxed">
-                  Singapore-targeted lead generation businesses spending **S$5,000/month or more** on Meta, running campaigns continuously for **60+ days**.
+                  Singapore targeted lead generation businesses spending **S$5,000/month or more** on Meta, running campaigns continuously for **60+ days**.
                 </p>
               </div>
 
@@ -138,7 +138,7 @@ export default function LeadEngineAudit() {
                 Book your Lead Engine Audit
               </a>
               <span className="block text-center font-mono text-[10px] text-brand-charcoal/50 mt-3">
-                * Intake via appointment. View-access to Business Manager required.
+                * Intake via appointment. View access to Business Manager required.
               </span>
             </div>
           </div>

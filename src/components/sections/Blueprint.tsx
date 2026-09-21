@@ -18,7 +18,7 @@ export default function Blueprint() {
     {
       num: "03",
       name: "Offer & Lead Mechanism",
-      desc: "Instant Form vs Landing Page trade-offs, qualifying question setups, friction sizing, and form copy."
+      desc: "Instant Form vs Landing Page trade offs, qualifying question setups, friction sizing, and form copy."
     },
     {
       num: "04",
@@ -46,7 +46,7 @@ export default function Blueprint() {
             <SectionHeading
               eyebrow="STRATEGIC MAPPING"
               title="Six Layers. Your Entire Marketing Execution, Mapped Before You Spend a Dollar."
-              description="The audit diagnoses what is broken in active accounts. The Blueprint builds what does not exist yet. We outline a clear, launch-ready specification for early stage brands."
+              description="The audit diagnoses what is broken in active accounts. The Blueprint builds what does not exist yet. We outline a clear, launch ready specification for early stage brands."
             />
 
             <div className="mt-12 space-y-6">
@@ -125,9 +125,9 @@ export default function Blueprint() {
               <div className="space-y-4 mb-8">
                 {[
                   "Ideal lead profiling and qualification thresholds",
-                  "Singapore-focused ad targeting blueprints",
+                  "Singapore focused ad targeting blueprints",
                   "Optimum form layout design & questioning mapping",
-                  "Execution ad-account build structure blueprint",
+                  "Execution ad account build structure blueprint",
                   "Visual format layout & script writing direction",
                   "90 day execution roadmap timelines",
                   "30 minute debrief strategy session"

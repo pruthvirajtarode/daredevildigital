@@ -16,7 +16,7 @@ export default function About() {
     {
       label: "100+",
       title: "Regional Advertisers Audited",
-      desc: "Analyzing lead generation setups across Singapore, Australia, and Southeast Asia. Identified the exact points where ad delivery algorithms fail in small, high-density markets."
+      desc: "Analyzing lead generation setups across Singapore, Australia, and Southeast Asia. Identified the exact points where ad delivery algorithms fail in small, high density markets."
     },
     {
       label: "SG",
@@ -29,7 +29,7 @@ export default function About() {
     <div className="pt-24 min-h-screen bg-brand-offwhite">
       <SEO 
         title="About"
-        description="Learn about Daredevil Digital, a Singapore-based digital marketing agency founded by a former Meta APAC account manager."
+        description="Learn about Daredevil Digital, a Singapore based digital marketing agency founded by a former Meta APAC account manager."
       />
       {/* Hero */}
       <section className="py-24 lg:py-32 bg-brand-navy text-brand-offwhite">
@@ -56,7 +56,7 @@ export default function About() {
               />
               <div className="space-y-6 text-brand-charcoal/80 text-lg leading-relaxed">
                 <p>
-                  Daredevil Digital was established because we saw Singapore advertisers burning budgets on pixel-only setups. Most agencies launch campaigns, watch for form conversions, and report lead volume. But a form fill is not a client.
+                  Daredevil Digital was established because we saw Singapore advertisers burning budgets on pixel only setups. Most agencies launch campaigns, watch for form conversions, and report lead volume. But a form fill is not a client.
                 </p>
                 <p>
                   We change the economics of lead generation by implementing the Signal Loop: routing offline events (qualified leads, appointment bookings, closed deals) directly back to ad algorithms.

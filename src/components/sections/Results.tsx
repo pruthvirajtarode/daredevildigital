@@ -9,7 +9,7 @@ export default function Results() {
         <SectionHeading
           eyebrow="CLIENT OUTCOMES"
           title="The Signal Loop in Practice."
-          description="We let real-world numbers and database performance do the talking. Testimonials and outcomes are independently verified."
+          description="We let real world numbers and database performance do the talking. Testimonials and outcomes are independently verified."
         />
 
         <motion.div 
