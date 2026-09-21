@@ -4,6 +4,8 @@ import { ArrowRight, ArrowLeft, CheckCircle2 } from 'lucide-react';
 import Button from '../ui/Button';
 
 const servicesOptions = [
+  'Signal Audit',
+  'Blueprint',
   'Social Media Management',
   'Social Media Marketing',
   'Social Media Coaching',
@@ -37,43 +39,55 @@ export default function ContactForm() {
   };
 
   const toggleService = (service: string) => {
-    setFormData(prev => ({
-      ...prev,
-      services: prev.services.includes(service)
-        ? prev.services.filter(s => s !== service)
-        : [...prev.services, service]
-    }));
+    setFormData(prev => {
+      const isSelected = prev.services.includes(service);
+      if (!isSelected && prev.services.length >= 2) return prev;
+      
+      return {
+        ...prev,
+        services: isSelected
+          ? prev.services.filter(s => s !== service)
+          : [...prev.services, service]
+      };
+    });
   };
 
-  const nextStep = () => setStep(s => Math.min(s + 1, 4));
+  const nextStep = () => {
+    if (step === 2 && formData.services.length === 0) {
+      alert("Please select at least one option.");
+      return;
+    }
+    setStep(s => Math.min(s + 1, 4));
+  };
   const prevStep = () => setStep(s => Math.max(s - 1, 1));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Map form submission to WhatsApp
-    const message = `*New Enquiry from Daredevil Digital*
-*Name:* ${formData.firstName} ${formData.lastName}
-*Business:* ${formData.businessName || 'N/A'}
-*Website:* ${formData.website || 'N/A'}
-*Services:* ${formData.services.join(', ') || 'N/A'}
-*Revenue:* ${formData.monthlyRevenue || 'N/A'}
-*Ad Budget:* ${formData.paidAdsBudget || 'N/A'}
-*Challenge:* ${formData.challenge || 'N/A'}
-*Email:* ${formData.email}
-*Phone:* ${formData.phone || 'N/A'}
+    const payload = {
+      ...formData,
+      source: 'Contact Form'
+    };
 
-*Message:* 
-${formData.enquiry}`;
-
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/6588240612?text=${encodedMessage}`;
-    
-    window.open(whatsappUrl, '_blank');
-    
-    setIsSubmitting(false);
-    setIsSuccess(true);
+    try {
+      // TODO: Replace with actual Webhook or API endpoint
+      // await fetch('YOUR_WEBHOOK_URL', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(payload)
+      // });
+      
+      // Simulate network request for now
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      setIsSubmitting(false);
+      setIsSuccess(true);
+    } catch (error) {
+      console.error('Submission failed', error);
+      setIsSubmitting(false);
+      alert('Something went wrong. Please try again.');
+    }
   };
 
   if (isSuccess) {
@@ -131,12 +145,12 @@ ${formData.enquiry}`;
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-brand-charcoal mb-2">Business Name</label>
-                  <input type="text" value={formData.businessName} onChange={e => updateFormData('businessName', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors" />
+                  <label className="block text-sm font-semibold text-brand-charcoal mb-2">Business Name *</label>
+                  <input required type="text" value={formData.businessName} onChange={e => updateFormData('businessName', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors" />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-brand-charcoal mb-2">Website URL</label>
-                  <input type="url" value={formData.website} onChange={e => updateFormData('website', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors" placeholder="https://" />
+                  <label className="block text-sm font-semibold text-brand-charcoal mb-2">Website URL *</label>
+                  <input required type="url" value={formData.website} onChange={e => updateFormData('website', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors" placeholder="https://" />
                 </div>
               </div>
             )}
@@ -158,8 +172,8 @@ ${formData.enquiry}`;
             {step === 3 && (
               <div className="space-y-6">
                 <div>
-                  <label className="block text-sm font-semibold text-brand-charcoal mb-2">Monthly Revenue</label>
-                  <select value={formData.monthlyRevenue} onChange={e => updateFormData('monthlyRevenue', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors">
+                  <label className="block text-sm font-semibold text-brand-charcoal mb-2">Monthly Revenue (USD) *</label>
+                  <select required value={formData.monthlyRevenue} onChange={e => updateFormData('monthlyRevenue', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors">
                     <option value="" disabled>Select range</option>
                     <option value="under_10k">Under $10k</option>
                     <option value="10k_50k">$10k to $50k</option>
@@ -168,8 +182,8 @@ ${formData.enquiry}`;
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-brand-charcoal mb-2">Paid Ads Budget (Monthly)</label>
-                  <select value={formData.paidAdsBudget} onChange={e => updateFormData('paidAdsBudget', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors">
+                  <label className="block text-sm font-semibold text-brand-charcoal mb-2">Paid Ads Budget (Monthly) (USD) *</label>
+                  <select required value={formData.paidAdsBudget} onChange={e => updateFormData('paidAdsBudget', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors">
                     <option value="" disabled>Select budget</option>
                     <option value="none">None yet</option>
                     <option value="under_1k">Under $1k</option>
@@ -178,8 +192,8 @@ ${formData.enquiry}`;
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-brand-charcoal mb-2">Current Marketing Challenge</label>
-                  <textarea rows={3} value={formData.challenge} onChange={e => updateFormData('challenge', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors" placeholder="What's holding your growth back?" />
+                  <label className="block text-sm font-semibold text-brand-charcoal mb-2">Current Marketing Challenge *</label>
+                  <textarea required rows={3} value={formData.challenge} onChange={e => updateFormData('challenge', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors" placeholder="What's holding your growth back?" />
                 </div>
               </div>
             )}
@@ -192,8 +206,8 @@ ${formData.enquiry}`;
                     <input required type="email" value={formData.email} onChange={e => updateFormData('email', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors" />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-brand-charcoal mb-2">Phone Number</label>
-                    <input type="tel" value={formData.phone} onChange={e => updateFormData('phone', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors" />
+                    <label className="block text-sm font-semibold text-brand-charcoal mb-2">Phone Number *</label>
+                    <input required type="tel" value={formData.phone} onChange={e => updateFormData('phone', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors" />
                   </div>
                 </div>
                 <div>
