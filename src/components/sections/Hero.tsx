@@ -47,13 +47,13 @@ export default function Hero() {
           </div>
           
           {/* Active Verticals Pill Strip */}
-          <div className="mt-16 pt-8 border-t border-white/20 flex flex-col sm:flex-row sm:items-center gap-4">
-            <span className="font-mono text-[10px] font-bold text-white/60 uppercase tracking-widest shrink-0">
+          <div className="mt-16 pt-8 border-t border-white/20 flex flex-col sm:flex-row sm:items-center gap-4 lg:gap-6">
+            <span className="font-mono text-xs font-bold text-white/60 uppercase tracking-widest shrink-0">
               Active Verticals
             </span>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-3">
               {['Renovation', 'Electrical', 'Aesthetics', 'Tuition', 'Finance', 'Legal', 'Real Estate'].map((v) => (
-                <span key={v} className="font-mono text-[10px] text-white border border-white/20 px-2.5 py-1 rounded bg-white/10">
+                <span key={v} className="font-mono text-xs sm:text-sm text-white border border-white/20 px-4 py-2 rounded bg-white/10 shadow-sm backdrop-blur-sm">
                   {v}
                 </span>
               ))}
