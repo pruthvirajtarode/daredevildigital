@@ -130,7 +130,7 @@ export default function ExclusivityTracker() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-3 gap-6 bg-white/5 border border-white/10 rounded-2xl p-6 lg:p-8 mb-12 text-center"
+          className="grid grid-cols-3 gap-6 bg-brand-navy/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 lg:p-8 mb-12 text-center shadow-2xl"
         >
           <div>
             <span className="block font-mono text-2xl lg:text-4xl font-bold text-brand-purewhite">
@@ -188,13 +188,13 @@ export default function ExclusivityTracker() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search your industry niche..."
-              className="w-full bg-white/5 border border-white/10 focus:border-brand-yellow rounded-lg pl-10 pr-4 py-2 text-sm text-brand-offwhite placeholder-brand-offwhite/40 focus:outline-none transition-colors"
+              className="w-full bg-brand-navy/60 backdrop-blur-md border border-white/10 focus:border-brand-yellow rounded-lg pl-10 pr-4 py-2 text-sm text-brand-offwhite placeholder-brand-offwhite/40 focus:outline-none transition-colors"
             />
           </div>
         </div>
 
         {/* Verticals List */}
-        <div className="border border-white/10 rounded-2xl overflow-hidden divide-y divide-white/10">
+        <div className="border border-white/10 rounded-2xl overflow-hidden divide-y divide-white/10 bg-brand-navy/70 backdrop-blur-xl shadow-2xl">
           {filteredVerticals.length > 0 ? (
             filteredVerticals.map((vert) => {
               const isOpen = !!openVerticals[vert.id];
@@ -299,7 +299,7 @@ export default function ExclusivityTracker() {
         </div>
 
         {/* CTA Strip */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 border border-white/10 rounded-2xl p-6 lg:p-8 mt-12 bg-white/5">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 border border-white/10 rounded-2xl p-6 lg:p-8 mt-12 bg-brand-navy/80 backdrop-blur-xl shadow-2xl">
           <div>
             <h4 className="font-display text-lg font-bold text-brand-purewhite mb-1">
               Your business niche is still open. Move before it isn't.
