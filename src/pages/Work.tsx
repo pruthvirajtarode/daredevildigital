@@ -70,18 +70,37 @@ export default function Work() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.3 }}
-                  className="group cursor-pointer"
+                  className="group cursor-pointer outline-none"
+                  tabIndex={0}
+                  whileHover="active"
+                  whileTap="active"
                 >
                   <div className="aspect-[4/3] rounded-3xl bg-brand-offwhite mb-6 overflow-hidden relative border border-brand-charcoal/5 shadow-sm">
-                    <img src={project.img} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-brand-navy/0 group-hover:bg-brand-navy/10 transition-colors duration-300" />
+                    <motion.img 
+                      src={project.img} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover" 
+                      variants={{ active: { scale: 1.05 } }}
+                      transition={{ duration: 0.7, ease: "easeOut" }}
+                    />
+                    <motion.div 
+                      className="absolute inset-0 bg-brand-navy/0" 
+                      variants={{ active: { backgroundColor: 'rgba(10, 25, 47, 0.1)' } }}
+                      transition={{ duration: 0.3 }}
+                    />
                   </div>
                   <div className="flex gap-4 items-center text-sm font-bold tracking-widest text-brand-charcoal/60 uppercase mb-3">
                     <span className="text-brand-burgundy">{project.category}</span>
                     <span className="w-1 h-1 rounded-full bg-brand-charcoal/20" />
                     <span>{project.type}</span>
                   </div>
-                  <h3 className="font-display text-2xl font-bold text-brand-navy group-hover:text-brand-yellow transition-colors">{project.title}</h3>
+                  <motion.h3 
+                    className="font-display text-2xl font-bold text-brand-navy"
+                    variants={{ active: { color: '#EAB308' } }} // brand-yellow
+                    transition={{ duration: 0.2 }}
+                  >
+                    {project.title}
+                  </motion.h3>
                 </motion.div>
               ))}
             </AnimatePresence>
