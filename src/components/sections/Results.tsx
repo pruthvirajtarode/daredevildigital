@@ -1,5 +1,6 @@
 import SectionHeading from '../ui/SectionHeading';
 import { BarChart2 } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Results() {
   return (
@@ -11,7 +12,13 @@ export default function Results() {
           description="We let real-world numbers and database performance do the talking. Testimonials and outcomes are independently verified."
         />
 
-        <div className="mt-16 border-2 border-dashed border-brand-charcoal/10 rounded-3xl p-12 text-center max-w-3xl mx-auto flex flex-col items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="mt-16 border-2 border-dashed border-brand-charcoal/10 rounded-3xl p-12 text-center max-w-3xl mx-auto flex flex-col items-center"
+        >
           <div className="w-12 h-12 bg-brand-navy/5 rounded-full flex items-center justify-center mb-6">
             <BarChart2 className="w-6 h-6 text-brand-navy" />
           </div>
@@ -24,7 +31,7 @@ export default function Results() {
           <p className="text-sm text-brand-charcoal/60">
             Verified client outcomes and CPL improvement ratios will be published here upon audit debrief releases.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

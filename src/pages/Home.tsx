@@ -7,6 +7,7 @@ import Results from '../components/sections/Results';
 import CTASection from '../components/sections/CTASection';
 import ContactForm from '../components/sections/ContactForm';
 import SectionHeading from '../components/ui/SectionHeading';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
@@ -41,9 +42,15 @@ export default function Home() {
             description="Provide details regarding your current ad spend, website setup, and lead mechanics, and we will prepare a plan."
             alignment="center"
           />
-          <div className="mt-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            className="mt-12"
+          >
             <ContactForm />
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

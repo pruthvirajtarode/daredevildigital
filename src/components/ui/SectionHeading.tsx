@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 interface SectionHeadingProps {
   eyebrow?: string;
   title: string;
@@ -25,7 +27,13 @@ export default function SectionHeading({
   const HeadingTag = as;
 
   return (
-    <div className={`max-w-3xl mb-16 ${aligns[alignment]}`}>
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.6 }}
+      className={`max-w-3xl mb-16 ${aligns[alignment]}`}
+    >
       {eyebrow && (
         <span className={`block mb-4 text-xs font-bold tracking-widest uppercase ${isDark ? 'text-brand-yellow' : 'text-brand-burgundy'}`}>
           {eyebrow}
@@ -39,6 +47,6 @@ export default function SectionHeading({
           {description}
         </p>
       )}
-    </div>
+    </motion.div>
   );
 }

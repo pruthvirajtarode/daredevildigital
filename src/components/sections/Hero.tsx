@@ -14,7 +14,12 @@ export default function Hero() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
         
         {/* Left Copy Column */}
-        <div className="max-w-2xl lg:col-span-7">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="max-w-2xl lg:col-span-7"
+        >
           <span className="inline-block mb-6 text-xs font-mono font-bold tracking-[0.2em] text-brand-yellow uppercase">
             DAREDEVIL DIGITAL · SINGAPORE
           </span>
@@ -54,10 +59,15 @@ export default function Hero() {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
         
         {/* Right Graphical Column */}
-        <div className="lg:col-span-5 relative h-[380px] lg:h-[550px] w-full flex justify-center items-center">
+        <motion.div 
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="lg:col-span-5 relative h-[380px] lg:h-[550px] w-full flex justify-center items-center"
+        >
           <motion.div 
             animate={{ rotate: 360 }}
             transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
@@ -183,7 +193,7 @@ export default function Hero() {
 
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

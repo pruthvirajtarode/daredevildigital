@@ -1,6 +1,7 @@
 import { MessageCircle, Mail } from 'lucide-react';
 import { contact } from '../../data/contact';
 import { pricing } from '../../data/pricing';
+import { motion } from 'framer-motion';
 
 const InstagramIcon = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
@@ -18,7 +19,13 @@ export default function CTASection() {
       <div className="absolute bottom-0 left-0 w-[450px] h-[450px] bg-brand-burgundy/5 rounded-full blur-3xl pointer-events-none" />
       
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
-        <div className="mx-auto max-w-3xl text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
+          className="mx-auto max-w-3xl text-center"
+        >
           <span className="block mb-6 text-xs font-mono font-bold tracking-[0.2em] text-brand-yellow uppercase">
             TAKE ACTION
           </span>
@@ -87,7 +94,7 @@ export default function CTASection() {
             </a>
           </div>
 
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -89,7 +89,13 @@ export default function ExclusivityTracker() {
         
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-          <div className="max-w-xl">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-xl"
+          >
             <span className="block mb-4 text-xs font-mono font-bold tracking-[0.2em] text-brand-yellow uppercase">
               EXCLUSIVITY LIMITS
             </span>
@@ -99,7 +105,7 @@ export default function ExclusivityTracker() {
             <p className="text-brand-offwhite/80 text-sm leading-relaxed">
               At the Exclusive Management tier, Daredevil Digital works with exactly one client per niche. No conflicts of interest, no bidding wars, and no sharing ad creative strategies with your direct competitors. Once a slot is closed, it remains closed.
             </p>
-          </div>
+          </motion.div>
           
           {/* Legend */}
           <div className="flex flex-wrap gap-6 text-xs font-mono text-brand-offwhite/60 shrink-0">
@@ -119,7 +125,13 @@ export default function ExclusivityTracker() {
         </div>
 
         {/* Counter Summary Bar */}
-        <div className="grid grid-cols-3 gap-6 bg-white/5 border border-white/10 rounded-2xl p-6 lg:p-8 mb-12 text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="grid grid-cols-3 gap-6 bg-white/5 border border-white/10 rounded-2xl p-6 lg:p-8 mb-12 text-center"
+        >
           <div>
             <span className="block font-mono text-2xl lg:text-4xl font-bold text-brand-purewhite">
               {stats.total}
@@ -144,7 +156,7 @@ export default function ExclusivityTracker() {
               Slots taken
             </span>
           </div>
-        </div>
+        </motion.div>
 
         {/* Search & Filter Toggles */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
