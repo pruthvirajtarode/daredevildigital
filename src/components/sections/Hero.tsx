@@ -8,8 +8,8 @@ export default function Hero() {
       style={{ backgroundImage: "url('/images/hero-bg.png')" }}
     >
       {/* Decorative overlay for readability and moody look */}
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 to-brand-navy/70" />
-      <div className="absolute inset-0 bg-black/30 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-brand-navy/70 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/50 to-transparent" />
       
       {/* Decorative background glows */}
       <div className="absolute top-1/4 -right-48 w-96 h-96 bg-brand-yellow/20 rounded-full blur-3xl pointer-events-none" />
@@ -37,10 +37,10 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button href="/contact" variant="primary" size="lg">
+            <Button href="/contact" variant="secondary" size="lg">
               START A CONVERSATION
             </Button>
-            <Button href="/signal-audit" variant="outline" size="lg">
+            <Button href="/signal-audit" variant="outline-light" size="lg">
               SEE HOW THE SIGNAL LOOP WORKS
             </Button>
           </div>

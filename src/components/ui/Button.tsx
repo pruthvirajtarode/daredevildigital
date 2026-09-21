@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'outline' | 'outline-light' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
   fullWidth?: boolean;
@@ -24,6 +24,7 @@ export default function Button({
     primary: 'bg-brand-navy text-brand-purewhite hover:bg-brand-yellow hover:text-brand-navy focus:ring-brand-navy',
     secondary: 'bg-brand-yellow text-brand-navy hover:bg-brand-purewhite hover:text-brand-navy focus:ring-brand-yellow',
     outline: 'border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-brand-purewhite focus:ring-brand-navy',
+    'outline-light': 'border-2 border-white text-white hover:bg-white hover:text-brand-navy focus:ring-white',
     ghost: 'text-brand-navy hover:bg-brand-navy/5 focus:ring-brand-navy',
   };
 
