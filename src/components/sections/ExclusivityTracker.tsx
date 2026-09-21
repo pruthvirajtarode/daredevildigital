@@ -81,9 +81,9 @@ export default function ExclusivityTracker() {
 
   return (
     <section id="exclusivity" className="relative py-24 lg:py-32 bg-brand-navy text-brand-offwhite border-b border-white/10 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('/images/handshake-bg.png')" }}>
-      {/* Decorative overlay for readability */}
-      <div className="absolute inset-0 bg-brand-navy/80 mix-blend-multiply" />
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/90 to-brand-navy/95" />
+      {/* Decorative overlay for readability while keeping image natural */}
+      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent" />
       
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         

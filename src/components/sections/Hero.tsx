@@ -7,13 +7,9 @@ export default function Hero() {
       className="relative min-h-[90vh] flex items-center pt-28 pb-16 bg-brand-navy overflow-hidden border-b border-brand-charcoal/5 bg-cover bg-center"
       style={{ backgroundImage: "url('/images/hero-bg.png')" }}
     >
-      {/* Decorative overlay for readability and moody look */}
-      <div className="absolute inset-0 bg-brand-navy/70 mix-blend-multiply" />
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/50 to-transparent" />
-      
-      {/* Decorative background glows */}
-      <div className="absolute top-1/4 -right-48 w-96 h-96 bg-brand-yellow/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 -left-48 w-96 h-96 bg-brand-burgundy/20 rounded-full blur-3xl pointer-events-none" />
+      {/* Overlay to ensure text readability while preserving natural image colors */}
+      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
       
       <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
         
