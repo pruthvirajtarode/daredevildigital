@@ -6,11 +6,11 @@ export type FAQItem = {
 export const faqs: FAQItem[] = [
   {
     question: "What does the S$999 audit actually cover?",
-    answer: "A six-layer diagnostic of your Meta account — Signal Integrity, Account Structure, Saturation, Creative, Lead Layer, and Business Layer. You get a Configuration Health score, a written list of every Critical issue with a fix attached, a Signal Loop gap analysis, and a 30-minute debrief call. If you move to a management engagement, the S$999 is credited in full against month one."
+    answer: "A six-layer diagnostic of your Meta account: Signal Integrity, Account Structure, Saturation, Creative, Lead Layer, and Business Layer. You get a Configuration Health score, a written list of every Critical issue with a fix attached, a Signal Loop gap analysis, and a 30-minute debrief call. If you move to a management engagement, the S$999 is credited in full against month one."
   },
   {
     question: "I'm not spending S$5K/month yet. Can I still work with D3?",
-    answer: "Yes — Option B is the right entry point. The Digital Marketing Blueprint (S$888) covers six layers: business snapshot, audience architecture, offer and lead mechanism, campaign blueprint, creative direction, and a 90-day execution roadmap. You move into Starter Management at S$699/month, with a written graduation clause: when monthly ad spend consistently clears S$3,000, you move to Option A terms."
+    answer: "Yes, Option B is the right entry point. The Digital Marketing Blueprint (S$888) covers six layers: business snapshot, audience architecture, offer and lead mechanism, campaign blueprint, creative direction, and a 90-day execution roadmap. You move into Starter Management at S$699/month, with a written graduation clause: when monthly ad spend consistently clears S$3,000, you move to Option A terms."
   },
   {
     question: "What happens after the audit if I don't proceed to management?",

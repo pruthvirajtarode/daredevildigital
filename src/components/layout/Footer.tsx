@@ -122,9 +122,6 @@ export default function Footer() {
           <p className="text-xs leading-5 text-brand-offwhite/50">
             &copy; 2026 Daredevil Digital. Singapore. All rights reserved.
           </p>
-          <p className="text-[10px] font-mono text-brand-offwhite/30 tracking-wider">
-            DEEP NAVY · BURGUNDY · YELLOW · OFF-WHITE
-          </p>
         </div>
       </div>
     </footer>

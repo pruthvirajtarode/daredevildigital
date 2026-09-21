@@ -52,11 +52,28 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-    }, 1500);
+    // Map form submission to WhatsApp
+    const message = `*New Enquiry from Daredevil Digital*
+*Name:* ${formData.firstName} ${formData.lastName}
+*Business:* ${formData.businessName || 'N/A'}
+*Website:* ${formData.website || 'N/A'}
+*Services:* ${formData.services.join(', ') || 'N/A'}
+*Revenue:* ${formData.monthlyRevenue || 'N/A'}
+*Ad Budget:* ${formData.paidAdsBudget || 'N/A'}
+*Challenge:* ${formData.challenge || 'N/A'}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone || 'N/A'}
+
+*Message:* 
+${formData.enquiry}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/6588240612?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
+    
+    setIsSubmitting(false);
+    setIsSuccess(true);
   };
 
   if (isSuccess) {

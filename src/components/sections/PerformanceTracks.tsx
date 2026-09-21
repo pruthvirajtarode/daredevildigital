@@ -128,9 +128,6 @@ export default function PerformanceTracks() {
                 <span className="inline-block px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-widest text-brand-burgundy bg-brand-burgundy/10 border border-brand-burgundy/20 rounded mb-4">
                   Option B — Early Stage
                 </span>
-                <h3 className="font-display text-3xl font-bold text-brand-navy">
-                  Digital Marketing Blueprint
-                </h3>
               </div>
             </div>
 

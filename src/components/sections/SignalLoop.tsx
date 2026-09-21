@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '../ui/SectionHeading';
+import Button from '../ui/Button';
 import { RefreshCw, Layers, Users } from 'lucide-react';
 
 export default function SignalLoop() {
@@ -32,11 +33,18 @@ export default function SignalLoop() {
   return (
     <section id="signal" className="pt-32 lg:pt-40 pb-24 lg:pb-32 bg-brand-purewhite border-b border-brand-charcoal/5">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="THE OPERATIONAL PHILOSOPHY"
-          title="The Signal Loop"
-          description="Most Singapore agencies set up the browser Pixel and stop. We push qualified leads, booked appointments, and closed sales back to Meta so the algorithm targets buyers, not just browsers."
-        />
+        <div>
+          <SectionHeading
+            eyebrow="THE OPERATIONAL PHILOSOPHY"
+            title="The Signal Loop"
+            description="Most Singapore agencies set up the browser Pixel and stop. We push qualified leads, booked appointments, and closed sales back to Meta so the algorithm targets buyers, not just browsers."
+          />
+          <div className="-mt-8 mb-16">
+            <Button href="#audit" variant="secondary" size="lg">
+              Book a Lead Engine Audit
+            </Button>
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mt-16 items-center">
           {/* Steps List */}
