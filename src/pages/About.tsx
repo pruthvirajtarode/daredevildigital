@@ -37,7 +37,7 @@ export default function About() {
           <SectionHeading 
             eyebrow="ABOUT OPERATOR"
             title="THE AGENCY IS THE OPERATOR. THAT'S THE POINT."
-            description="We are a boutique Singapore paid social agency built to solve lead-generation quality issues by aligning Meta campaign learning with CRM data feedback."
+            description="We are a boutique Singapore paid social agency built to solve lead generation quality issues by aligning Meta campaign learning with CRM data feedback."
             theme="dark"
             alignment="center"
             as="h1"
@@ -59,7 +59,7 @@ export default function About() {
                   Daredevil Digital was established because we saw Singapore advertisers burning budgets on pixel-only setups. Most agencies launch campaigns, watch for form conversions, and report lead volume. But a form fill is not a client.
                 </p>
                 <p>
-                  We change the economics of lead generation by implementing the Signal Loop: routing offline events—qualified leads, appointment bookings, closed deals—directly back to ad algorithms.
+                  We change the economics of lead generation by implementing the Signal Loop: routing offline events (qualified leads, appointment bookings, closed deals) directly back to ad algorithms.
                 </p>
                 <p>
                   Every account is optimized directly by the founder. There are no junior assistants, account managers, or coordinators. You get transparent reports and direct communications on database outcome trends.

@@ -32,7 +32,7 @@ export const verticals: Vertical[] = [
       { name: "Electrical Services", taken: false },
       { name: "Plumbing Services", taken: false },
       { name: "Home Cleaning", taken: false },
-      { name: "Post-Renovation Cleaning", taken: false },
+      { name: "Post Renovation Cleaning", taken: false },
       { name: "Pest Control", taken: false },
       { name: "Movers & Relocation", taken: false },
       { name: "Locksmith Services", taken: false },
@@ -165,10 +165,10 @@ export const verticals: Vertical[] = [
       { name: "Cybersecurity", taken: false },
       { name: "HR & Recruitment", taken: false },
       { name: "Corporate Training & L&D", taken: false },
-      { name: "Office Design & Fit-Out", taken: false },
+      { name: "Office Design & Fit Out", taken: false },
       { name: "Commercial Cleaning", taken: false },
       { name: "Business Coaching / Consultancy", taken: false },
-      { name: "Digital Marketing Agency (non-competing)", taken: false },
+      { name: "Digital Marketing Agency (non competing)", taken: false },
       { name: "Printing & Branding", taken: false },
       { name: "Logistics & Courier (B2B)", taken: false }
     ]

@@ -15,7 +15,7 @@ export default function Home() {
     <div className="overflow-hidden">
       <SEO 
         title="Home"
-        description="Daredevil Digital helps Singapore businesses strengthen their digital presence, improve paid social performance and build lead-generation systems around real business outcomes."
+        description="Daredevil Digital helps Singapore businesses strengthen their digital presence, improve paid social performance and build lead generation systems around real business outcomes."
       />
       {/* 1. HERO SECTION */}
       <Hero />

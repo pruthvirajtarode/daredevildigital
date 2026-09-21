@@ -21,7 +21,7 @@ export default function Services() {
           <SectionHeading 
             eyebrow="OUR CAPABILITIES"
             title="DIGITAL CAPABILITIES & PERFORMANCE MARKETING SYSTEMS."
-            description="We deliver full-scale social and creative execution alongside technical campaign structures optimized for business revenue."
+            description="We deliver full scale social and creative execution alongside technical campaign structures optimized for business revenue."
             theme="dark"
             alignment="center"
             as="h1"
@@ -40,7 +40,7 @@ export default function Services() {
               Meta Lead Generation & CAPI Signal Loop
             </h2>
             <p className="text-brand-charcoal/70 text-sm leading-relaxed">
-              We connect offline conversion outcomes directly to campaign target parameters. Read below about our specialized pricing tracks for early-stage and active advertisers.
+              We connect offline conversion outcomes directly to campaign target parameters. Read below about our specialized pricing tracks for early stage and active advertisers.
             </p>
           </div>
         </div>

@@ -14,7 +14,7 @@ export default function SEO({
   ogImage = 'https://daredevildigital.com/images/hero-bg.png' 
 }: SEOProps) {
   const defaultTitle = 'Daredevil Digital | Digital Marketing & Lead Generation Singapore';
-  const defaultDescription = 'Daredevil Digital helps Singapore businesses strengthen their digital presence, improve paid social performance and build lead-generation systems around real business outcomes.';
+  const defaultDescription = 'Daredevil Digital helps Singapore businesses strengthen their digital presence, improve paid social performance and build lead generation systems around real business outcomes.';
   
   const finalTitle = title ? `${title} | Daredevil Digital` : defaultTitle;
   const finalDescription = description || defaultDescription;

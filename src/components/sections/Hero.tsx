@@ -30,7 +30,7 @@ export default function Hero() {
           </h1>
           
           <p className="text-lg md:text-xl leading-relaxed text-brand-offwhite/90 mb-6">
-            From social strategy and creative execution to performance marketing and lead-generation systems, Daredevil Digital helps businesses turn digital attention into measurable opportunity.
+            From social strategy and creative execution to performance marketing and lead generation systems, Daredevil Digital helps businesses turn digital attention into measurable opportunity.
           </p>
 
           <p className="text-base leading-relaxed text-brand-offwhite/80 mb-10 border-l-2 border-brand-yellow pl-4 italic">
@@ -181,11 +181,11 @@ export default function Hero() {
                     <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-ping" />
                   </div>
                   <div className="flex items-center justify-between bg-white/[0.02] px-2 py-1 rounded">
-                    <span className="text-brand-purewhite">10:44 AM - Lead Qualified (CRM)</span>
+                    <span className="text-brand-purewhite">10:44 AM: Lead Qualified (CRM)</span>
                     <span className="text-[#22C55E] font-bold">Matched &rarr; Meta Ads</span>
                   </div>
                   <div className="flex items-center justify-between bg-white/[0.02] px-2 py-1 rounded">
-                    <span className="text-brand-purewhite">10:42 AM - Booked Appointment (Calendly)</span>
+                    <span className="text-brand-purewhite">10:42 AM: Booked Appointment (Calendly)</span>
                     <span className="text-[#22C55E] font-bold">Matched &rarr; Meta Ads</span>
                   </div>
                 </div>

@@ -19,7 +19,7 @@ export default function Footer() {
               <Logo light />
             </Link>
             <p className="text-sm leading-relaxed text-brand-offwhite/85 max-w-xs">
-              Bold strategy. Creative execution. Performance digital growth partner for lead-generation businesses.
+              Bold strategy. Creative execution. Performance digital growth partner for lead generation businesses.
             </p>
             <div className="flex space-x-4">
               <a

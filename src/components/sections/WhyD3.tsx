@@ -9,7 +9,7 @@ export default function WhyD3() {
     },
     {
       stat: "SG",
-      title: "Singapore-Specific Architecture",
+      title: "Singapore Specific Architecture",
       desc: "The Signal Loop is engineered for Singapore's constraints, not adapted from larger markets. Four million reachable adults requires a different playbook."
     },
     {

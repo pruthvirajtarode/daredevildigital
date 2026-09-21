@@ -23,10 +23,10 @@ export default function Results() {
             <BarChart2 className="w-6 h-6 text-brand-navy" />
           </div>
           <span className="font-mono text-xs font-bold text-brand-burgundy uppercase tracking-widest block mb-4">
-            First Client Results — Coming Soon
+            First Client Results Coming Soon
           </span>
           <p className="text-xl font-display font-semibold text-brand-navy mb-4 max-w-md leading-relaxed">
-            "This is where your first client outcome goes. One sharp sentence detailing the before-and-after CRM volume shifts."
+            "This is where your first client outcome goes. One sharp sentence detailing the before and after CRM volume shifts."
           </p>
           <p className="text-sm text-brand-charcoal/60">
             Verified client outcomes and CPL improvement ratios will be published here upon audit debrief releases.

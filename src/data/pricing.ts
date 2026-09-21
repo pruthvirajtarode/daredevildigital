@@ -11,7 +11,7 @@ export const pricing = {
   },
   starter: {
     price: "S$699/mo",
-    note: "Campaign build, management, and reporting for early-stage Meta spend."
+    note: "Campaign build, management, and reporting for early stage Meta spend."
   },
   launch: {
     price: "S$1,200/mo",

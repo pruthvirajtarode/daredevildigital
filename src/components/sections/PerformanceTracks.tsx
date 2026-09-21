@@ -15,12 +15,12 @@ export default function PerformanceTracks() {
             Two Tracks. One Standard.
           </h2>
           <p className="text-lg md:text-xl text-brand-charcoal/80 leading-relaxed">
-            Active Meta spenders who need performance fixed vs early-stage businesses who need it built right from day one. Both tracks run the same core Signal Loop feedback logic.
+            Active Meta spenders who need performance fixed vs early stage businesses who need it built right from day one. Both tracks run the same core Signal Loop feedback logic.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16 items-stretch">
-          {/* Option A — Active Spenders */}
+          {/* Option A: Active Spenders */}
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ export default function PerformanceTracks() {
             <div className="flex justify-between items-start mb-8">
               <div>
                 <span className="inline-block px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-widest text-brand-yellow bg-brand-yellow/10 border border-brand-yellow/20 rounded mb-4">
-                  Option A — Active Spenders
+                  Option A: Active Spenders
                 </span>
                 <h3 className="font-display text-3xl font-bold text-brand-purewhite">
                   Lead Engine Management
@@ -108,7 +108,7 @@ export default function PerformanceTracks() {
             </Button>
           </motion.div>
 
-          {/* Option B — Early Stage */}
+          {/* Option B: Early Stage */}
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -126,13 +126,13 @@ export default function PerformanceTracks() {
             <div className="flex justify-between items-start mb-8">
               <div>
                 <span className="inline-block px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-widest text-brand-burgundy bg-brand-burgundy/10 border border-brand-burgundy/20 rounded mb-4">
-                  Option B — Early Stage
+                  Option B: Early Stage
                 </span>
               </div>
             </div>
 
             <p className="text-brand-charcoal/70 text-sm leading-relaxed mb-8">
-              For home-based, start-up, or early-stage businesses ready to deploy ad spend on Meta systematically. We map target audiences, creative vectors, and lead flows prior to launching campaign structures.
+              For home based, start up, or early stage businesses ready to deploy ad spend on Meta systematically. We map target audiences, creative vectors, and lead flows prior to launching campaign structures.
             </p>
 
             <div className="flex-1 space-y-6 mb-12">
@@ -147,7 +147,7 @@ export default function PerformanceTracks() {
                   </div>
                 </div>
                 <p className="text-xs text-brand-charcoal/60 pl-6">
-                  {pricing.blueprint.note} Comprehensive 90-day launch roadmap.
+                  {pricing.blueprint.note} Comprehensive 90 day launch roadmap.
                 </p>
               </div>
 
@@ -159,7 +159,7 @@ export default function PerformanceTracks() {
                   <span className="font-mono text-sm font-bold text-brand-navy">{pricing.starter.price}</span>
                 </div>
                 <p className="text-xs text-brand-charcoal/60 pl-6">
-                  {pricing.starter.note} Optimized management scale for low ad-spend parameters.
+                  {pricing.starter.note} Optimized management scale for low ad spend parameters.
                 </p>
               </div>
 

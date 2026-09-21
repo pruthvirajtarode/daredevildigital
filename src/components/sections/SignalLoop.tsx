@@ -11,22 +11,22 @@ export default function SignalLoop() {
     {
       num: "01",
       title: "Ad is served",
-      desc: "Meta targets users based on the conversion signals it has learned. At this stage, it targets based on pixel-volume feedback."
+      desc: "Meta targets users based on the conversion signals it has learned. At this stage, it targets based on pixel volume feedback."
     },
     {
       num: "02",
       title: "Lead submits form",
-      desc: "A browser-based pixel fires. Meta logs a conversion. Your account dashboard records a lead. Ad spend is optimized toward form-fills."
+      desc: "A browser-based pixel fires. Meta logs a conversion. Your account dashboard records a lead. Ad spend is optimized toward form fills."
     },
     {
       num: "03",
-      title: "Lead qualifies — or doesn't",
-      desc: "Your sales team calls. Most aren't a fit. In standard setups, this qualification feedback never reaches Meta. The algorithm keeps chasing low-quality forms."
+      title: "Lead qualifies or doesn't",
+      desc: "Your sales team calls. Most aren't a fit. In standard setups, this qualification feedback never reaches Meta. The algorithm keeps chasing low quality forms."
     },
     {
       num: "04",
       title: "D3 closes the loop",
-      desc: "We feed actual CRM outcomes — qualified lead, booked appointment, closed sale — back to Meta via Conversion API (CAPI) and offline events. The algorithm now optimizes for buyers."
+      desc: "We feed actual CRM outcomes (qualified lead, booked appointment, closed sale) back to Meta via Conversion API (CAPI) and offline events. The algorithm now optimizes for buyers."
     }
   ];
 

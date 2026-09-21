@@ -162,8 +162,8 @@ ${formData.enquiry}`;
                   <select value={formData.monthlyRevenue} onChange={e => updateFormData('monthlyRevenue', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors">
                     <option value="" disabled>Select range</option>
                     <option value="under_10k">Under $10k</option>
-                    <option value="10k_50k">$10k - $50k</option>
-                    <option value="50k_100k">$50k - $100k</option>
+                    <option value="10k_50k">$10k to $50k</option>
+                    <option value="50k_100k">$50k to $100k</option>
                     <option value="100k_plus">$100k+</option>
                   </select>
                 </div>
@@ -173,7 +173,7 @@ ${formData.enquiry}`;
                     <option value="" disabled>Select budget</option>
                     <option value="none">None yet</option>
                     <option value="under_1k">Under $1k</option>
-                    <option value="1k_5k">$1k - $5k</option>
+                    <option value="1k_5k">$1k to $5k</option>
                     <option value="5k_plus">$5k+</option>
                   </select>
                 </div>

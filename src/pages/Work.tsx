@@ -12,7 +12,7 @@ const projects = [
   { id: 3, title: 'Content Engine Architecture', category: 'CONTENT', type: 'CONCEPT PROJECT', img: '/images/service_content_1786441264836.png' },
   { id: 4, title: 'Brand Identity Redefined', category: 'BRANDING', type: 'CONCEPT PROJECT', img: '/images/pillar_creative_1786441173912.png' },
   { id: 5, title: 'Performance Dashboard UI', category: 'ANALYTICS', type: 'CONCEPT PROJECT', img: '/images/case_study_2_1786440961686.png' },
-  { id: 6, title: 'E-commerce Conversion Flow', category: 'WEB', type: 'CONCEPT PROJECT', img: '/images/service_webdev_1786441294976.png' },
+  { id: 6, title: 'Ecommerce Conversion Flow', category: 'WEB', type: 'CONCEPT PROJECT', img: '/images/service_webdev_1786441294976.png' },
 ];
 
 export default function Work() {

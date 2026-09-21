@@ -13,7 +13,7 @@ export default function Blueprint() {
     {
       num: "02",
       name: "Audience Architecture",
-      desc: "Target demographics, psychographics, and Singapore-specific triggers. Mapping who Meta searches for."
+      desc: "Target demographics, psychographics, and Singapore Specific triggers. Mapping who Meta searches for."
     },
     {
       num: "03",
@@ -32,7 +32,7 @@ export default function Blueprint() {
     },
     {
       num: "06",
-      name: "90-Day Execution Roadmap",
+      name: "90 day Execution Roadmap",
       desc: "Weeks 1–4 (Launch), 5–8 (Optimize), 9–12 (Scale) milestones, metrics, and threshold decision targets."
     }
   ];
@@ -46,7 +46,7 @@ export default function Blueprint() {
             <SectionHeading
               eyebrow="STRATEGIC MAPPING"
               title="Six Layers. Your Entire Marketing Execution, Mapped Before You Spend a Dollar."
-              description="The audit diagnoses what is broken in active accounts. The Blueprint builds what does not exist yet. We outline a clear, launch-ready specification for early-stage brands."
+              description="The audit diagnoses what is broken in active accounts. The Blueprint builds what does not exist yet. We outline a clear, launch-ready specification for early stage brands."
             />
 
             <div className="mt-12 space-y-6">
@@ -118,7 +118,7 @@ export default function Blueprint() {
                   WHO IS THIS FOR?
                 </div>
                 <p className="text-xs text-brand-offwhite/75 leading-relaxed">
-                  Home-based operators and early-stage companies ready to advertise correctly. Not yet at S$5,000/month in Meta ad budgets, seeking a clear build roadmap before retainers start.
+                  home based operators and early stage companies ready to advertise correctly. Not yet at S$5,000/month in Meta ad budgets, seeking a clear build roadmap before retainers start.
                 </p>
               </div>
 
@@ -129,8 +129,8 @@ export default function Blueprint() {
                   "Optimum form layout design & questioning mapping",
                   "Execution ad-account build structure blueprint",
                   "Visual format layout & script writing direction",
-                  "90-day execution roadmap timelines",
-                  "30-minute debrief strategy session"
+                  "90 day execution roadmap timelines",
+                  "30 minute debrief strategy session"
                 ].map((item) => (
                   <div key={item} className="flex gap-3 text-sm text-brand-offwhite/80 items-start">
                     <Check className="w-4 h-4 text-brand-yellow shrink-0 mt-0.5" />
@@ -145,7 +145,7 @@ export default function Blueprint() {
                 rel="noreferrer"
                 className="inline-flex items-center justify-center w-full rounded-full bg-[#25D366] text-white hover:bg-[#20b858] transition-all px-8 py-4 font-bold text-center text-base shadow-md uppercase tracking-wider"
               >
-                Get the Blueprint — S$888
+                Get the Blueprint for S$888
               </a>
               <span className="block text-center font-mono text-[10px] text-brand-offwhite/50 mt-3">
                 * Strategic blueprints delivered within 7 business days from briefing.

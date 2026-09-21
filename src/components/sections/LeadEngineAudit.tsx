@@ -110,7 +110,7 @@ export default function LeadEngineAudit() {
                   QUALIFICATION CRITERIA
                 </div>
                 <p className="text-xs text-brand-charcoal/70 leading-relaxed">
-                  Singapore-targeted lead-generation businesses spending **S$5,000/month or more** on Meta, running campaigns continuously for **60+ days**.
+                  Singapore-targeted lead generation businesses spending **S$5,000/month or more** on Meta, running campaigns continuously for **60+ days**.
                 </p>
               </div>
 
@@ -120,7 +120,7 @@ export default function LeadEngineAudit() {
                   "Fix blueprints for all Critical setup errors",
                   "CAPI & event matching gap analysis",
                   "Frequency, CPM, and CPL saturation read",
-                  "30-minute debrief call with the operator"
+                  "30 minute debrief call with the operator"
                 ].map((item) => (
                   <div key={item} className="flex gap-3 text-sm text-brand-charcoal/80 items-start">
                     <Check className="w-4 h-4 text-brand-burgundy shrink-0 mt-0.5" />

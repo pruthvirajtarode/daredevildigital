@@ -57,7 +57,7 @@ export default function ConfigurationHealthScore() {
               ACCOUNT CONFIGURATION HEALTH
             </span>
             <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">
-              Most Singapore lead-gen accounts are optimizing toward the wrong signal.
+              Most Singapore lead gen accounts are optimizing toward the wrong signal.
             </h2>
             <p className="text-brand-offwhite/80 text-lg leading-relaxed mb-8">
               Based on our analysis of active campaigns in Singapore, the average setup fails to feed post-click conversion events back to ad platforms. Meta's algorithm is forced to optimize for volume (form clicks) rather than value (closed sales).

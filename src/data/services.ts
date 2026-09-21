@@ -50,7 +50,7 @@ export const services = [
       'Image content',
       'Video content',
       'Brand consistency',
-      'SEO-aware content'
+      'SEO aware content'
     ]
   },
   {
@@ -63,7 +63,7 @@ export const services = [
       'UX/UI',
       'Responsive development',
       'SEO foundations',
-      'E-commerce where required',
+      'Ecommerce where required',
       'Maintenance'
     ]
   }
