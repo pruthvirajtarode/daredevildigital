@@ -67,7 +67,7 @@ export default function ConfigurationHealthScore() {
                 Check Your Score
               </Button>
               <div className="text-xs font-mono text-brand-offwhite/50 mt-3 sm:mt-0 sm:self-center">
-                * Real score is derived from our 6-layer Lead Engine Audit.
+                * Real score is derived from our 6 layer Lead Engine Audit.
               </div>
             </div>
           </motion.div>

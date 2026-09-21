@@ -305,7 +305,7 @@ export default function ExclusivityTracker() {
               Your business niche is still open. Move before it isn't.
             </h4>
             <p className="text-xs text-brand-offwhite/60">
-              Exclusivity is first-come, confirmed-client. Secure your vertical via a Lead Engine Audit first.
+              Exclusivity is first come, confirmed client. Secure your vertical via a Lead Engine Audit first.
             </p>
           </div>
           <a
