@@ -34,7 +34,7 @@ export default function Hero() {
           </p>
 
           <p className="text-base leading-relaxed text-brand-offwhite/80 mb-10 border-l-2 border-brand-yellow pl-4 italic">
-            Built around a simple principle: your campaigns should learn from the customers you actually want — not just the people who submit forms.
+            Built around a simple principle: your campaigns should learn from the customers you actually want not just the people who submit forms.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

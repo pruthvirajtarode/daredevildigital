@@ -47,7 +47,7 @@ export default function PerformanceTracks() {
             </div>
             
             <p className="text-brand-offwhite/70 text-sm leading-relaxed mb-8">
-              For businesses already spending S$5,000/month or more on Meta ads. You have live data and budget; the problem lies in event configuration, target signals, saturating creative, or lead handling logic. We audit, repair, then optimize.
+              For businesses already spending S$3,000/month or more on Meta ads. You have live data and budget; the problem lies in event configuration, target signals, saturating creative, or lead handling logic. We audit, repair, then optimize.
             </p>
 
             <div className="flex-1 space-y-6 mb-12">
