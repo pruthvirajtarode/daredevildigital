@@ -3,13 +3,60 @@ import Button from '../ui/Button';
 
 export default function Hero() {
   return (
-    <section 
-      className="relative min-h-[90vh] flex items-center pt-28 pb-16 bg-brand-navy overflow-hidden border-b border-brand-charcoal/5 bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/hero-bg.png')" }}
-    >
+    <section className="relative min-h-[90vh] flex items-center pt-28 pb-16 bg-brand-navy overflow-hidden border-b border-brand-charcoal/5">
+      {/* Animated Realistic Background Image */}
+      <motion.div 
+        className="absolute inset-[-5%] z-0"
+        animate={{ 
+          scale: [1, 1.05, 1],
+          x: ['0%', '-1%', '0%'],
+          y: ['0%', '1%', '0%']
+        }}
+        transition={{ 
+          duration: 30, 
+          repeat: Infinity,
+          ease: "linear" 
+        }}
+      >
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/hero-bg.png')" }}
+        />
+      </motion.div>
+
+      {/* Drifting Ambient Particles for realism */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        {[...Array(20)].map((_, i) => {
+          const size = Math.random() * 3 + 1;
+          return (
+            <motion.div
+              key={i}
+              className="absolute bg-brand-yellow rounded-full blur-[1px]"
+              style={{
+                width: size + 'px',
+                height: size + 'px',
+                top: Math.random() * 100 + '%',
+                left: Math.random() * 100 + '%',
+              }}
+              animate={{
+                y: [0, -150 - Math.random() * 100],
+                x: [0, (Math.random() - 0.5) * 100],
+                opacity: [0, Math.random() * 0.4 + 0.2, 0],
+              }}
+              transition={{
+                duration: Math.random() * 15 + 15,
+                repeat: Infinity,
+                ease: "linear",
+                delay: Math.random() * 20,
+              }}
+            />
+          );
+        })}
+      </div>
+
       {/* Overlay to ensure text readability while preserving natural image colors */}
-      <div className="absolute inset-0 bg-black/30" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-black/40 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-0" />
       
       <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
         
