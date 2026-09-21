@@ -8,10 +8,15 @@ import CTASection from '../components/sections/CTASection';
 import ContactForm from '../components/sections/ContactForm';
 import SectionHeading from '../components/ui/SectionHeading';
 import { motion } from 'framer-motion';
+import SEO from '../components/ui/SEO';
 
 export default function Home() {
   return (
     <div className="overflow-hidden">
+      <SEO 
+        title="Home"
+        description="Daredevil Digital helps Singapore businesses strengthen their digital presence, improve paid social performance and build lead-generation systems around real business outcomes."
+      />
       {/* 1. HERO SECTION */}
       <Hero />
 

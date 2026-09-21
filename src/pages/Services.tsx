@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import SectionHeading from '../components/ui/SectionHeading';
 import CTASection from '../components/sections/CTASection';
+import SEO from '../components/ui/SEO';
 import PerformanceTracks from '../components/sections/PerformanceTracks';
 import { services } from '../data/services';
 import { company } from '../data/company';
@@ -9,7 +10,11 @@ import { motion } from 'framer-motion';
 
 export default function Services() {
   return (
-    <div className="pt-24 min-h-screen bg-brand-offwhite">
+    <div className="pt-24 min-h-screen bg-brand-purewhite">
+      <SEO 
+        title="Services"
+        description="Performance Marketing, Social Strategy, and Creative Execution for Singapore businesses."
+      />
       {/* Hero */}
       <section className="py-24 lg:py-32 bg-brand-navy text-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">

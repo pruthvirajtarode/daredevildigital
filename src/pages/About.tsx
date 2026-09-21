@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import SectionHeading from '../components/ui/SectionHeading';
 import CTASection from '../components/sections/CTASection';
+import SEO from '../components/ui/SEO';
 import { company } from '../data/company';
 import { contact } from '../data/contact';
 import { MapPin, Mail, MessageCircle, ArrowRight } from 'lucide-react';
@@ -26,6 +27,10 @@ export default function About() {
 
   return (
     <div className="pt-24 min-h-screen bg-brand-offwhite">
+      <SEO 
+        title="About"
+        description="Learn about Daredevil Digital, a Singapore-based digital marketing agency founded by a former Meta APAC account manager."
+      />
       {/* Hero */}
       <section className="py-24 lg:py-32 bg-brand-navy text-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">

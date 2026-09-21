@@ -3,6 +3,7 @@ import { services } from '../data/services';
 import SectionHeading from '../components/ui/SectionHeading';
 import CTASection from '../components/sections/CTASection';
 import { CheckCircle2 } from 'lucide-react';
+import SEO from '../components/ui/SEO';
 
 // Import performance marketing modules
 import SignalLoop from '../components/sections/SignalLoop';
@@ -19,6 +20,10 @@ export default function ServiceDetail() {
   if (slug === 'performance-marketing') {
     return (
       <div className="pt-20 min-h-screen bg-brand-offwhite">
+        <SEO 
+          title="Performance Marketing & Lead Gen"
+          description="A Singapore-based marketing engineering service feeding CRM outcome data directly back to ad platform machine learning algorithms."
+        />
         {/* Subpage Header */}
         <section className="py-24 lg:py-32 bg-brand-navy text-brand-offwhite">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
@@ -66,6 +71,10 @@ export default function ServiceDetail() {
 
   return (
     <div className="pt-24 min-h-screen bg-brand-purewhite">
+      <SEO 
+        title={service.title}
+        description={service.description}
+      />
       {/* Hero */}
       <section className="py-24 lg:py-32 bg-brand-navy border-b border-brand-charcoal/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">

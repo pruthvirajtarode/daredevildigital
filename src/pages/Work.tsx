@@ -2,6 +2,7 @@ import SectionHeading from '../components/ui/SectionHeading';
 import CTASection from '../components/sections/CTASection';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import SEO from '../components/ui/SEO';
 
 const categories = ['ALL', 'SOCIAL', 'CONTENT', 'WEB', 'ANALYTICS', 'BRANDING'];
 
@@ -23,6 +24,10 @@ export default function Work() {
 
   return (
     <div className="pt-24 min-h-screen bg-brand-purewhite">
+      <SEO 
+        title="Work"
+        description="A showcase of our digital marketing capabilities, strategic thinking, and digital execution for Singapore businesses."
+      />
       <section className="py-24 lg:py-32 border-b border-brand-charcoal/5 bg-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <SectionHeading 
