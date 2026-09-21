@@ -127,9 +127,7 @@ export default function Navbar() {
                         key={item.name}
                         to={item.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className={`-mx-3 block rounded-lg px-3 py-3 font-display text-2xl font-semibold leading-7 transition-colors hover:text-brand-yellow ${
-                          isActive(item.href) ? 'text-brand-yellow' : 'text-brand-purewhite'
-                        }`}
+                        className="-mx-3 block rounded-lg px-3 py-3 font-display text-2xl font-semibold leading-7 transition-colors hover:text-brand-yellow text-brand-purewhite"
                       >
                         {item.name}
                       </Link>
