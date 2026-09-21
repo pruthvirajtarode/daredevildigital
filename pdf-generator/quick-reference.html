@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daredevil Digital - Quick Reference</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#080857',
+              burgundy: '#6F2420',
+              yellow: '#F5C400',
+              offwhite: '#F8F7F2',
+              charcoal: '#161616',
+              purewhite: '#FFFFFF',
+            }
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @page { size: A4 portrait; margin: 0; }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #080857; /* brand-navy */
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+    }
+    .page {
+      width: 210mm;
+      height: 297mm;
+      padding: 15mm;
+      box-sizing: border-box;
+      position: relative;
+      background-color: #080857;
+    }
+    
+    @media print {
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: transparent;
+      }
+      .page {
+        width: 100vw !important;
+        height: 100vh !important;
+        margin: 0 !important;
+        padding: 15mm !important;
+        box-shadow: none;
+        page-break-after: always;
+        page-break-inside: avoid;
+      }
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    }
+  </style>
+</head>
+<body>
+  <section class="page flex flex-col justify-between">
+    
+    <!-- Header -->
+    <div class="flex justify-between items-end border-b border-slate-600 pb-4">
+      <div>
+        <h1 class="font-display font-bold text-4xl text-white uppercase tracking-tight leading-none mb-1">Daredevil Digital</h1>
+        <h2 class="font-mono text-[10px] text-brand-yellow tracking-[0.2em] uppercase">Brand & Digital Design System • Quick Reference</h2>
+      </div>
+      <!-- Logo SVG -->
+      <img src="../D3 Logo.png" class="h-12" alt="Daredevil Digital Logo" />
+    </div>
+
+    <!-- Content -->
+    <div class="flex-1 mt-8 grid grid-cols-2 gap-8">
+      
+      <!-- Colors -->
+      <div>
+        <h3 class="font-mono text-xs font-bold text-brand-yellow border-b border-slate-700 pb-2 mb-4">COLOUR TOKENS</h3>
+        <div class="space-y-2 font-mono text-[10px]">
+          <div class="flex items-center gap-3"><div class="w-6 h-6 rounded bg-[#080857] border border-slate-700"></div> <span><strong class="text-white">brand-navy</strong><br/>#080857</span></div>
+          <div class="flex items-center gap-3"><div class="w-6 h-6 rounded bg-[#F5C400] border border-slate-700"></div> <span><strong class="text-white">brand-yellow</strong><br/>#F5C400</span></div>
+          <div class="flex items-center gap-3"><div class="w-6 h-6 rounded bg-[#6F2420] border border-slate-700"></div> <span><strong class="text-white">brand-burgundy</strong><br/>#6F2420</span></div>
+          <div class="flex items-center gap-3"><div class="w-6 h-6 rounded bg-[#F8F7F2] border border-slate-700"></div> <span><strong class="text-white">brand-offwhite</strong><br/>#F8F7F2</span></div>
+          <div class="flex items-center gap-3"><div class="w-6 h-6 rounded bg-[#161616] border border-slate-700"></div> <span><strong class="text-white">brand-charcoal</strong><br/>#161616</span></div>
+          <div class="flex items-center gap-3"><div class="w-6 h-6 rounded bg-[#FFFFFF] border border-gray-300 shadow-inner"></div> <span><strong class="text-white">brand-purewhite</strong><br/>#FFFFFF</span></div>
+        </div>
+      </div>
+
+      <!-- Typography -->
+      <div>
+        <h3 class="font-mono text-xs font-bold text-brand-yellow border-b border-slate-700 pb-2 mb-4">TYPOGRAPHY</h3>
+        <div class="space-y-4">
+          <div>
+            <div class="font-display font-bold text-3xl">Space Grotesk</div>
+            <div class="font-mono text-[9px] text-slate-400 mb-2">font-display (H1, H2, Numbers)</div>
+          </div>
+          <div>
+            <div class="font-body font-bold text-xl">Inter</div>
+            <div class="font-mono text-[9px] text-slate-400 mb-2">font-body (Paragraphs, H3, UI)</div>
+          </div>
+          <div>
+            <div class="font-mono font-bold text-sm tracking-widest uppercase">JetBrains Mono</div>
+            <div class="font-mono text-[9px] text-slate-400">font-mono (Labels, Metrics)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div>
+        <h3 class="font-mono text-xs font-bold text-brand-yellow border-b border-slate-700 pb-2 mb-4">COMPONENTS</h3>
+        <div class="space-y-3">
+          <button class="bg-brand-yellow text-brand-navy px-6 py-2.5 rounded-full font-bold text-xs w-full text-center">PRIMARY ACTION</button>
+          <button class="bg-white text-brand-navy px-6 py-2.5 rounded-full font-bold text-xs w-full text-center">SECONDARY ACTION</button>
+          <div class="font-mono text-[9px] font-bold text-brand-yellow bg-brand-yellow/10 border border-brand-yellow/20 px-3 py-1.5 rounded uppercase text-center w-full">System Label</div>
+        </div>
+      </div>
+
+      <!-- Spacing -->
+      <div>
+        <h3 class="font-mono text-xs font-bold text-brand-yellow border-b border-slate-700 pb-2 mb-4">SPACING & RADIUS</h3>
+        <div class="font-mono text-[10px] space-y-1 text-slate-200">
+          <div class="flex justify-between"><span>Hero padding</span> <span>py-32</span></div>
+          <div class="flex justify-between"><span>Section padding</span> <span>py-24</span></div>
+          <div class="flex justify-between"><span>Container max</span> <span>max-w-7xl</span></div>
+          <div class="flex justify-between"><span>Gutter</span> <span>px-6 lg:px-8</span></div>
+          <div class="flex justify-between"><span>Card Radius</span> <span>rounded-3xl</span></div>
+          <div class="flex justify-between"><span>Button Radius</span> <span>rounded-full</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-8 font-mono text-[8px] text-slate-500 text-center uppercase tracking-widest">
+      Confidential • Internal Edition • 2026
+    </div>
+  </section>
+</body>
+</html>

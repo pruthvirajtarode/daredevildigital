@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daredevil Digital - Brand & Digital Design System</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#080857',
+              burgundy: '#6F2420',
+              yellow: '#F5C400',
+              offwhite: '#F8F7F2',
+              charcoal: '#161616',
+              purewhite: '#FFFFFF',
+            }
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --bg: #F8F7F2;
+      --text: #161616;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #eee;
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    @page {
+      size: A4 landscape;
+      margin: 0;
+    }
+
+    /* Print Specific Overrides */
+    @media print {
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: transparent;
+      }
+      .page {
+        width: 100vw !important;
+        height: 100vh !important;
+        margin: 0 !important;
+        padding: 0;
+        box-shadow: none;
+        page-break-after: always;
+        page-break-inside: avoid;
+      }
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+
+    .page {
+      width: 297mm;
+      height: 210mm;
+      background: var(--bg);
+      color: var(--text);
+      margin: 20px auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page.dark {
+      background: #080857; /* brand-navy */
+      color: #F8F7F2; /* brand-offwhite */
+    }
+
+    /* Standard Page Layout */
+    .page-header {
+      padding: 15mm 20mm 10mm 20mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    
+    .page-content {
+      flex: 1;
+      padding: 0 20mm;
+      display: flex;
+    }
+
+    .page-footer {
+      padding: 10mm 20mm 15mm 20mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8px;
+      color: inherit;
+      opacity: 0.5;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .grid-bg {
+      position: absolute;
+      inset: 0;
+      background-size: 20px 20px;
+      background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+      z-index: 0;
+      pointer-events: none;
+    }
+    .dark .grid-bg {
+      background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+    }
+    
+    /* Utility */
+    .z-10 { z-index: 10; position: relative; }
+    
+    .section-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      color: #F5C400;
+      margin-bottom: 4px;
+    }
+    
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .box-sample {
+      border-radius: 8px;
+      padding: 20px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- COVER PAGE -->
+  <section class="page dark" style="justify-content: center; align-items: center; text-align: center;">
+    <div class="grid-bg"></div>
+    <div class="z-10 flex flex-col items-center">
+      <!-- SVG Logo Placeholder -->
+      <img src="../D3 Logo.png" class="h-24 mb-12" alt="Daredevil Digital Logo" />
+      <h1 class="font-display font-bold text-6xl text-brand-purewhite tracking-tight uppercase leading-none mb-6">
+        Daredevil Digital
+      </h1>
+      <h2 class="font-display text-3xl text-brand-yellow font-bold uppercase tracking-wide mb-12">
+        Brand & Digital Design System
+      </h2>
+      <div class="font-mono text-[10px] text-slate-400 tracking-[0.2em] uppercase px-4 py-2 border border-slate-600 rounded">
+        Internal Edition 2026
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 BRAND FOUNDATION -->
+  <section class="page">
+    <div class="page-header z-10">
+      <div>
+        <div class="section-num">01</div>
+        <div class="section-title text-brand-navy">BRAND FOUNDATION</div>
+      </div>
+    </div>
+    <div class="page-content z-10 flex-col">
+      <div class="w-2/3 mb-12">
+        <p class="text-xl leading-relaxed text-gray-700">
+          Daredevil Digital is an agency engineered for real growth. We do not recycle playbooks designed for large overseas markets. We optimize around outcomes. Our brand must reflect this focused, premium, and data-driven approach.
+        </p>
+      </div>
+      <div class="grid grid-cols-4 gap-6 w-full">
+        <!-- Principle 1 -->
+        <div class="border-t-2 border-brand-charcoal pt-4">
+          <div class="font-mono text-[10px] font-bold text-brand-burgundy mb-2">PRINCIPLE 01</div>
+          <h3 class="font-display font-bold text-xl text-brand-navy mb-2">Clarity Over Clutter</h3>
+          <p class="text-[11px] text-gray-600 leading-relaxed">Digital noise kills conversions. We use negative space aggressively to ensure that the core message and the primary call-to-action are never obscured.</p>
+        </div>
+        <!-- Principle 2 -->
+        <div class="border-t-2 border-brand-charcoal pt-4">
+          <div class="font-mono text-[10px] font-bold text-brand-burgundy mb-2">PRINCIPLE 02</div>
+          <h3 class="font-display font-bold text-xl text-brand-navy mb-2">High Contrast</h3>
+          <p class="text-[11px] text-gray-600 leading-relaxed">Our visual language relies on stark contrasts. Deep navy backgrounds against pure white text with vibrant yellow accents to guide the user's eye exactly where it needs to go.</p>
+        </div>
+        <!-- Principle 3 -->
+        <div class="border-t-2 border-brand-charcoal pt-4">
+          <div class="font-mono text-[10px] font-bold text-brand-burgundy mb-2">PRINCIPLE 03</div>
+          <h3 class="font-display font-bold text-xl text-brand-navy mb-2">Data-Driven Visuals</h3>
+          <p class="text-[11px] text-gray-600 leading-relaxed">We use technical diagrams, monospaced data labels, and performance indicators (green dots, percentages) to reinforce our technical authority and CAPI expertise.</p>
+        </div>
+        <!-- Principle 4 -->
+        <div class="border-t-2 border-brand-charcoal pt-4">
+          <div class="font-mono text-[10px] font-bold text-brand-burgundy mb-2">PRINCIPLE 04</div>
+          <h3 class="font-display font-bold text-xl text-brand-navy mb-2">Premium Simplicity</h3>
+          <p class="text-[11px] text-gray-600 leading-relaxed">We avoid childish illustrations and generic stock photos. We rely on pristine typography, subtle gradients, and high-quality photography to project a boutique, high-end feel.</p>
+        </div>
+      </div>
+    </div>
+    <div class="page-footer z-10">
+      <span>DAREDEVIL DIGITAL</span>
+      <span>01</span>
+    </div>
+  </section>
+
+  <!-- 02 LOGO SYSTEM -->
+  <section class="page dark">
+    <div class="grid-bg"></div>
+    <div class="page-header z-10">
+      <div>
+        <div class="section-num">02</div>
+        <div class="section-title text-brand-purewhite">LOGO SYSTEM</div>
+      </div>
+    </div>
+    <div class="page-content z-10 gap-8 h-full">
+      <div class="w-1/3 flex flex-col justify-center gap-4">
+        <h3 class="font-mono text-[10px] font-bold text-brand-yellow uppercase tracking-widest">Logo Application</h3>
+        <p class="text-sm text-slate-200 leading-relaxed">
+          Our logo is our most recognizable asset. Do not distort, re-color, or crowd it. Always ensure adequate clear space equivalent to the height of the 'D' icon on all sides.
+        </p>
+      </div>
+      <div class="w-2/3 grid grid-cols-2 grid-rows-2 gap-4 h-[60%] my-auto">
+        <div class="bg-brand-purewhite rounded-xl flex items-center justify-center p-8 relative">
+          <span class="absolute top-4 left-4 font-mono text-[8px] text-gray-400 uppercase">Light Background</span>
+          <div class="text-center">
+            <img src="../D3 Logo.png" class="h-16 mx-auto" alt="Daredevil Digital Logo" />
+          </div>
+        </div>
+        <div class="bg-brand-navy border border-slate-700 rounded-xl flex items-center justify-center p-8 relative">
+          <span class="absolute top-4 left-4 font-mono text-[8px] text-slate-400 uppercase">Dark Background</span>
+          <div class="text-center">
+            <img src="../D3 Logo.png" class="h-16 mx-auto brightness-0 invert" alt="Daredevil Digital Logo Light" />
+          </div>
+        </div>
+        <div class="bg-brand-yellow rounded-xl flex items-center justify-center p-8 relative">
+          <span class="absolute top-4 left-4 font-mono text-[8px] text-brand-navy/60 uppercase">Accent Background</span>
+          <div class="text-center">
+            <img src="../D3 Logo.png" class="h-16 mx-auto brightness-0" alt="Daredevil Digital Logo Dark" />
+          </div>
+        </div>
+        <div class="bg-brand-charcoal rounded-xl flex items-center justify-center p-8 relative overflow-hidden">
+          <div class="absolute inset-0 bg-cover bg-center text-slate-400" style="background-image: url('../public/images/office-bg.png')"></div>
+          <span class="absolute top-4 left-4 font-mono text-[8px] text-slate-300 uppercase">Photographic Background</span>
+          <div class="text-center relative z-10">
+            <img src="../D3 Logo.png" class="h-16 mx-auto brightness-0 invert" alt="Daredevil Digital Logo Light" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-footer z-10">
+      <span>DAREDEVIL DIGITAL</span>
+      <span>02</span>
+    </div>
+  </section>
+
+  <!-- 03 TYPOGRAPHY -->
+  <section class="page">
+    <div class="page-header z-10">
+      <div>
+        <div class="section-num">03</div>
+        <div class="section-title text-brand-navy">TYPOGRAPHY</div>
+      </div>
+    </div>
+    <div class="page-content z-10 flex-col h-full">
+      <div class="flex gap-12 h-[75%]">
+        <!-- Display Font -->
+        <div class="w-1/2 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-end mb-4 border-b border-gray-300 pb-2">
+              <h3 class="font-display font-bold text-2xl text-brand-navy">Space Grotesk</h3>
+              <span class="font-mono text-[10px] text-gray-500">PRIMARY DISPLAY</span>
+            </div>
+            <p class="text-sm text-gray-600 mb-8">Used exclusively for H1, H2, and large display numbers. Imparts a technical yet bold and modern feel.</p>
+            <div class="font-display font-bold text-[72px] leading-[0.9] text-brand-navy mb-4 tracking-tight uppercase">
+              Aa
+            </div>
+            <div class="font-display font-bold text-xl text-brand-navy break-words leading-tight tracking-tight uppercase">
+              ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>
+              abcdefghijklmnopqrstuvwxyz<br/>
+              0123456789
+            </div>
+          </div>
+          <div>
+            <div class="font-mono text-[10px] mb-1 text-brand-burgundy font-bold">H1 / 48-56px / Bold</div>
+            <div class="font-display font-bold text-5xl text-brand-navy mb-4 tracking-tight">Bold Digital Strategy.</div>
+            <div class="font-mono text-[10px] mb-1 text-brand-burgundy font-bold">H2 / 36-44px / Bold</div>
+            <div class="font-display font-bold text-4xl text-brand-navy tracking-tight">Built For Real Growth.</div>
+          </div>
+        </div>
+        
+        <!-- Body & Mono -->
+        <div class="w-1/2 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-end mb-4 border-b border-gray-300 pb-2">
+              <h3 class="font-body font-bold text-2xl text-brand-navy">Inter</h3>
+              <span class="font-mono text-[10px] text-gray-500">BODY / UI</span>
+            </div>
+            <div class="font-body text-base text-gray-700 mb-8 leading-relaxed">
+              Highly legible sans-serif for long-form reading, paragraphs, button labels, and general UI text. Used in regular (400) and bold (700) weights.
+            </div>
+          </div>
+
+          <div class="mt-4 mb-12">
+            <div class="flex justify-between items-end mb-4 border-b border-gray-300 pb-2">
+              <h3 class="font-mono font-bold text-2xl text-brand-navy">JetBrains Mono</h3>
+              <span class="font-mono text-[10px] text-gray-500">TECHNICAL / LABELS</span>
+            </div>
+            <div class="font-mono text-sm text-gray-700 mb-6 leading-relaxed">
+              Used for eyebrows, metrics, data visualizations, and technical specifications. Gives the brand its signature "marketing engineering" aesthetic.
+            </div>
+            <div class="font-mono text-[10px] mb-2 text-brand-burgundy font-bold">LABEL / 10-12px / Uppercase / Tracking 0.2em</div>
+            <div class="font-mono text-xs font-bold text-brand-navy tracking-[0.2em] uppercase bg-gray-100 px-3 py-2 inline-block rounded">
+              PERFORMANCE TRACKING
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-footer z-10">
+      <span>DAREDEVIL DIGITAL</span>
+      <span>03</span>
+    </div>
+  </section>
+
+  <!-- 04 COLOUR SYSTEM -->
+  <section class="page dark">
+    <div class="grid-bg"></div>
+    <div class="page-header z-10">
+      <div>
+        <div class="section-num">04</div>
+        <div class="section-title text-brand-purewhite">COLOUR SYSTEM</div>
+      </div>
+    </div>
+    <div class="page-content z-10 flex-col h-full">
+      <div class="grid grid-cols-3 gap-6 h-[75%]">
+        
+        <!-- Primary -->
+        <div class="flex flex-col h-full">
+          <div class="flex-1 bg-[#080857] rounded-t-xl relative border-x border-t border-slate-700"></div>
+          <div class="bg-brand-purewhite p-4 rounded-b-xl text-brand-charcoal">
+            <h4 class="font-display font-bold text-xl uppercase">Brand Navy</h4>
+            <div class="flex justify-between font-mono text-[10px] mt-2 text-gray-500">
+              <span>HEX</span> <span class="font-bold text-brand-navy">#080857</span>
+            </div>
+            <div class="flex justify-between font-mono text-[10px] mt-1 text-gray-500">
+              <span>USAGE</span> <span>Primary Background</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Yellow -->
+        <div class="flex flex-col h-full">
+          <div class="flex-1 bg-[#F5C400] rounded-t-xl relative border-x border-t border-gray-300"></div>
+          <div class="bg-brand-purewhite p-4 rounded-b-xl text-brand-charcoal">
+            <h4 class="font-display font-bold text-xl uppercase">Brand Yellow</h4>
+            <div class="flex justify-between font-mono text-[10px] mt-2 text-gray-500">
+              <span>HEX</span> <span class="font-bold text-brand-yellow">#F5C400</span>
+            </div>
+            <div class="flex justify-between font-mono text-[10px] mt-1 text-gray-500">
+              <span>USAGE</span> <span>Primary CTA / Accent</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Burgundy -->
+        <div class="flex flex-col h-full">
+          <div class="flex-1 bg-[#6F2420] rounded-t-xl relative border-x border-t border-slate-700"></div>
+          <div class="bg-brand-purewhite p-4 rounded-b-xl text-brand-charcoal">
+            <h4 class="font-display font-bold text-xl uppercase">Brand Burgundy</h4>
+            <div class="flex justify-between font-mono text-[10px] mt-2 text-gray-500">
+              <span>HEX</span> <span class="font-bold text-brand-burgundy">#6F2420</span>
+            </div>
+            <div class="flex justify-between font-mono text-[10px] mt-1 text-gray-500">
+              <span>USAGE</span> <span>Secondary Accent / Eyebrows</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Offwhite -->
+        <div class="flex flex-col h-[60%]">
+          <div class="flex-1 bg-[#F8F7F2] rounded-t-xl relative border-x border-t border-gray-300"></div>
+          <div class="bg-brand-purewhite p-4 rounded-b-xl text-brand-charcoal">
+            <h4 class="font-display font-bold text-lg uppercase">Brand Off-White</h4>
+            <div class="flex justify-between font-mono text-[10px] mt-1">
+              <span>HEX: #F8F7F2</span> <span>Light Background</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charcoal -->
+        <div class="flex flex-col h-[60%]">
+          <div class="flex-1 bg-[#161616] rounded-t-xl relative border-x border-t border-slate-700"></div>
+          <div class="bg-brand-purewhite p-4 rounded-b-xl text-brand-charcoal">
+            <h4 class="font-display font-bold text-lg uppercase">Brand Charcoal</h4>
+            <div class="flex justify-between font-mono text-[10px] mt-1">
+              <span>HEX: #161616</span> <span>Primary Text (Light Mode)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pure White -->
+        <div class="flex flex-col h-[60%]">
+          <div class="flex-1 bg-[#FFFFFF] rounded-t-xl relative border border-gray-300 shadow-inner"></div>
+          <div class="bg-brand-purewhite p-4 rounded-b-xl text-brand-charcoal">
+            <h4 class="font-display font-bold text-lg uppercase">Pure White</h4>
+            <div class="flex justify-between font-mono text-[10px] mt-1">
+              <span>HEX: #FFFFFF</span> <span>Surfaces / High Contrast Text</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="page-footer z-10">
+      <span>DAREDEVIL DIGITAL</span>
+      <span>04</span>
+    </div>
+  </section>
+
+  <!-- 05 COLOUR USAGE -->
+  <section class="page">
+    <div class="page-header z-10">
+      <div>
+        <div class="section-num">05</div>
+        <div class="section-title text-brand-navy">COLOUR RATIO & USAGE</div>
+      </div>
+    </div>
+    <div class="page-content z-10 flex-col h-full">
+      
+      <div class="w-full h-8 flex rounded overflow-hidden mb-8 shadow-sm">
+        <div class="h-full bg-brand-navy w-[70%] flex items-center px-4"><span class="font-mono text-[8px] text-slate-400">70% PRIMARY DARK FOUNDATION</span></div>
+        <div class="h-full bg-brand-offwhite w-[20%] flex items-center px-4 border-l border-gray-300"><span class="font-mono text-[8px] text-gray-500">20% LIGHT NEUTRAL</span></div>
+        <div class="h-full bg-brand-yellow w-[10%] flex items-center px-4"><span class="font-mono text-[8px] text-brand-navy/60 font-bold">10% ACCENT</span></div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-8 h-full pb-12">
+        <div class="space-y-6">
+          <h4 class="font-mono text-xs font-bold text-[#22C55E]">DO</h4>
+          
+          <div class="bg-brand-navy p-6 rounded-xl relative overflow-hidden h-32 flex flex-col justify-center">
+            <span class="font-mono text-[9px] text-brand-yellow tracking-widest uppercase block mb-2">High Contrast</span>
+            <h5 class="font-display text-2xl font-bold text-brand-purewhite mb-3">Dark background + Yellow accent</h5>
+            <div class="bg-brand-yellow text-brand-navy font-bold text-[10px] px-3 py-1.5 inline-block rounded">CTA BUTTON</div>
+          </div>
+
+          <div class="bg-brand-offwhite p-6 rounded-xl border border-gray-200 h-32 flex flex-col justify-center">
+            <span class="font-mono text-[9px] text-brand-burgundy tracking-widest uppercase block mb-2">Controlled Accent</span>
+            <h5 class="font-display text-2xl font-bold text-brand-navy mb-3">Light background + Dark text</h5>
+            <div class="bg-brand-navy text-brand-purewhite font-bold text-[10px] px-3 py-1.5 inline-block rounded">CTA BUTTON</div>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <h4 class="font-mono text-xs font-bold text-[#EF4444]">DON'T</h4>
+          
+          <div class="bg-brand-navy p-6 rounded-xl relative overflow-hidden h-32 flex flex-col justify-center">
+            <h5 class="font-display text-2xl font-bold text-brand-burgundy mb-3">Low contrast typography</h5>
+            <div class="bg-brand-burgundy text-brand-navy font-bold text-[10px] px-3 py-1.5 inline-block rounded">HARD TO READ</div>
+          </div>
+
+          <div class="bg-brand-yellow p-6 rounded-xl border border-gray-200 h-32 flex flex-col justify-center">
+            <h5 class="font-display text-2xl font-bold text-brand-purewhite mb-3 drop-shadow">Accent colour used everywhere</h5>
+            <div class="bg-brand-purewhite text-brand-yellow font-bold text-[10px] px-3 py-1.5 inline-block rounded shadow">OVERWHELMING</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-footer z-10">
+      <span>DAREDEVIL DIGITAL</span>
+      <span>05</span>
+    </div>
+  </section>
+
+  <!-- 06 GRID & LAYOUT SYSTEM -->
+  <section class="page">
+    <div class="page-header z-10">
+      <div>
+        <div class="section-num">06</div>
+        <div class="section-title text-brand-navy">GRID & SPACING SYSTEM</div>
+      </div>
+    </div>
+    <div class="page-content z-10 flex-col h-full">
+      <div class="flex gap-12 h-full pb-12">
+        <div class="w-1/3 flex flex-col justify-between">
+          <div>
+            <h3 class="font-mono text-xs font-bold text-brand-navy mb-4 border-b border-gray-300 pb-2">SPACING SCALE</h3>
+            <p class="text-xs text-gray-600 mb-6 leading-relaxed">
+              We use a strict 4pt/8pt spacing system derived from Tailwind CSS defaults. Spacing should feel generous and deliberate.
+            </p>
+            <table class="w-full text-xs text-left font-mono">
+              <tr class="border-b border-gray-200"><th class="py-2 text-brand-navy">Token</th><th class="py-2 text-gray-500">Value</th></tr>
+              <tr class="border-b border-gray-200"><td class="py-2">space-1</td><td class="py-2">4px</td></tr>
+              <tr class="border-b border-gray-200"><td class="py-2">space-2</td><td class="py-2">8px</td></tr>
+              <tr class="border-b border-gray-200"><td class="py-2">space-4</td><td class="py-2">16px</td></tr>
+              <tr class="border-b border-gray-200"><td class="py-2">space-6</td><td class="py-2">24px</td></tr>
+              <tr class="border-b border-gray-200"><td class="py-2">space-8</td><td class="py-2">32px</td></tr>
+              <tr class="border-b border-gray-200"><td class="py-2">space-12</td><td class="py-2">48px</td></tr>
+              <tr class="border-b border-gray-200"><td class="py-2">space-16</td><td class="py-2">64px</td></tr>
+              <tr class="border-b border-gray-200"><td class="py-2">space-24</td><td class="py-2">96px</td></tr>
+              <tr class="border-b border-gray-200"><td class="py-2 text-brand-burgundy font-bold">py-24 (section)</td><td class="py-2">96px</td></tr>
+              <tr class="border-b border-gray-200"><td class="py-2 text-brand-burgundy font-bold">py-32 (hero)</td><td class="py-2">128px</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="w-2/3">
+          <h3 class="font-mono text-xs font-bold text-brand-navy mb-4 border-b border-gray-300 pb-2">12-COLUMN GRID SYSTEM (MAX-W-7XL)</h3>
+          
+          <div class="w-full bg-gray-100 p-4 rounded-xl border border-gray-300 relative">
+            <div class="w-full flex gap-2 h-48">
+              <!-- 12 cols -->
+              <div class="flex-1 bg-brand-yellow/30 border border-brand-yellow/50 rounded flex items-center justify-center font-mono text-[8px] text-brand-navy font-bold">1</div>
+              <div class="flex-1 bg-brand-yellow/30 border border-brand-yellow/50 rounded flex items-center justify-center font-mono text-[8px] text-brand-navy font-bold">2</div>
+              <div class="flex-1 bg-brand-yellow/30 border border-brand-yellow/50 rounded flex items-center justify-center font-mono text-[8px] text-brand-navy font-bold">3</div>
+              <div class="flex-1 bg-brand-yellow/30 border border-brand-yellow/50 rounded flex items-center justify-center font-mono text-[8px] text-brand-navy font-bold">4</div>
+              <div class="flex-1 bg-brand-yellow/30 border border-brand-yellow/50 rounded flex items-center justify-center font-mono text-[8px] text-brand-navy font-bold">5</div>
+              <div class="flex-1 bg-brand-yellow/30 border border-brand-yellow/50 rounded flex items-center justify-center font-mono text-[8px] text-brand-navy font-bold">6</div>
+              <div class="flex-1 bg-brand-yellow/30 border border-brand-yellow/50 rounded flex items-center justify-center font-mono text-[8px] text-brand-navy font-bold">7</div>
+              <div class="flex-1 bg-brand-yellow/30 border border-brand-yellow/50 rounded flex items-center justify-center font-mono text-[8px] text-brand-navy font-bold">8</div>
+              <div class="flex-1 bg-brand-yellow/30 border border-brand-yellow/50 rounded flex items-center justify-center font-mono text-[8px] text-brand-navy font-bold">9</div>
+              <div class="flex-1 bg-brand-yellow/30 border border-brand-yellow/50 rounded flex items-center justify-center font-mono text-[8px] text-brand-navy font-bold">10</div>
+              <div class="flex-1 bg-brand-yellow/30 border border-brand-yellow/50 rounded flex items-center justify-center font-mono text-[8px] text-brand-navy font-bold">11</div>
+              <div class="flex-1 bg-brand-yellow/30 border border-brand-yellow/50 rounded flex items-center justify-center font-mono text-[8px] text-brand-navy font-bold">12</div>
+            </div>
+            
+            <div class="w-full flex gap-2 h-12 mt-2">
+              <div class="w-[58%] bg-brand-navy/10 border border-brand-navy/30 rounded flex items-center justify-center font-mono text-[10px] text-brand-navy font-bold">col-span-7 (Copy)</div>
+              <div class="w-[42%] bg-brand-navy/10 border border-brand-navy/30 rounded flex items-center justify-center font-mono text-[10px] text-brand-navy font-bold">col-span-5 (Visual)</div>
+            </div>
+            <div class="absolute -bottom-6 left-0 text-[10px] font-mono text-gray-500">Desktop Layout Example</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-footer z-10">
+      <span>DAREDEVIL DIGITAL</span>
+      <span>06</span>
+    </div>
+  </section>
+
+  <!-- 07 UI COMPONENTS -->
+  <section class="page dark">
+    <div class="grid-bg"></div>
+    <div class="page-header z-10">
+      <div>
+        <div class="section-num">07</div>
+        <div class="section-title text-brand-purewhite">UI COMPONENTS</div>
+      </div>
+    </div>
+    <div class="page-content z-10 flex-col h-full">
+      <div class="grid grid-cols-2 gap-12 h-full pb-12">
+        
+        <!-- Buttons -->
+        <div class="bg-brand-purewhite/5 border border-slate-700 rounded-2xl p-8 flex flex-col justify-center">
+          <h3 class="font-mono text-xs font-bold text-brand-yellow mb-8 tracking-widest uppercase">Button System</h3>
+          <div class="space-y-6">
+            <div class="flex items-center gap-6">
+              <button class="bg-brand-yellow text-brand-navy px-6 py-3 rounded-full font-bold text-sm hover:bg-white transition-colors duration-300">
+                PRIMARY ACTION
+              </button>
+              <span class="font-mono text-[9px] text-slate-400">bg-brand-yellow / text-brand-navy / rounded-full</span>
+            </div>
+            <div class="flex items-center gap-6">
+              <button class="bg-brand-purewhite text-brand-navy px-6 py-3 rounded-full font-bold text-sm hover:bg-brand-yellow transition-colors duration-300">
+                SECONDARY ACTION
+              </button>
+              <span class="font-mono text-[9px] text-slate-400">bg-brand-purewhite / text-brand-navy / rounded-full</span>
+            </div>
+            <div class="flex items-center gap-6">
+              <button class="border-2 border-slate-600 text-brand-purewhite px-6 py-3 rounded-full font-bold text-sm hover:bg-slate-700 transition-colors duration-300">
+                OUTLINE LIGHT
+              </button>
+              <span class="font-mono text-[9px] text-slate-400">border-2 border-slate-600 / text-brand-purewhite</span>
+            </div>
+            <div class="flex items-center gap-6 pt-2">
+              <a href="#" class="font-bold text-brand-yellow hover:text-white transition-colors uppercase tracking-widest text-xs inline-flex items-center">
+                TEXT LINK <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Badges & Inputs -->
+        <div class="flex flex-col gap-6">
+          
+          <div class="bg-brand-purewhite/5 border border-slate-700 rounded-2xl p-8">
+            <h3 class="font-mono text-xs font-bold text-brand-yellow mb-6 tracking-widest uppercase">Badges & Labels</h3>
+            <div class="flex flex-wrap gap-4 mb-6">
+              <span class="font-mono text-[10px] font-bold text-brand-burgundy bg-brand-burgundy/20 px-3 py-1 rounded">EYEBROW TEXT</span>
+              <span class="font-mono text-[10px] font-bold text-brand-yellow bg-brand-yellow/10 border border-brand-yellow/20 px-3 py-1 rounded uppercase">System Active</span>
+              <span class="font-mono text-[10px] font-bold text-[#22C55E] bg-[#22C55E]/10 border border-[#22C55E]/20 px-3 py-1 rounded uppercase flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#22C55E]"></span> MATCHED</span>
+            </div>
+            <div class="flex gap-2">
+               <span class="font-mono text-xs text-white border border-slate-600 px-4 py-2 rounded bg-slate-700 shadow-sm">Real Estate</span>
+               <span class="font-mono text-xs text-white border border-slate-600 px-4 py-2 rounded bg-slate-700 shadow-sm">Finance</span>
+            </div>
+          </div>
+
+          <div class="bg-brand-purewhite/5 border border-slate-700 rounded-2xl p-8 flex-1">
+            <h3 class="font-mono text-xs font-bold text-brand-yellow mb-6 tracking-widest uppercase">Form Inputs</h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-xs font-bold text-brand-offwhite mb-2">FULL NAME</label>
+                <div class="w-full bg-brand-purewhite/5 border border-slate-700 rounded-lg p-3 text-sm text-brand-offwhite text-slate-400">John Doe</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="page-footer z-10">
+      <span>DAREDEVIL DIGITAL</span>
+      <span>07</span>
+    </div>
+  </section>
+
+  <!-- 08 CARD SYSTEM & METRICS -->
+  <section class="page">
+    <div class="page-header z-10">
+      <div>
+        <div class="section-num">08</div>
+        <div class="section-title text-brand-navy">CARDS & DATA VIZ</div>
+      </div>
+    </div>
+    <div class="page-content z-10 flex-col h-full">
+      <div class="grid grid-cols-2 gap-8 h-full pb-12">
+        
+        <!-- Standard Service Card -->
+        <div>
+          <h3 class="font-mono text-xs font-bold text-brand-navy mb-6 tracking-widest uppercase border-b border-gray-300 pb-2">Service Card Standard</h3>
+          <div class="bg-brand-purewhite p-8 rounded-3xl border border-gray-200 shadow-sm">
+            <span class="font-mono text-xs font-bold text-brand-burgundy bg-brand-burgundy/10 px-2 py-0.5 rounded">SERVICE 01</span>
+            <h2 class="font-display text-2xl font-bold text-brand-navy mt-4 mb-4">Social Media Management</h2>
+            <p class="text-sm text-gray-700 mb-6 leading-relaxed">
+              From strategy to execution, we build consistent social presence that keeps your brand visible, relevant and connected.
+            </p>
+            <h4 class="text-[10px] font-mono font-bold tracking-widest uppercase text-brand-navy mb-3 border-b border-gray-300 pb-2">Capabilities</h4>
+            <ul class="grid grid-cols-2 gap-2 text-xs mb-6">
+              <li class="flex items-center gap-2 text-gray-600"><span class="w-3 h-3 text-brand-yellow">✓</span> Campaign strategy</li>
+              <li class="flex items-center gap-2 text-gray-600"><span class="w-3 h-3 text-brand-yellow">✓</span> Content planning</li>
+            </ul>
+            <a href="#" class="inline-flex items-center font-bold text-brand-navy text-xs uppercase tracking-widest">
+              View Details →
+            </a>
+          </div>
+        </div>
+
+        <!-- Dashboard Data Card -->
+        <div>
+          <h3 class="font-mono text-xs font-bold text-brand-navy mb-6 tracking-widest uppercase border-b border-gray-300 pb-2">Technical / Data Language</h3>
+          <div class="bg-brand-charcoal p-8 rounded-3xl relative overflow-hidden h-[300px] flex flex-col justify-center border border-white/5 shadow-xl">
+             <div class="space-y-6 relative z-10">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <span class="font-mono text-[10px] text-brand-yellow uppercase tracking-widest block mb-1">CAPI ENGINE STATUS</span>
+                    <span class="text-2xl font-display font-bold text-brand-purewhite block">D3_INTELLIGENCE_LOOP</span>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 border-t border-slate-700 pt-6">
+                  <div>
+                    <span class="font-mono text-[10px] text-slate-400 block uppercase tracking-wider mb-2">OFFLINE MATCHES</span>
+                    <div class="flex items-baseline gap-2">
+                      <span class="font-mono text-4xl font-bold text-brand-purewhite">1,842</span>
+                      <span class="font-mono text-xs text-[#22C55E] font-bold">+18.4%</span>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="font-mono text-[10px] text-slate-400 block uppercase tracking-wider mb-2">MATCH QUALITY</span>
+                    <div class="flex items-baseline gap-2">
+                      <span class="font-mono text-4xl font-bold text-[#22C55E]">9.4<span class="text-lg text-slate-400">/10</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <p class="font-mono text-[10px] text-gray-500 mt-4 max-w-sm">
+            Technical data blocks should use JetBrains Mono for numbers/labels, and stark contrasts (green/yellow on charcoal) to mimic performance analytics dashboards.
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <div class="page-footer z-10">
+      <span>DAREDEVIL DIGITAL</span>
+      <span>08</span>
+    </div>
+  </section>
+
+  <!-- 09 MOTION & INTERACTION -->
+  <section class="page">
+    <div class="page-header z-10">
+      <div>
+        <div class="section-num">09</div>
+        <div class="section-title text-brand-navy">MOTION SYSTEM</div>
+      </div>
+    </div>
+    <div class="page-content z-10 flex-col h-full">
+      <div class="w-2/3 mb-12">
+        <p class="text-xl leading-relaxed text-gray-700">
+          Animation is used to guide attention, confirm interactions, and reveal content gracefully as the user scrolls. We rely on Framer Motion for precise, physics-based UI animation.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-3 gap-8">
+        <div class="bg-gray-100 p-6 rounded-xl border border-gray-300">
+          <h4 class="font-mono text-xs font-bold text-brand-navy mb-4 border-b border-gray-300 pb-2">Scroll Entrance (Fade Up)</h4>
+          <p class="text-[11px] text-gray-600 mb-4 leading-relaxed">Standard entrance for text sections and cards when scrolling into view.</p>
+          <div class="bg-brand-charcoal p-4 rounded text-white font-mono text-[9px] overflow-x-auto whitespace-pre">
+initial={{ opacity: 0, y: 30 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true, amount: 0.2 }}
+transition={{ duration: 0.6 }}</div>
+        </div>
+
+        <div class="bg-gray-100 p-6 rounded-xl border border-gray-300">
+          <h4 class="font-mono text-xs font-bold text-brand-navy mb-4 border-b border-gray-300 pb-2">Interactive Hover (Cards)</h4>
+          <p class="text-[11px] text-gray-600 mb-4 leading-relaxed">Used for portfolio items or image grids to indicate clickability.</p>
+          <div class="bg-brand-charcoal p-4 rounded text-white font-mono text-[9px] overflow-x-auto whitespace-pre">
+whileHover="active"
+whileTap="active"
+
+variants={{
+  active: { scale: 1.05 }
+}}
+transition={{ duration: 0.7 }}</div>
+        </div>
+
+        <div class="bg-gray-100 p-6 rounded-xl border border-gray-300">
+          <h4 class="font-mono text-xs font-bold text-brand-navy mb-4 border-b border-gray-300 pb-2">Micro-Interactions</h4>
+          <p class="text-[11px] text-gray-600 mb-4 leading-relaxed">Fast, responsive feedback for buttons and links. Usually handled via Tailwind CSS classes.</p>
+          <div class="bg-brand-charcoal p-4 rounded text-white font-mono text-[9px] overflow-x-auto whitespace-pre">
+className="
+  transition-all
+  duration-300
+  hover:bg-brand-yellow
+"</div>
+        </div>
+      </div>
+    </div>
+    <div class="page-footer z-10">
+      <span>DAREDEVIL DIGITAL</span>
+      <span>09</span>
+    </div>
+  </section>
+
+  <!-- 10 DEVELOPER HANDOFF (TOKENS) -->
+  <section class="page dark">
+    <div class="grid-bg"></div>
+    <div class="page-header z-10">
+      <div>
+        <div class="section-num">10</div>
+        <div class="section-title text-brand-purewhite">DEVELOPER TOKENS</div>
+      </div>
+    </div>
+    <div class="page-content z-10 flex-col h-full text-brand-purewhite">
+      <div class="grid grid-cols-2 gap-12 pb-12 h-full">
+        <div>
+          <h3 class="font-mono text-xs font-bold text-brand-yellow mb-4 border-b border-slate-700 pb-2">Tailwind Variables (index.css)</h3>
+          <div class="bg-brand-charcoal p-6 rounded-xl border border-slate-700 font-mono text-[10px] leading-loose">
+            <span class="text-purple-400">@theme</span> {<br/>
+            &nbsp;&nbsp;<span class="text-blue-300">--color-brand-navy</span>: #080857;<br/>
+            &nbsp;&nbsp;<span class="text-blue-300">--color-brand-burgundy</span>: #6F2420;<br/>
+            &nbsp;&nbsp;<span class="text-blue-300">--color-brand-yellow</span>: #F5C400;<br/>
+            &nbsp;&nbsp;<span class="text-blue-300">--color-brand-offwhite</span>: #F8F7F2;<br/>
+            &nbsp;&nbsp;<span class="text-blue-300">--color-brand-charcoal</span>: #161616;<br/>
+            &nbsp;&nbsp;<span class="text-blue-300">--color-brand-purewhite</span>: #FFFFFF;<br/><br/>
+            
+            &nbsp;&nbsp;<span class="text-blue-300">--font-display</span>: "Space Grotesk", sans-serif;<br/>
+            &nbsp;&nbsp;<span class="text-blue-300">--font-body</span>: "Inter", sans-serif;<br/>
+            &nbsp;&nbsp;<span class="text-blue-300">--font-mono</span>: "JetBrains Mono", monospace;<br/>
+            }
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-mono text-xs font-bold text-brand-yellow mb-4 border-b border-slate-700 pb-2">JSON Tokens Location</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-6">
+            A complete programmatic JSON representation of this design system is available in the root repository under:
+          </p>
+          <div class="bg-brand-charcoal p-4 rounded border border-slate-700 font-mono text-[10px] text-brand-yellow mb-8 inline-block">
+            Daredevil_Digital_Design_Tokens.json
+          </div>
+          
+          <h3 class="font-mono text-xs font-bold text-brand-yellow mb-4 border-b border-slate-700 pb-2">Class Application Standards</h3>
+          <ul class="text-xs text-slate-300 space-y-4">
+            <li><strong>Headings:</strong> Always apply <code class="bg-slate-700 px-1 rounded font-mono text-[10px]">font-display</code></li>
+            <li><strong>Primary Action:</strong> Always use <code class="bg-slate-700 px-1 rounded font-mono text-[10px]">bg-brand-yellow text-brand-navy</code></li>
+            <li><strong>Page Background (Light):</strong> <code class="bg-slate-700 px-1 rounded font-mono text-[10px]">bg-brand-offwhite</code> or <code class="bg-slate-700 px-1 rounded font-mono text-[10px]">bg-brand-purewhite</code></li>
+            <li><strong>Page Background (Dark):</strong> <code class="bg-slate-700 px-1 rounded font-mono text-[10px]">bg-brand-navy</code></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="page-footer z-10">
+      <span>DAREDEVIL DIGITAL</span>
+      <span>10</span>
+    </div>
+  </section>
+
+</body>
+</html>
