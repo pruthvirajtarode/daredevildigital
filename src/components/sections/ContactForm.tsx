@@ -71,6 +71,9 @@ export default function ContactForm() {
     };
 
     try {
+      // Log payload for debugging until webhook is provided
+      console.log('Form payload:', payload);
+
       // TODO: Replace with actual Webhook or API endpoint
       // await fetch('YOUR_WEBHOOK_URL', {
       //   method: 'POST',
