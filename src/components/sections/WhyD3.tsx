@@ -20,61 +20,46 @@ export default function WhyD3() {
   ];
 
   return (
-    <section id="why-d3" className="bg-brand-offwhite border-b border-brand-charcoal/5 flex flex-col lg:flex-row min-h-[80vh]">
-      {/* Left side Abstract Pattern */}
-      <div className="w-full lg:w-1/2 min-h-[40vh] lg:min-h-full relative overflow-hidden bg-brand-navy flex items-center justify-center">
-        {/* Subtle grid pattern */}
-        <div className="absolute inset-0 opacity-10"
-             style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
-        {/* Animated Glow */}
-        <motion.div 
-          className="absolute w-3/4 h-3/4 bg-brand-burgundy/20 rounded-full blur-[100px]"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.8, 0.5] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <div className="relative z-10 text-brand-offwhite/20 font-display font-bold text-7xl md:text-9xl rotate-90 lg:rotate-0 tracking-tighter mix-blend-overlay">
-          D3.
-        </div>
-      </div>
-      
-      {/* Right side Content */}
-      <div className="w-full lg:w-1/2 py-24 lg:py-32 px-8 lg:px-16 xl:px-24 flex items-center bg-brand-purewhite">
-        <div className="max-w-2xl">
+    <section id="why-d3" className="bg-brand-purewhite border-b border-brand-charcoal/5 py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        
+        {/* Centered Header */}
+        <div className="max-w-3xl mx-auto text-center mb-20">
           <span className="block mb-4 text-xs font-mono font-bold tracking-[0.2em] text-brand-burgundy uppercase">
             WHY WORK WITH US
           </span>
           <h2 className="font-display text-4xl lg:text-5xl font-bold tracking-tight text-brand-navy mb-6">
             What a Boutique Looks Like When It's Built Around One Goal.
           </h2>
-          <p className="text-brand-charcoal/70 text-lg leading-relaxed mb-12">
+          <p className="text-brand-charcoal/70 text-lg leading-relaxed">
             We do not delegate campaigns to junior executives. We do not recycle playbooks designed for large overseas markets. We optimize around outcomes.
           </p>
-
-          <div className="space-y-10">
-            {points.map((point, index) => (
-              <motion.div 
-                key={point.stat}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex gap-6"
-              >
-                <span className="block font-mono text-3xl font-bold text-brand-burgundy/80 shrink-0 w-16">
-                  {point.stat}
-                </span>
-                <div>
-                  <h3 className="font-display text-lg font-bold text-brand-navy mb-2 leading-snug">
-                    {point.title}
-                  </h3>
-                  <p className="text-brand-charcoal/70 text-sm leading-relaxed">
-                    {point.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
+
+        {/* 3-Column Grid for Points */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+          {points.map((point, index) => (
+            <motion.div 
+              key={point.stat}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="flex flex-col text-center items-center"
+            >
+              <span className="block font-mono text-5xl font-bold text-brand-burgundy/10 mb-4 tracking-tighter">
+                {point.stat}
+              </span>
+              <h3 className="font-display text-xl font-bold text-brand-navy mb-3 leading-snug">
+                {point.title}
+              </h3>
+              <p className="text-brand-charcoal/70 text-sm leading-relaxed max-w-sm">
+                {point.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

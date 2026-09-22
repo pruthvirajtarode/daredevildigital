@@ -6,25 +6,49 @@ export default function Hero() {
     <section className="relative min-h-[90vh] flex items-center pt-28 pb-16 bg-brand-navy overflow-hidden border-b border-brand-charcoal/5">
 
 
-      {/* Drifting Ambient Particles for realism */}
+      {/* Dynamic Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        {[...Array(20)].map((_, i) => {
+        {/* Subtle Grid Pattern */}
+        <div 
+          className="absolute inset-0 opacity-[0.03]" 
+          style={{ backgroundImage: 'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)', backgroundSize: '64px 64px' }} 
+        />
+        
+        {/* Glowing Orbs for Depth */}
+        <motion.div 
+          className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-burgundy/20 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/3"
+          animate={{ scale: [1, 1.1, 1], opacity: [0.4, 0.6, 0.4] }}
+          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div 
+          className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-brand-yellow/15 rounded-full blur-[120px] translate-y-1/3"
+          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+          transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+        />
+        <motion.div 
+          className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-brand-charcoal/40 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"
+          animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
+          transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+        />
+
+        {/* Existing drifting particles for extra detail */}
+        {[...Array(15)].map((_, i) => {
           const size = Math.random() * 3 + 1;
           return (
             <motion.div
               key={i}
-              className="absolute bg-brand-yellow rounded-full blur-[1px]"
+              className="absolute bg-brand-purewhite rounded-full blur-[1px]"
               style={{
                 width: size + 'px',
                 height: size + 'px',
                 top: Math.random() * 100 + '%',
                 left: Math.random() * 100 + '%',
               }}
-              initial={{ opacity: Math.random() * 0.4 + 0.2, y: Math.random() * 100 }}
+              initial={{ opacity: Math.random() * 0.3 + 0.1, y: Math.random() * 100 }}
               animate={{
                 y: [Math.random() * 100, -200],
                 x: [0, (Math.random() - 0.5) * 50],
-                opacity: [Math.random() * 0.4 + 0.2, 0, Math.random() * 0.4 + 0.2],
+                opacity: [Math.random() * 0.3 + 0.1, 0, Math.random() * 0.3 + 0.1],
               }}
               transition={{
                 duration: Math.random() * 8 + 8,
@@ -36,9 +60,9 @@ export default function Hero() {
         })}
       </div>
 
-      {/* Overlay to ensure text readability while preserving natural image colors */}
-      <div className="absolute inset-0 bg-black/40 z-0" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-0" />
+      {/* Overlay to ensure text readability */}
+      <div className="absolute inset-0 bg-black/20 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/90 via-brand-navy/50 to-transparent z-0" />
       
       <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
         
