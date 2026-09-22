@@ -1,0 +1,156 @@
+{
+  "brand": "Daredevil Digital",
+  "version": "1.0.0",
+  "tokens": {
+    "colors": {
+      "brand-navy": {
+        "value": "#080857",
+        "description": "Primary dark background and high-contrast element color",
+        "usage": "background, surface, text-primary (on light)"
+      },
+      "brand-burgundy": {
+        "value": "#6F2420",
+        "description": "Secondary dark accent, used for subtle hierarchy",
+        "usage": "accent, secondary elements, borders"
+      },
+      "brand-yellow": {
+        "value": "#F5C400",
+        "description": "Primary action color, used sparingly for high impact",
+        "usage": "buttons, primary CTA, active states, key data highlights"
+      },
+      "brand-offwhite": {
+        "value": "#F8F7F2",
+        "description": "Primary background color for light sections",
+        "usage": "background (light mode), text-primary (on dark)"
+      },
+      "brand-charcoal": {
+        "value": "#161616",
+        "description": "Secondary dark color, deep grey for typography on light",
+        "usage": "text-primary (on light), borders, subtle dark surfaces"
+      },
+      "brand-purewhite": {
+        "value": "#FFFFFF",
+        "description": "Pure white for highest contrast elements",
+        "usage": "surface (light), text-highest-contrast (on dark)"
+      },
+      "success": {
+        "value": "#22C55E",
+        "description": "Success state and positive data visualization",
+        "usage": "active dots, positive metrics, success banners"
+      }
+    },
+    "typography": {
+      "fonts": {
+        "display": {
+          "value": "'Space Grotesk', sans-serif",
+          "usage": "H1, H2, large display numbers, hero typography"
+        },
+        "body": {
+          "value": "'Inter', sans-serif",
+          "usage": "Paragraphs, H3, UI text, buttons"
+        },
+        "mono": {
+          "value": "'JetBrains Mono', monospace",
+          "usage": "Technical labels, metric values, code snippets, eyebrow text"
+        }
+      },
+      "sizes": {
+        "display-large": {
+          "value": "64px - 80px",
+          "weight": "700"
+        },
+        "h1": {
+          "value": "48px - 56px",
+          "weight": "700"
+        },
+        "h2": {
+          "value": "36px - 44px",
+          "weight": "700"
+        },
+        "h3": {
+          "value": "24px - 32px",
+          "weight": "600-700"
+        },
+        "body-large": {
+          "value": "18px",
+          "weight": "400"
+        },
+        "body-base": {
+          "value": "16px",
+          "weight": "400"
+        },
+        "body-small": {
+          "value": "14px",
+          "weight": "400"
+        },
+        "technical-label": {
+          "value": "10px - 12px",
+          "weight": "600-700",
+          "letter-spacing": "0.1em - 0.2em"
+        }
+      }
+    },
+    "spacing": {
+      "scale": {
+        "space-1": "4px",
+        "space-2": "8px",
+        "space-3": "12px",
+        "space-4": "16px",
+        "space-6": "24px",
+        "space-8": "32px",
+        "space-12": "48px",
+        "space-16": "64px",
+        "space-24": "96px",
+        "space-32": "128px"
+      },
+      "sections": {
+        "vertical-padding-desktop": "128px (py-32)",
+        "vertical-padding-mobile": "96px (py-24)"
+      }
+    },
+    "borders": {
+      "radius": {
+        "sm": "4px",
+        "md": "8px",
+        "lg": "16px",
+        "xl": "24px",
+        "2xl": "32px"
+      },
+      "width": {
+        "default": "1px",
+        "thick": "2px"
+      },
+      "colors": {
+        "light-mode": "rgba(22, 22, 22, 0.05)",
+        "dark-mode": "rgba(255, 255, 255, 0.1)"
+      }
+    },
+    "shadows": {
+      "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+      "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+      "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+      "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+    },
+    "motion": {
+      "durations": {
+        "fast": "150ms",
+        "normal": "300ms",
+        "slow": "700ms"
+      },
+      "easings": {
+        "default": "ease-out"
+      },
+      "patterns": {
+        "scroll-reveal": "opacity 0 to 1, y 30px to 0px, duration 600ms",
+        "hover-card": "scale 1 to 1.05, duration 300ms"
+      }
+    },
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px"
+    }
+  }
+}

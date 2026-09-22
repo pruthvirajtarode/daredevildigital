@@ -31,7 +31,8 @@ export default function ContactForm() {
     challenge: '',
     phone: '',
     email: '',
-    enquiry: ''
+    enquiry: '',
+    _honey: '' // Honeypot field
   });
 
   const updateFormData = (field: string, value: any) => {
@@ -71,25 +72,22 @@ export default function ContactForm() {
     };
 
     try {
-      // Log payload for debugging until webhook is provided
-      console.log('Form payload:', payload);
-
-      // TODO: Replace with actual Webhook or API endpoint
-      // await fetch('YOUR_WEBHOOK_URL', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(payload)
-      // });
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
       
-      // Simulate network request for now
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
       
       setIsSubmitting(false);
       setIsSuccess(true);
     } catch (error) {
       console.error('Submission failed', error);
       setIsSubmitting(false);
-      alert('Something went wrong. Please try again.');
+      alert('Something went wrong while sending your request. Please try again.');
     }
   };
 
@@ -203,6 +201,12 @@ export default function ContactForm() {
 
             {step === 4 && (
               <div className="space-y-6">
+                {/* Honeypot field - visually hidden, ignores screen readers */}
+                <div style={{ position: 'absolute', left: '-9999px' }} aria-hidden="true">
+                  <label htmlFor="_honey">Ignore this field</label>
+                  <input type="text" id="_honey" name="_honey" value={formData._honey} onChange={e => updateFormData('_honey', e.target.value)} tabIndex={-1} autoComplete="off" />
+                </div>
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-brand-charcoal mb-2">Email Address *</label>
