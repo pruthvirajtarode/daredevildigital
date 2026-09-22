@@ -104,31 +104,39 @@ export default function Services() {
                   </Link>
                 </div>
 
-                {/* Clean Abstract Visual instead of Image */}
+                {/* Service Image placeholder */}
                 <motion.div 
                   className="w-full lg:w-1/2 aspect-square md:aspect-[4/3] rounded-3xl bg-brand-navy flex items-center justify-center relative overflow-hidden shadow-lg cursor-pointer outline-none"
                   whileHover="active"
                   whileTap="active"
                 >
-                  {/* Subtle Grid Pattern */}
-                  <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
-                  
-                  {/* Interactive Glow */}
-                  <motion.div 
-                    className="absolute w-64 h-64 bg-brand-burgundy/20 rounded-full blur-[80px]"
-                    variants={{
-                      active: { scale: 1.2, backgroundColor: 'rgba(234, 179, 8, 0.2)' } // shifts to brand-yellow
-                    }}
-                    transition={{ duration: 0.5 }}
-                  />
-                  
-                  <motion.span 
-                    className="font-display text-8xl md:text-9xl font-bold text-brand-purewhite/95 z-10 drop-shadow-xl tracking-tighter"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                  <motion.img 
+                    src={[
+                      '/images/service_social_media_1786441004737.png',
+                      '/images/service_coaching_1786441123552.png',
+                      '/images/service_analytics_1786441229735.png',
+                      '/images/service_content_1786441264836.png',
+                      '/images/service_webdev_1786441294976.png'
+                    ][index] || '/images/hero_dashboard_1786440656238.png'}
+                    alt={service.title} 
+                    className="absolute inset-0 w-full h-full object-cover"
                     variants={{
                       active: { scale: 1.05 }
+                    }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                  />
+                  <motion.div 
+                    className="absolute inset-0 bg-brand-navy/30"
+                    variants={{
+                      active: { backgroundColor: 'rgba(10, 25, 47, 0.1)' }
+                    }}
+                    transition={{ duration: 0.7 }}
+                  />
+                  <motion.span 
+                    className="font-display text-9xl font-bold text-brand-purewhite/95 z-10 drop-shadow-xl"
+                    initial={{ opacity: 0 }}
+                    variants={{
+                      active: { opacity: 1 }
                     }}
                     transition={{ duration: 0.5 }}
                   >
