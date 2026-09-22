@@ -10,9 +10,6 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  const isHomePage = location.pathname === '/';
-  const isTransparent = isHomePage && !isScrolled;
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -39,22 +36,22 @@ export default function Navbar() {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-          !isTransparent
-            ? 'bg-brand-offwhite/90 py-4 backdrop-blur-md shadow-sm border-b border-brand-charcoal/5'
-            : 'bg-transparent py-6 border-b border-white/10'
+          isScrolled
+            ? 'bg-brand-navy/95 py-4 backdrop-blur-md shadow-sm border-b border-white/10'
+            : 'bg-transparent py-6 border-b border-transparent'
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5 transition-transform hover:scale-105">
-              <Logo light={isTransparent} />
+              <Logo light={true} />
             </Link>
           </div>
           
           <div className="flex lg:hidden">
             <button
               type="button"
-              className={`-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 focus:outline-none ${isTransparent ? 'text-white' : 'text-brand-navy'}`}
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white focus:outline-none"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
@@ -71,8 +68,8 @@ export default function Navbar() {
                   to={item.href}
                   className={`text-sm font-semibold leading-6 transition-colors ${
                     active 
-                      ? (isTransparent ? 'text-brand-yellow font-bold border-b-2 border-brand-yellow/30 pb-0.5' : 'text-brand-burgundy font-bold border-b-2 border-brand-burgundy/30 pb-0.5')
-                      : (isTransparent ? 'text-white/90 hover:text-white' : 'text-brand-charcoal hover:text-brand-burgundy')
+                      ? 'text-brand-yellow font-bold border-b-2 border-brand-yellow/30 pb-0.5'
+                      : 'text-white/90 hover:text-white'
                   }`}
                 >
                   {item.name}
@@ -84,11 +81,7 @@ export default function Navbar() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
               to="/audit"
-              className={`rounded-full px-6 py-2.5 text-sm font-semibold shadow-sm transition-all ${
-                isTransparent
-                  ? 'bg-brand-yellow text-brand-navy hover:bg-white'
-                  : 'bg-brand-navy text-brand-purewhite hover:bg-brand-yellow hover:text-brand-navy'
-              }`}
+              className="rounded-full px-6 py-2.5 text-sm font-semibold shadow-sm transition-all bg-brand-yellow text-brand-navy hover:bg-white"
             >
               Book Your Audit <span aria-hidden="true">&rarr;</span>
             </Link>
