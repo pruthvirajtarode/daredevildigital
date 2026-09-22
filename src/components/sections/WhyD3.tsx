@@ -21,14 +21,20 @@ export default function WhyD3() {
 
   return (
     <section id="why-d3" className="bg-brand-offwhite border-b border-brand-charcoal/5 flex flex-col lg:flex-row min-h-[80vh]">
-      {/* Left side Animated Image */}
-      <div className="w-full lg:w-1/2 min-h-[40vh] lg:min-h-full relative overflow-hidden">
+      {/* Left side Abstract Pattern */}
+      <div className="w-full lg:w-1/2 min-h-[40vh] lg:min-h-full relative overflow-hidden bg-brand-navy flex items-center justify-center">
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 opacity-10"
+             style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+        {/* Animated Glow */}
         <motion.div 
-          className="absolute inset-[-5%] bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/office-bg.png')" }}
-          animate={{ scale: [1, 1.08, 1], x: ['0%', '-2%', '0%'] }}
-          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute w-3/4 h-3/4 bg-brand-burgundy/20 rounded-full blur-[100px]"
+          animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.8, 0.5] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         />
+        <div className="relative z-10 text-brand-offwhite/20 font-display font-bold text-7xl md:text-9xl rotate-90 lg:rotate-0 tracking-tighter mix-blend-overlay">
+          D3.
+        </div>
       </div>
       
       {/* Right side Content */}

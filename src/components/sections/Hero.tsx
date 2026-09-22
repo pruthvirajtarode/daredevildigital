@@ -4,25 +4,7 @@ import Button from '../ui/Button';
 export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center pt-28 pb-16 bg-brand-navy overflow-hidden border-b border-brand-charcoal/5">
-      {/* Animated Realistic Background Image */}
-      <motion.div 
-        className="absolute inset-[-5%] z-0"
-        animate={{ 
-          scale: [1, 1.08, 1],
-          x: ['0%', '-2%', '0%'],
-          y: ['0%', '1%', '0%']
-        }}
-        transition={{ 
-          duration: 15, 
-          repeat: Infinity,
-          ease: "easeInOut" 
-        }}
-      >
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/hero-bg.png')" }}
-        />
-      </motion.div>
+
 
       {/* Drifting Ambient Particles for realism */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">

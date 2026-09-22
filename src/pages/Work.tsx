@@ -75,19 +75,21 @@ export default function Work() {
                   whileHover="active"
                   whileTap="active"
                 >
-                  <div className="aspect-[4/3] rounded-3xl bg-brand-offwhite mb-6 overflow-hidden relative border border-brand-charcoal/5 shadow-sm">
-                    <motion.img 
-                      src={project.img} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover" 
-                      variants={{ active: { scale: 1.05 } }}
-                      transition={{ duration: 0.7, ease: "easeOut" }}
+                  <div className="aspect-[4/3] rounded-3xl bg-brand-navy flex items-center justify-center mb-6 overflow-hidden relative border border-brand-charcoal/5 shadow-sm">
+                    {/* Subtle Pattern */}
+                    <div className="absolute inset-0 opacity-10 bg-white" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '16px 16px' }} />
+                    <motion.div 
+                      className="absolute w-48 h-48 bg-brand-burgundy/20 rounded-full blur-[60px]"
+                      variants={{ active: { scale: 1.2, backgroundColor: 'rgba(234, 179, 8, 0.2)' } }}
+                      transition={{ duration: 0.5 }}
                     />
                     <motion.div 
-                      className="absolute inset-0 bg-brand-navy/0" 
-                      variants={{ active: { backgroundColor: 'rgba(10, 25, 47, 0.1)' } }}
-                      transition={{ duration: 0.3 }}
-                    />
+                      className="relative z-10 text-brand-purewhite/95 font-display font-bold text-3xl md:text-4xl text-center px-6 leading-tight drop-shadow-md"
+                      variants={{ active: { scale: 1.05 } }}
+                      transition={{ duration: 0.4 }}
+                    >
+                      {project.title.split(' ').slice(0, 2).join(' ')}
+                    </motion.div>
                   </div>
                   <div className="flex gap-4 items-center text-sm font-bold tracking-widest text-brand-charcoal/60 uppercase mb-3">
                     <span className="text-brand-burgundy">{project.category}</span>
