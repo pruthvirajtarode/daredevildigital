@@ -47,7 +47,7 @@ export default function WhyD3() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex flex-col text-center items-center"
             >
-              <span className="block font-mono text-5xl font-bold text-brand-burgundy/10 mb-4 tracking-tighter">
+              <span className="block font-mono text-5xl font-bold text-brand-burgundy mb-4 tracking-tighter">
                 {point.stat}
               </span>
               <h3 className="font-display text-xl font-bold text-brand-navy mb-3 leading-snug">
