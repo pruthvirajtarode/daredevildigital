@@ -3,7 +3,7 @@ import Button from '../ui/Button';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-28 pb-16 bg-brand-navy overflow-hidden border-b border-brand-charcoal/5">
+    <section className="relative min-h-[90vh] flex items-center pt-40 lg:pt-48 pb-16 bg-brand-navy overflow-hidden border-b border-brand-charcoal/5">
 
 
       {/* Dynamic Animated Background */}
