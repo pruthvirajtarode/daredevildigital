@@ -60,7 +60,7 @@ export default function ExclusivityTracker() {
               EXCLUSIVITY LIMITS
             </span>
             <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              One Client Per Niche. Check If Yours Is Open.
+              One Client Per Niche.
             </h2>
             <p className="text-brand-offwhite/80 text-sm leading-relaxed">
               At the Exclusive Management tier, Daredevil Digital works with exactly one client per niche. No conflicts of interest, no bidding wars, and no sharing ad creative strategies with your direct competitors. Once a slot is closed, it remains closed.
