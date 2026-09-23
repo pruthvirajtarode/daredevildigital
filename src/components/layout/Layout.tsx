@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import Chatbot from '../ui/Chatbot';
 import ScrollToTop from '../ui/ScrollToTop';
 import FloatingWhatsApp from '../ui/FloatingWhatsApp';
 import ScrollToHash from '../ui/ScrollToHash';
@@ -19,7 +18,6 @@ export default function Layout({ children }: LayoutProps) {
         {children}
       </main>
       <Footer />
-      <Chatbot />
       <FloatingWhatsApp />
       <ScrollToTop />
     </div>
