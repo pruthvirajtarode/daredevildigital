@@ -3,7 +3,7 @@ import Button from '../ui/Button';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-28 lg:pt-32 pb-12 bg-brand-navy overflow-hidden border-b border-brand-charcoal/5">
+    <section className="relative min-h-[90vh] flex items-center pt-24 lg:pt-24 pb-8 bg-brand-navy overflow-hidden border-b border-brand-charcoal/5">
 
 
       {/* Dynamic Animated Background */}
@@ -64,7 +64,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/20 z-0" />
       <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/90 via-brand-navy/50 to-transparent z-0" />
       
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10">
         
         {/* Left Copy Column */}
         <motion.div 
@@ -77,16 +77,16 @@ export default function Hero() {
             DAREDEVIL DIGITAL · SINGAPORE
           </span>
           
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-brand-purewhite leading-[1.05] mb-6 uppercase">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-brand-purewhite leading-[1.05] mb-4 uppercase">
             BOLD DIGITAL STRATEGY.<br />
             BUILT FOR REAL GROWTH.
           </h1>
           
-          <p className="text-lg md:text-xl leading-relaxed text-brand-offwhite/90 mb-4">
+          <p className="text-base md:text-lg leading-relaxed text-brand-offwhite/90 mb-4">
             From social strategy and creative execution to performance marketing and lead generation systems, Daredevil Digital helps businesses turn digital attention into measurable opportunity.
           </p>
 
-          <p className="text-base leading-relaxed text-brand-offwhite/80 mb-8 border-l-2 border-brand-yellow pl-4 italic">
+          <p className="text-sm md:text-base leading-relaxed text-brand-offwhite/80 mb-6 border-l-2 border-brand-yellow pl-4 italic">
             Built around a simple principle: your campaigns should learn from the customers you actually want not just the people who submit forms.
           </p>
 
@@ -100,7 +100,7 @@ export default function Hero() {
           </div>
           
           {/* Active Verticals Pill Strip */}
-          <div className="mt-10 pt-6 border-t border-white/20 flex flex-col sm:flex-row sm:items-center gap-4 lg:gap-6">
+          <div className="mt-8 pt-6 border-t border-white/20 flex flex-col sm:flex-row sm:items-center gap-4 lg:gap-6">
             <span className="font-mono text-xs font-bold text-white/60 uppercase tracking-widest shrink-0">
               Active Verticals
             </span>
@@ -119,7 +119,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="lg:col-span-5 relative h-[380px] lg:h-[480px] w-full flex justify-center items-center"
+          className="lg:col-span-5 relative h-[380px] lg:h-[400px] w-full flex justify-center items-center"
         >
           <motion.div 
             animate={{ rotate: 360 }}
