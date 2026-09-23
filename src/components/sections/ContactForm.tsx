@@ -42,7 +42,6 @@ export default function ContactForm() {
   const toggleService = (service: string) => {
     setFormData(prev => {
       const isSelected = prev.services.includes(service);
-      if (!isSelected && prev.services.length >= 2) return prev;
       
       return {
         ...prev,
