@@ -40,9 +40,7 @@ export default function CTASection() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a
-              href="https://wa.me/6588240612"
-              target="_blank"
-              rel="noreferrer"
+              href="/contact"
               className="inline-flex items-center justify-center rounded-full bg-brand-yellow text-brand-navy hover:bg-brand-purewhite hover:text-brand-navy transition-all px-8 py-4 font-bold text-center text-base shadow-md uppercase tracking-wider w-full sm:w-auto"
             >
               Book a Lead Engine Audit
@@ -51,7 +49,7 @@ export default function CTASection() {
 
           <p className="text-sm text-brand-offwhite/60 mb-12">
             Not ready for the audit?{" "}
-            <a href="#blueprint" className="text-brand-yellow hover:underline transition-all">
+            <a href="/contact" className="text-brand-yellow hover:underline transition-all">
               Start with the Blueprint →
             </a>
           </p>

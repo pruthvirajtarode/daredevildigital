@@ -63,7 +63,7 @@ export default function ConfigurationHealthScore() {
               Based on our analysis of active campaigns in Singapore, the average setup fails to feed post click conversion events back to ad platforms. Meta's algorithm is forced to optimize for volume (form clicks) rather than value (closed sales).
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start text-center sm:text-left">
-              <Button href="#audit" variant="secondary" size="md">
+              <Button href="/contact" variant="secondary" size="md">
                 Check Your Score
               </Button>
               <div className="text-xs font-mono text-brand-offwhite/50 mt-3 sm:mt-0 sm:self-center">

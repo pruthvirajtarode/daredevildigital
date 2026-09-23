@@ -103,7 +103,7 @@ export default function PerformanceTracks() {
               </div>
             </div>
 
-            <Button href="#audit" variant="secondary" fullWidth size="lg">
+            <Button href="/contact" variant="secondary" fullWidth size="lg">
               Book a Lead Engine Audit
             </Button>
           </motion.div>
@@ -176,7 +176,7 @@ export default function PerformanceTracks() {
               </div>
             </div>
 
-            <Button href="#blueprint" variant="outline" fullWidth size="lg">
+            <Button href="/contact" variant="outline" fullWidth size="lg">
               Get the Blueprint
             </Button>
           </motion.div>

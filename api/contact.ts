@@ -50,10 +50,10 @@ export default async function handler(
       services: data.services?.join(', ') || '',
       monthlyRevenue: data.monthlyRevenue,
       paidAdsBudget: data.paidAdsBudget,
-      challenge: data.challenge,
-      phone: data.phone,
+      marketingChallenge: data.challenge,
       email: data.email,
-      message: data.enquiry
+      phone: data.phone,
+      anythingElse: data.enquiry
     };
 
     // Forward to Wix Webhook

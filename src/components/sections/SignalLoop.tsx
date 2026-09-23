@@ -40,7 +40,7 @@ export default function SignalLoop() {
             description="Most Singapore agencies set up the browser Pixel and stop. We push qualified leads, booked appointments, and closed sales back to Meta so the algorithm targets buyers, not just browsers."
           />
           <div className="-mt-8 mb-16">
-            <Button href="#audit" variant="secondary" size="lg">
+            <Button href="/contact" variant="secondary" size="lg">
               Book a Lead Engine Audit
             </Button>
           </div>
