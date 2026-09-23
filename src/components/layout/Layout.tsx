@@ -14,7 +14,7 @@ export default function Layout({ children }: LayoutProps) {
     <div className="flex min-h-screen flex-col bg-brand-offwhite font-body text-brand-charcoal">
       <ScrollToHash />
       <Navbar />
-      <main className="flex-1">
+      <main className="flex-1 pt-[72px] lg:pt-[88px]">
         {children}
       </main>
       <Footer />

@@ -23,12 +23,12 @@ export default function Work() {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <div className="pt-24 min-h-screen bg-brand-purewhite">
+    <div className="min-h-screen bg-brand-purewhite">
       <SEO 
         title="Work"
         description="A showcase of our digital marketing capabilities, strategic thinking, and digital execution for Singapore businesses."
       />
-      <section className="py-24 lg:py-32 border-b border-brand-charcoal/5 bg-brand-offwhite">
+      <section className="py-12 lg:py-16 border-b border-brand-charcoal/5 bg-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <SectionHeading 
             eyebrow="PORTFOLIO"

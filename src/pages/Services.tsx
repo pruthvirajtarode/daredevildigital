@@ -10,13 +10,13 @@ import { motion } from 'framer-motion';
 
 export default function Services() {
   return (
-    <div className="pt-24 min-h-screen bg-brand-purewhite">
+    <div className="min-h-screen bg-brand-purewhite">
       <SEO 
         title="Services"
         description="Performance Marketing, Social Strategy, and Creative Execution for Singapore businesses."
       />
       {/* Hero */}
-      <section className="py-24 lg:py-32 bg-brand-navy text-brand-offwhite">
+      <section className="py-12 lg:py-16 bg-brand-navy text-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <SectionHeading 
             eyebrow="OUR CAPABILITIES"
@@ -48,7 +48,7 @@ export default function Services() {
       </section>
 
       {/* 2. Core Agency Services list */}
-      <section className="py-24 lg:py-32">
+      <section className="py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-3xl mb-16">
             <span className="block mb-4 text-xs font-mono font-bold tracking-[0.2em] text-brand-burgundy uppercase">
@@ -150,7 +150,7 @@ export default function Services() {
       </section>
 
       {/* 3. General Campaign Process */}
-      <section className="py-24 lg:py-32 bg-brand-navy text-brand-offwhite">
+      <section className="py-12 lg:py-16 bg-brand-navy text-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading 
             eyebrow="OUR WORKFLOW"

@@ -26,13 +26,13 @@ export default function About() {
   ];
 
   return (
-    <div className="pt-24 min-h-screen bg-brand-offwhite">
+    <div className="min-h-screen bg-brand-offwhite">
       <SEO 
         title="About"
         description="Learn about Daredevil Digital, a Singapore based digital marketing agency founded by a former Meta APAC account manager."
       />
       {/* Hero */}
-      <section className="py-24 lg:py-32 bg-brand-navy text-brand-offwhite">
+      <section className="py-12 lg:py-16 bg-brand-navy text-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <SectionHeading 
             eyebrow="ABOUT OPERATOR"
@@ -46,7 +46,7 @@ export default function About() {
       </section>
 
       {/* Operator Story */}
-      <section className="py-24 lg:py-32 bg-brand-purewhite">
+      <section className="py-12 lg:py-16 bg-brand-purewhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
@@ -89,7 +89,7 @@ export default function About() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-24 lg:py-32 bg-brand-navy text-brand-offwhite">
+      <section className="py-12 lg:py-16 bg-brand-navy text-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
             <div>
@@ -113,7 +113,7 @@ export default function About() {
       </section>
 
       {/* The Pillars */}
-      <section className="py-24 lg:py-32 bg-brand-offwhite">
+      <section className="py-12 lg:py-16 bg-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading 
             eyebrow="The Daredevil Philosophy"
