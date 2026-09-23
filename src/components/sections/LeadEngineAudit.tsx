@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Check, ShieldAlert } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import SectionHeading from '../ui/SectionHeading';
 import { pricing } from '../../data/pricing';
 
@@ -129,14 +130,12 @@ export default function LeadEngineAudit() {
                 ))}
               </div>
 
-              <a
-                href="https://wa.me/6588240612"
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                to="/contact"
                 className="inline-flex items-center justify-center w-full rounded-full bg-[#25D366] text-white hover:bg-[#20b858] transition-all px-8 py-4 font-bold text-center text-base shadow-md uppercase tracking-wider"
               >
                 Book your Lead Engine Audit
-              </a>
+              </Link>
               <span className="block text-center font-mono text-[10px] text-brand-charcoal/50 mt-3">
                 * Intake via appointment. View access to Business Manager required.
               </span>
