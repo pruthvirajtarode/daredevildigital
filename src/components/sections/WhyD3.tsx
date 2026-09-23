@@ -20,11 +20,11 @@ export default function WhyD3() {
   ];
 
   return (
-    <section id="why-d3" className="bg-brand-purewhite border-b border-brand-charcoal/5 py-24 lg:py-32">
+    <section id="why-d3" className="bg-brand-purewhite border-b border-brand-charcoal/5 py-32 lg:py-40">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         
         {/* Centered Header */}
-        <div className="max-w-3xl mx-auto text-center mb-20">
+        <div className="max-w-3xl mx-auto text-center mb-28 lg:mb-36">
           <span className="block mb-4 text-xs font-mono font-bold tracking-[0.2em] text-brand-burgundy uppercase">
             WHY WORK WITH US
           </span>
@@ -37,7 +37,7 @@ export default function WhyD3() {
         </div>
 
         {/* 3-Column Grid for Points */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24">
           {points.map((point, index) => (
             <motion.div 
               key={point.stat}
