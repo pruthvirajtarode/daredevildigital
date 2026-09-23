@@ -28,7 +28,7 @@ export default function Work() {
         title="Work"
         description="A showcase of our digital marketing capabilities, strategic thinking, and digital execution for Singapore businesses."
       />
-      <section className="py-12 lg:py-16 border-b border-brand-charcoal/5 bg-brand-offwhite">
+      <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 border-b border-brand-charcoal/5 bg-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <SectionHeading 
             eyebrow="PORTFOLIO"

@@ -25,7 +25,7 @@ export default function ServiceDetail() {
           description="A Singapore based marketing engineering service feeding CRM outcome data directly back to ad platform machine learning algorithms."
         />
         {/* Subpage Header */}
-        <section className="py-12 lg:py-16 bg-brand-navy text-brand-offwhite">
+        <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 bg-brand-navy text-brand-offwhite">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
             <SectionHeading 
               eyebrow="SPECIALIZED SYSTEM"
@@ -76,7 +76,7 @@ export default function ServiceDetail() {
         description={service.description}
       />
       {/* Hero */}
-      <section className="py-12 lg:py-16 bg-brand-navy border-b border-brand-charcoal/5">
+      <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 bg-brand-navy border-b border-brand-charcoal/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <SectionHeading 
             eyebrow={`SERVICE 0${service.id}`}
@@ -90,7 +90,7 @@ export default function ServiceDetail() {
       </section>
 
       {/* Challenge & Solution */}
-      <section className="py-12 lg:py-16 bg-brand-offwhite">
+      <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 bg-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
@@ -110,7 +110,7 @@ export default function ServiceDetail() {
       </section>
 
       {/* What We Do / Capabilities details */}
-      <section className="py-12 lg:py-16">
+      <section className="pt-8 lg:pt-10 pb-12 lg:pb-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading 
             eyebrow="Capabilities"

@@ -38,7 +38,7 @@ export default function Blueprint() {
   ];
 
   return (
-    <section id="blueprint" className="pt-20 lg:pt-24 pb-20 lg:pb-24 bg-brand-purewhite border-b border-brand-charcoal/5">
+    <section id="blueprint" className="pt-10 lg:pt-14 pb-16 lg:pb-24 bg-brand-purewhite border-b border-brand-charcoal/5">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* Left Column: Layers */}

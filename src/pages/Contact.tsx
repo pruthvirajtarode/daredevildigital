@@ -20,7 +20,7 @@ export default function Contact() {
         title="Contact Us"
         description="Get in touch with Daredevil Digital. Let's discuss your business, your challenges, and build a digital strategy for growth in Singapore."
       />
-      <section className="py-12 lg:py-16 bg-brand-navy">
+      <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 bg-brand-navy">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <SectionHeading 
             eyebrow="CONTACT US"
@@ -33,7 +33,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-12 lg:py-16 relative">
+      <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 relative">
         <div className="absolute top-0 left-0 w-full h-1/2 bg-brand-navy -z-10" />
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
