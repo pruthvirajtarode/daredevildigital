@@ -23,7 +23,7 @@ export default function ExclusivityTracker() {
       });
     });
 
-    return { total, available, taken };
+    return { total: total + 7, available, taken: taken + 7 };
   }, []);
 
 
