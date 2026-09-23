@@ -14,7 +14,7 @@ const FacebookIcon = ({ className }: { className?: string }) => (
 
 export default function CTASection() {
   return (
-    <section id="cta" className="bg-brand-navy py-24 sm:py-32 relative overflow-hidden border-t border-white/10">
+    <section id="cta" className="bg-brand-navy py-12 lg:py-16 relative overflow-hidden border-t border-white/10">
       {/* Background visual shapes */}
       <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-brand-yellow/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[450px] h-[450px] bg-brand-burgundy/5 rounded-full blur-3xl pointer-events-none" />
