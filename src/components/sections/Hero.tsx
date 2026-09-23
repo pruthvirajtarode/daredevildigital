@@ -92,7 +92,7 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button href="/contact" variant="secondary" size="lg">
-              Book a free consult
+              BOOK A FREE CONSULT
             </Button>
             <Button href="/signal-audit" variant="outline-light" size="lg">
               SEE HOW THE SIGNAL LOOP WORKS
