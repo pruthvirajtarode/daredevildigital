@@ -3,7 +3,7 @@ import Button from '../ui/Button';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-16 lg:pt-20 pb-8 bg-brand-navy overflow-hidden border-b border-brand-charcoal/5">
+    <section className="relative min-h-[90vh] flex items-center pt-24 lg:pt-28 pb-8 bg-brand-navy overflow-hidden border-b border-brand-charcoal/5">
 
 
       {/* Dynamic Animated Background */}
@@ -73,7 +73,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-2xl lg:col-span-7"
         >
-          <span className="inline-block mb-4 text-xs font-mono font-bold tracking-[0.2em] text-brand-yellow uppercase">
+          <span className="inline-block mb-2 text-xs font-mono font-bold tracking-[0.2em] text-brand-yellow uppercase mt-4">
             DAREDEVIL DIGITAL · SINGAPORE
           </span>
           
