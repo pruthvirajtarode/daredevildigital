@@ -77,9 +77,11 @@ export default function Hero() {
             DAREDEVIL DIGITAL · SINGAPORE
           </span>
           
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-brand-purewhite leading-[1.05] mb-4 uppercase">
-            BOLD DIGITAL STRATEGY.<br />
-            BUILT FOR REAL GROWTH.
+          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-brand-purewhite leading-[1.05] mb-6 uppercase">
+            BOLD DIGITAL<br />
+            STRATEGY.<br />
+            BUILT FOR REAL<br />
+            GROWTH.
           </h1>
           
           <p className="text-base md:text-lg leading-relaxed text-brand-offwhite/90 mb-4">
@@ -90,11 +92,11 @@ export default function Hero() {
             Built around a simple principle: your campaigns should learn from the customers you actually want not just the people who submit forms.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button href="/contact" variant="secondary" size="lg">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4">
+            <Button href="/contact" variant="secondary" size="lg" className="whitespace-nowrap">
               BOOK A FREE CONSULT
             </Button>
-            <Button href="/signal-audit" variant="outline-light" size="lg">
+            <Button href="/signal-audit" variant="outline-light" size="lg" className="whitespace-nowrap">
               SEE HOW THE SIGNAL LOOP WORKS
             </Button>
           </div>
