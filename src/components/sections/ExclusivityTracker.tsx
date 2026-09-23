@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { verticals } from '../../data/exclusivity';
 
 export default function ExclusivityTracker() {
@@ -129,12 +130,12 @@ export default function ExclusivityTracker() {
               Exclusivity is first come, confirmed client. Secure your vertical via a Lead Engine Audit first.
             </p>
           </div>
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="rounded-full bg-brand-yellow text-brand-navy hover:bg-brand-purewhite hover:text-brand-navy transition-colors px-6 py-3 font-bold text-sm uppercase shrink-0"
           >
             Book your Audit
-          </a>
+          </Link>
         </div>
 
       </div>

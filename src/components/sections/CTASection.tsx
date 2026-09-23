@@ -2,6 +2,7 @@ import { MessageCircle, Mail } from 'lucide-react';
 import { contact } from '../../data/contact';
 import { pricing } from '../../data/pricing';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const InstagramIcon = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
@@ -39,19 +40,19 @@ export default function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center justify-center rounded-full bg-brand-yellow text-brand-navy hover:bg-brand-purewhite hover:text-brand-navy transition-all px-8 py-4 font-bold text-center text-base shadow-md uppercase tracking-wider w-full sm:w-auto"
             >
               Book a Lead Engine Audit
-            </a>
+            </Link>
           </div>
 
           <p className="text-sm text-brand-offwhite/60 mb-12">
             Not ready for the audit?{" "}
-            <a href="/contact" className="text-brand-yellow hover:underline transition-all">
+            <Link to="/contact" className="text-brand-yellow hover:underline transition-all">
               Start with the Blueprint →
-            </a>
+            </Link>
           </p>
 
           {/* Social and Direct Channels */}
