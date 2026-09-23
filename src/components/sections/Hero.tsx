@@ -126,7 +126,7 @@ export default function Hero() {
             transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
             className="absolute w-[110%] h-[110%] bg-brand-yellow/10 rounded-full blur-3xl -z-10"
           />
-          <div className="relative w-full h-full max-w-sm lg:max-w-md mx-auto">
+          <div className="relative w-full h-full max-w-sm lg:max-w-full mx-auto">
             {/* Visual stacked card aesthetics */}
             <div className="absolute inset-0 bg-brand-purewhite/10 backdrop-blur-sm rounded-3xl shadow-2xl transform rotate-3 scale-105" />
             <div className="absolute inset-0 bg-brand-yellow/80 rounded-3xl shadow-xl transform -rotate-2" />
