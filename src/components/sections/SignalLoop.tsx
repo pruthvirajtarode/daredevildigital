@@ -31,7 +31,7 @@ export default function SignalLoop() {
   ];
 
   return (
-    <section id="signal" className="pt-32 lg:pt-40 pb-24 lg:pb-32 bg-brand-purewhite border-b border-brand-charcoal/5">
+    <section id="signal" className="py-16 lg:py-24 bg-brand-purewhite border-b border-brand-charcoal/5">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div>
           <SectionHeading

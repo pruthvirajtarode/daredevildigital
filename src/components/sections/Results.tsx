@@ -35,7 +35,7 @@ const reviews = [
 
 export default function Results() {
   return (
-    <section id="results" className="py-32 lg:py-40 bg-brand-purewhite border-b border-brand-charcoal/5 overflow-hidden">
+    <section id="results" className="py-16 lg:py-24 bg-brand-purewhite border-b border-brand-charcoal/5 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="CLIENT OUTCOMES"

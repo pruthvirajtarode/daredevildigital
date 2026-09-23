@@ -41,7 +41,7 @@ export default function ConfigurationHealthScore() {
   }, [isInView, controls]);
 
   return (
-    <section id="health-score" ref={ref} className="py-24 bg-brand-navy text-brand-offwhite relative overflow-hidden border-b border-white/10">
+    <section id="health-score" ref={ref} className="py-16 lg:py-24 bg-brand-navy text-brand-offwhite relative overflow-hidden border-b border-white/10">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-yellow/5 rounded-full blur-3xl pointer-events-none" />
       

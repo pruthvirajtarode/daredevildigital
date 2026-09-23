@@ -20,11 +20,11 @@ export default function WhyD3() {
   ];
 
   return (
-    <section id="why-d3" className="bg-brand-purewhite border-b border-brand-charcoal/5 py-32 lg:py-40">
+    <section id="why-d3" className="bg-brand-purewhite border-b border-brand-charcoal/5 py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         
         {/* Centered Header */}
-        <div className="max-w-3xl mx-auto text-center mb-28 lg:mb-36">
+        <div className="max-w-3xl mx-auto text-center mb-12 lg:mb-16">
           <span className="block mb-4 text-xs font-mono font-bold tracking-[0.2em] text-brand-burgundy uppercase">
             WHY WORK WITH US
           </span>

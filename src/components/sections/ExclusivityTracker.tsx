@@ -29,7 +29,7 @@ export default function ExclusivityTracker() {
 
 
   return (
-    <section id="exclusivity" className="relative py-24 lg:py-32 bg-brand-navy text-brand-offwhite border-b border-white/10 overflow-hidden">
+    <section id="exclusivity" className="relative py-16 lg:py-24 bg-brand-navy text-brand-offwhite border-b border-white/10 overflow-hidden">
       {/* Abstract Animated Glow */}
       <motion.div 
         className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-brand-yellow/5 rounded-full blur-[120px] -z-10"
