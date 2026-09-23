@@ -1,14 +1,8 @@
-import { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, ChevronDown } from 'lucide-react';
+import { useMemo } from 'react';
+import { motion } from 'framer-motion';
 import { verticals } from '../../data/exclusivity';
-import type { Vertical } from '../../data/exclusivity';
 
 export default function ExclusivityTracker() {
-  const [openVerticals, setOpenVerticals] = useState<Record<string, boolean>>({
-    'home-services': true, // Keep the first vertical open by default
-  });
-
   // Calculate live counters from database
   const stats = useMemo(() => {
     let total = 0;
