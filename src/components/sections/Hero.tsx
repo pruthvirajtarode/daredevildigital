@@ -121,7 +121,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="lg:col-span-5 relative h-[380px] lg:h-[400px] w-full flex justify-center items-center"
+          className="lg:col-span-5 relative h-[400px] lg:h-[550px] w-full flex justify-center items-center"
         >
           <motion.div 
             animate={{ rotate: 360 }}
