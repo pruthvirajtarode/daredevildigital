@@ -46,12 +46,13 @@ export default function ConfigurationHealthScore() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-yellow/5 rounded-full blur-3xl pointer-events-none" />
       
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
+            className="lg:col-span-7"
           >
             <span className="block mb-4 text-xs font-mono font-bold tracking-[0.2em] text-brand-yellow uppercase">
               ACCOUNT CONFIGURATION HEALTH
@@ -63,7 +64,7 @@ export default function ConfigurationHealthScore() {
               Based on our analysis of active campaigns in Singapore, the average setup fails to feed post click conversion events back to ad platforms. Meta's algorithm is forced to optimize for volume (form clicks) rather than value (closed sales).
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start text-center sm:text-left">
-              <Button href="/contact" variant="secondary" size="md">
+              <Button href="/contact" variant="secondary" size="md" className="whitespace-nowrap">
                 Check Your Score
               </Button>
               <div className="text-xs font-mono text-brand-offwhite/50 mt-3 sm:mt-0 sm:self-center">
@@ -77,7 +78,7 @@ export default function ConfigurationHealthScore() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-12 bg-white/5 border border-white/10 rounded-3xl p-12 backdrop-blur-sm"
+            className="lg:col-span-5 flex flex-col xl:flex-row items-center justify-center gap-8 bg-white/5 border border-white/10 rounded-3xl p-8 xl:p-12 backdrop-blur-sm"
           >
             {/* Animated Gauge */}
             <div className="relative w-48 h-48 flex items-center justify-center shrink-0">
