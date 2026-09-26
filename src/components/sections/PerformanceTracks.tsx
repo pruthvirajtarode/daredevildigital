@@ -35,7 +35,7 @@ export default function PerformanceTracks() {
             <div className="flex justify-between items-start mb-8">
               <div>
                 <span className="inline-block px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-widest text-brand-yellow bg-brand-yellow/10 border border-brand-yellow/20 rounded mb-4">
-                  Option A: Active Spenders
+                  For Active Spenders
                 </span>
                 <h3 className="font-display text-3xl font-bold text-brand-purewhite">
                   Lead Engine Management
@@ -126,7 +126,7 @@ export default function PerformanceTracks() {
             <div className="flex justify-between items-start mb-8">
               <div>
                 <span className="inline-block px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-widest text-brand-burgundy bg-brand-burgundy/10 border border-brand-burgundy/20 rounded mb-4">
-                  Option B: Early Stage
+                  For Early Stage
                 </span>
               </div>
             </div>
