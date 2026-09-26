@@ -100,7 +100,7 @@ export default function Footer() {
                 <ul role="list" className="mt-4 space-y-4">
                   <li className="flex items-start gap-3 text-sm leading-6 text-brand-offwhite/70">
                     <MapPin className="w-5 h-5 flex-shrink-0 text-brand-yellow mt-0.5" />
-                    <span>Singapore · Boutique Agency Model</span>
+                    <span>Singapore</span>
                   </li>
                   <li className="flex items-center gap-3 text-sm leading-6 text-brand-offwhite/70 hover:text-brand-yellow transition-colors">
                     <Phone className="w-5 h-5 flex-shrink-0 text-brand-yellow" />
