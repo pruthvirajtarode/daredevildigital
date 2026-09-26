@@ -9,7 +9,7 @@ export default function PerformanceTracks() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-3xl mb-20 lg:mb-28">
           <span className="block mb-4 text-xs font-mono font-bold tracking-[0.2em] text-brand-burgundy uppercase">
-            COMMERCIAL TRACKS
+            APAC ACCOUNT MANAGEMENT FOR META
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-brand-navy leading-[1.1] mb-6">
             Two Tracks. One Standard.
@@ -83,7 +83,10 @@ export default function PerformanceTracks() {
                   <span className="font-display text-base font-semibold text-brand-purewhite flex items-center gap-2">
                     <ArrowRight className="w-4 h-4 text-brand-yellow" /> Engine Management
                   </span>
-                  <span className="font-mono text-sm font-bold text-brand-purewhite">{pricing.engine.price}</span>
+                  <div className="text-right">
+                    <span className="font-mono text-[10px] text-white/40 line-through mr-2">{pricing.engine.previous}</span>
+                    <span className="font-mono text-sm font-bold text-brand-purewhite">{pricing.engine.current}</span>
+                  </div>
                 </div>
                 <p className="text-xs text-brand-offwhite/50 pl-6">
                   {pricing.engine.note} CAPI integration, offline mapping, and creative iteration.

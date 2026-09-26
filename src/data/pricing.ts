@@ -18,7 +18,8 @@ export const pricing = {
     note: "Fixes implemented. Campaign management. Reporting."
   },
   engine: {
-    price: "S$1,999/mo",
+    current: "S$1,499/mo",
+    previous: "S$1,999/mo",
     note: "Signal Loop active. CAPI + offline conversions. Creative iteration. Full reporting stack."
   },
   exclusive: {

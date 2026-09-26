@@ -46,7 +46,7 @@ export default function SignalLoop() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mt-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mt-16 items-stretch">
           {/* Steps List */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
@@ -95,7 +95,7 @@ export default function SignalLoop() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-6 flex flex-col justify-center items-center bg-brand-navy rounded-3xl p-8 lg:p-12 relative overflow-hidden border border-white/5 shadow-2xl h-[520px]"
+            className="lg:col-span-6 flex flex-col justify-center items-center bg-brand-navy rounded-3xl p-8 lg:p-12 relative overflow-hidden border border-white/5 shadow-2xl h-full min-h-[520px]"
           >
             {/* Ambient decorative glow */}
             <div className="absolute inset-0 bg-gradient-to-tr from-brand-burgundy/10 via-brand-yellow/5 to-transparent pointer-events-none" />

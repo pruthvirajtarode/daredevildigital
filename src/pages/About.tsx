@@ -51,7 +51,6 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <SectionHeading 
-                eyebrow="Direct Ownership"
                 title="No Handoffs. Direct Accountability."
               />
               <div className="space-y-6 text-brand-charcoal/80 text-lg leading-relaxed">
@@ -96,16 +95,16 @@ export default function About() {
               <span className="block mb-6 text-xs font-mono font-bold tracking-widest text-brand-yellow uppercase">
                 BRAND VISION
               </span>
-              <p className="font-display text-3xl font-bold leading-tight">
-                "{company.vision}"
+              <p className="font-display text-3xl font-bold leading-tight italic">
+                {company.vision}
               </p>
             </div>
             <div>
               <span className="block mb-6 text-xs font-mono font-bold tracking-widest text-brand-yellow uppercase">
                 OPERATIONAL MISSION
               </span>
-              <p className="font-display text-3xl font-bold leading-tight text-brand-offwhite/90">
-                "{company.mission}"
+              <p className="font-display text-3xl font-bold leading-tight text-brand-offwhite/90 italic">
+                {company.mission}
               </p>
             </div>
           </div>

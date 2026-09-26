@@ -92,11 +92,11 @@ export default function Hero() {
             Built around a simple principle: your campaigns should learn from the customers you actually want not just the people who submit forms.
           </p>
 
-          <div className="flex flex-col sm:flex-row flex-wrap gap-4">
-            <Button href="/contact" variant="secondary" size="lg" className="whitespace-nowrap">
+          <div className="flex flex-col gap-4 w-full max-w-md">
+            <Button href="/contact" variant="secondary" size="lg" fullWidth className="uppercase">
               BOOK A FREE CONSULT
             </Button>
-            <Button href="/signal-audit" variant="outline-light" size="lg" className="whitespace-nowrap">
+            <Button href="/signal-audit" variant="outline-light" size="lg" fullWidth className="uppercase">
               SEE HOW THE SIGNAL LOOP WORKS
             </Button>
           </div>
