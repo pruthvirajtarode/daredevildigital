@@ -111,7 +111,7 @@ export default function LeadEngineAudit() {
                   QUALIFICATION CRITERIA
                 </div>
                 <p className="text-xs text-brand-charcoal/70 leading-relaxed">
-                  Singapore targeted lead generation businesses spending **S$5,000/month or more** on Meta, running campaigns continuously for **60+ days**.
+                  Singapore targeted lead generation businesses spending S$3,000/month or more on Meta, running campaigns continuously for 60+ days.
                 </p>
               </div>
 

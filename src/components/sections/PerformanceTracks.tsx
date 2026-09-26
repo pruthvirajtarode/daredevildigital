@@ -8,9 +8,6 @@ export default function PerformanceTracks() {
     <section id="performance-tracks" className="py-16 lg:py-24 bg-brand-offwhite border-b border-brand-charcoal/5">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-3xl mb-20 lg:mb-28">
-          <span className="block mb-4 text-xs font-mono font-bold tracking-[0.2em] text-brand-burgundy uppercase">
-            APAC ACCOUNT MANAGEMENT FOR META
-          </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-brand-navy leading-[1.1] mb-6">
             Two Tracks. One Standard.
           </h2>
