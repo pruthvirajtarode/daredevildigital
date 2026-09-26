@@ -4,7 +4,7 @@ export default function WhyD3() {
   const points = [
     {
       stat: "5yr",
-      title: "APAC Account Management at Meta",
+      title: "APAC Account Management for META",
       desc: "Managed substantial ad spend across 100+ advertisers inside Meta. Pattern recognition on how Singapore accounts saturate comes from seeing it occur at scale."
     },
     {
