@@ -149,8 +149,8 @@ export default function ContactForm() {
                   <input required type="text" value={formData.businessName} onChange={e => updateFormData('businessName', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors" />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-brand-charcoal mb-2">Website URL *</label>
-                  <input required type="url" value={formData.website} onChange={e => updateFormData('website', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors" placeholder="https://" />
+                  <label className="block text-sm font-semibold text-brand-charcoal mb-2">Website URL (or N/A)</label>
+                  <input type="text" value={formData.website} onChange={e => updateFormData('website', e.target.value)} className="w-full border-b-2 border-brand-charcoal/20 bg-transparent py-3 focus:border-brand-navy focus:outline-none transition-colors" placeholder="https:// or N/A" />
                 </div>
               </div>
             )}
