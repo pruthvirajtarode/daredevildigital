@@ -79,7 +79,6 @@ export default function ServiceDetail() {
       <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 bg-brand-navy border-b border-brand-charcoal/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <SectionHeading 
-            eyebrow={`SERVICE 0${service.id}`}
             title={service.title}
             description={service.description}
             theme="dark"

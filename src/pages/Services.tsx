@@ -73,9 +73,6 @@ export default function Services() {
               >
                 {/* Service Details info */}
                 <div className="w-full lg:w-1/2">
-                  <span className="font-mono text-xs font-bold text-brand-burgundy bg-brand-burgundy/10 px-2 py-0.5 rounded">
-                    SERVICE {service.id}
-                  </span>
                   <h2 className="font-display text-3xl font-bold text-brand-navy mt-4 mb-6">
                     {service.title}
                   </h2>
