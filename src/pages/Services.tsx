@@ -50,9 +50,6 @@ export default function Services() {
       <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 bg-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-3xl mb-16">
-            <span className="block mb-4 text-xs font-mono font-bold tracking-[0.2em] text-brand-burgundy uppercase">
-              GENERAL AGENCY SERVICES
-            </span>
             <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-brand-navy leading-tight mb-4">
               Core Digital Capabilities
             </h2>
