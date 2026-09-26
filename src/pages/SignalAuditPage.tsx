@@ -1,6 +1,7 @@
 import SignalLoop from '../components/sections/SignalLoop';
 import SEO from '../components/ui/SEO';
 import PerformanceTracks from '../components/sections/PerformanceTracks';
+import LeadEngineAudit from '../components/sections/LeadEngineAudit';
 
 export default function SignalAuditPage() {
   return (
@@ -10,6 +11,7 @@ export default function SignalAuditPage() {
         description="We evaluate your Meta Ads pixel data, CAPI tracking, and CRM offline event syncing to find out exactly where the platform algorithm is breaking."
       />
       <SignalLoop />
+      <LeadEngineAudit />
       <PerformanceTracks />
     </div>
   );

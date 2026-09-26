@@ -16,11 +16,6 @@ export const footerNavigation = {
     { name: 'Contact', href: '/contact' }
   ],
   services: [
-    { name: 'Social Media Management', href: '/services/social-media-management' },
-    { name: 'Social Media Coaching', href: '/services/social-media-coaching' },
-    { name: 'Analytics & Reporting', href: '/services/analytics-reporting' },
-    { name: 'Content Creation', href: '/services/content-creation' },
-    { name: 'Website Development', href: '/services/website-development' },
     { name: 'Performance Marketing', href: '/services/performance-marketing' }
   ]
 };
