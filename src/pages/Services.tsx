@@ -121,23 +121,6 @@ export default function Services() {
                     }}
                     transition={{ duration: 0.7, ease: "easeOut" }}
                   />
-                  <motion.div 
-                    className="absolute inset-0 bg-brand-navy/30"
-                    variants={{
-                      active: { backgroundColor: 'rgba(10, 25, 47, 0.1)' }
-                    }}
-                    transition={{ duration: 0.7 }}
-                  />
-                  <motion.span 
-                    className="font-display text-9xl font-bold text-brand-purewhite/95 z-10 drop-shadow-xl"
-                    initial={{ opacity: 0 }}
-                    variants={{
-                      active: { opacity: 1 }
-                    }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    {service.id}
-                  </motion.span>
                 </motion.div>
               </motion.div>
             ))}
