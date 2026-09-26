@@ -101,7 +101,7 @@ export default function SignalLoop() {
             <div className="absolute inset-0 bg-gradient-to-tr from-brand-burgundy/10 via-brand-yellow/5 to-transparent pointer-events-none" />
 
             {/* Central Circle Loop visualization */}
-            <div className="relative w-72 h-72 flex items-center justify-center">
+            <div className="relative w-72 h-72 flex items-center justify-center scale-110 sm:scale-125 lg:scale-[1.35] my-6 lg:my-10">
               {/* Outer spinning ring */}
               <motion.div
                 animate={{ rotate: 360 }}
