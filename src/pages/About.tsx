@@ -35,7 +35,6 @@ export default function About() {
       <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 bg-brand-navy text-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <SectionHeading 
-            eyebrow="ABOUT OPERATOR"
             title="THE AGENCY IS THE OPERATOR. THAT'S THE POINT."
             description="We are a boutique Singapore paid social agency built to solve lead generation quality issues by aligning Meta campaign learning with CRM data feedback."
             theme="dark"

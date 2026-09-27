@@ -73,9 +73,6 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-2xl lg:col-span-7"
         >
-          <span className="inline-block mb-2 text-xs font-mono font-bold tracking-[0.2em] text-brand-yellow uppercase mt-4">
-            DAREDEVIL DIGITAL · SINGAPORE
-          </span>
           
           <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-brand-purewhite leading-[1.05] mb-6 uppercase">
             BOLD DIGITAL<br />

@@ -118,7 +118,7 @@ export default function Blueprint() {
                   WHO IS THIS FOR?
                 </div>
                 <p className="text-xs text-brand-offwhite/75 leading-relaxed">
-                  home based operators and early stage companies ready to advertise correctly. Not yet at S$5,000/month in Meta ad budgets, seeking a clear build roadmap before retainers start.
+                  home based operators and early stage companies ready to advertise correctly. Not yet at S$3,000/month in Meta ad budgets, seeking a clear build roadmap before retainers start.
                 </p>
               </div>
 

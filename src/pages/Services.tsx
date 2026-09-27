@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import SectionHeading from '../components/ui/SectionHeading';
 import CTASection from '../components/sections/CTASection';
 import SEO from '../components/ui/SEO';
-import PerformanceTracks from '../components/sections/PerformanceTracks';
 import { services } from '../data/services';
 import { company } from '../data/company';
 import { ArrowRight, Check } from 'lucide-react';
@@ -28,23 +27,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* 1. Performance Marketing Tracks Section */}
-      <section className="bg-brand-purewhite border-b border-brand-charcoal/5">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 py-20">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="inline-block px-4 py-2 text-sm font-mono font-bold uppercase tracking-widest text-brand-burgundy bg-brand-burgundy/10 border border-brand-burgundy/20 rounded-full mb-4">
-              PERFORMANCE MARKETING
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-navy mb-4">
-              Meta Lead Generation & CAPI Signal Loop
-            </h2>
-            <p className="text-brand-charcoal/70 text-sm leading-relaxed">
-              We connect offline conversion outcomes directly to campaign target parameters. Read below about our specialized pricing tracks for early stage and active advertisers.
-            </p>
-          </div>
-        </div>
-        <PerformanceTracks />
-      </section>
 
       {/* 2. Core Agency Services list */}
       <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 bg-brand-offwhite">

@@ -56,9 +56,6 @@ export default function ExclusivityTracker() {
             transition={{ duration: 0.6 }}
             className="max-w-xl"
           >
-            <span className="block mb-4 text-xs font-mono font-bold tracking-[0.2em] text-brand-yellow uppercase">
-              EXCLUSIVITY LIMITS
-            </span>
             <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-6">
               One Client Per Niche.
             </h2>
