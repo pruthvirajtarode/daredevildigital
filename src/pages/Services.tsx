@@ -4,7 +4,7 @@ import CTASection from '../components/sections/CTASection';
 import SEO from '../components/ui/SEO';
 import { services } from '../data/services';
 import { company } from '../data/company';
-import { ArrowRight, Check, Share2, Presentation, BarChart3, PenTool, Code2 } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 export default function Services() {
   return (
