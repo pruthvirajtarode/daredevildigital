@@ -4,7 +4,7 @@ import CTASection from '../components/sections/CTASection';
 import SEO from '../components/ui/SEO';
 import { services } from '../data/services';
 import { company } from '../data/company';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Check, Share2, Presentation, BarChart3, PenTool, Code2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 export default function Services() {
   return (
@@ -79,27 +79,30 @@ export default function Services() {
                   </Link>
                 </div>
 
-                {/* Service Image placeholder */}
+                {/* Service Visual */}
                 <motion.div 
-                  className="w-full lg:w-1/2 aspect-square md:aspect-[4/3] rounded-3xl bg-brand-navy flex items-center justify-center relative overflow-hidden shadow-lg cursor-pointer outline-none"
+                  className="w-full lg:w-1/2 aspect-square md:aspect-[4/3] rounded-3xl bg-brand-navy flex flex-col items-center justify-center relative overflow-hidden shadow-lg border border-brand-charcoal/5"
                   whileHover="active"
-                  whileTap="active"
                 >
-                  <motion.img 
-                    src={[
-                      '/images/service_social_media_digital_1790493015360.png',
-                      '/images/service_coaching_digital_1790493031164.png',
-                      '/images/service_analytics_digital_1790493058628.png',
-                      '/images/service_content_digital_1790493164481.png',
-                      '/images/service_webdev_digital_1790493181423.png'
-                    ][index] || '/images/hero_dashboard_1786440656238.png'}
-                    alt={service.title} 
-                    className="absolute inset-0 w-full h-full object-cover"
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-yellow/10 via-brand-navy to-brand-navy opacity-80" />
+                  
+                  {/* Digital Element Icon */}
+                  <motion.div
                     variants={{
-                      active: { scale: 1.05 }
+                      active: { scale: 1.1, rotate: [0, -5, 5, 0] }
                     }}
-                    transition={{ duration: 0.7, ease: "easeOut" }}
-                  />
+                    transition={{ duration: 0.5 }}
+                    className="relative z-10"
+                  >
+                    {index === 0 && <Share2 className="w-24 h-24 md:w-32 md:h-32 text-brand-yellow stroke-[1.5]" />}
+                    {index === 1 && <Presentation className="w-24 h-24 md:w-32 md:h-32 text-brand-yellow stroke-[1.5]" />}
+                    {index === 2 && <BarChart3 className="w-24 h-24 md:w-32 md:h-32 text-brand-yellow stroke-[1.5]" />}
+                    {index === 3 && <PenTool className="w-24 h-24 md:w-32 md:h-32 text-brand-yellow stroke-[1.5]" />}
+                    {index === 4 && <Code2 className="w-24 h-24 md:w-32 md:h-32 text-brand-yellow stroke-[1.5]" />}
+                  </motion.div>
+                  
+                  {/* Decorative digital grid */}
+                  <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
                 </motion.div>
               </motion.div>
             ))}
