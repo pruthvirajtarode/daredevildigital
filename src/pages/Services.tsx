@@ -87,11 +87,11 @@ export default function Services() {
                 >
                   <motion.img 
                     src={[
-                      '/images/service_social_media_human_1790493549933.png',
-                      '/images/service_coaching_human_1790493612117.png',
-                      '/images/service_analytics_human_1790493624452.png',
-                      '/images/service_content_human_1790493640056.png',
-                      '/images/service_webdev_human_1790493657106.png'
+                      '/images/service_social_media_digital_1790493015360.png',
+                      '/images/service_coaching_digital_1790493031164.png',
+                      '/images/service_analytics_digital_1790493058628.png',
+                      '/images/service_content_digital_1790493164481.png',
+                      '/images/service_webdev_digital_1790493181423.png'
                     ][index] || '/images/hero_dashboard_1786440656238.png'}
                     alt={service.title} 
                     className="absolute inset-0 w-full h-full object-cover"
