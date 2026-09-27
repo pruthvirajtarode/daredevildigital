@@ -32,7 +32,7 @@ export default function SectionHeading({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.5 }}
       transition={{ duration: 0.6 }}
-      className={`max-w-3xl mb-12 lg:mb-16 ${aligns[alignment]}`}
+      className={`max-w-3xl mb-6 lg:mb-10 ${aligns[alignment]}`}
     >
       {eyebrow && (
         <span className={`block mb-4 text-xs font-bold tracking-widest uppercase ${isDark ? 'text-brand-yellow' : 'text-brand-burgundy'}`}>

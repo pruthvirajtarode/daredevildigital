@@ -39,7 +39,7 @@ export default function Home() {
       <CTASection />
 
       {/* 8. CONTACT SECTION */}
-      <section id="contact-home" className="py-24 bg-brand-offwhite border-t border-brand-charcoal/5">
+      <section id="contact-home" className="py-12 bg-brand-offwhite border-t border-brand-charcoal/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading 
             eyebrow="GET IN TOUCH"

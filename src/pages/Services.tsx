@@ -14,7 +14,7 @@ export default function Services() {
         description="Performance Marketing, Social Strategy, and Creative Execution for Singapore businesses."
       />
       {/* Hero */}
-      <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 bg-brand-navy text-brand-offwhite">
+      <section className="pt-4 lg:pt-6 pb-6 lg:pb-8 bg-brand-navy text-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <SectionHeading 
             eyebrow="OUR CAPABILITIES"
@@ -29,7 +29,7 @@ export default function Services() {
 
 
       {/* 2. Core Agency Services list */}
-      <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 bg-brand-offwhite">
+      <section className="pt-4 lg:pt-6 pb-6 lg:pb-8 bg-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="max-w-3xl mb-16">
             <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-brand-navy leading-tight mb-4">
@@ -108,7 +108,7 @@ export default function Services() {
       </section>
 
       {/* 3. General Campaign Process */}
-      <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 bg-brand-navy text-brand-offwhite">
+      <section className="pt-4 lg:pt-6 pb-6 lg:pb-8 bg-brand-navy text-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading 
             eyebrow="OUR WORKFLOW"

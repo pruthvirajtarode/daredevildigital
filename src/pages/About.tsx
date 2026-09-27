@@ -32,7 +32,7 @@ export default function About() {
         description="Learn about Daredevil Digital, a Singapore based digital marketing agency founded by a former Meta APAC account manager."
       />
       {/* Hero */}
-      <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 bg-brand-navy text-brand-offwhite">
+      <section className="pt-4 lg:pt-6 pb-6 lg:pb-8 bg-brand-navy text-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <SectionHeading 
             title="THE AGENCY IS THE OPERATOR. THAT'S THE POINT."
@@ -45,7 +45,7 @@ export default function About() {
       </section>
 
       {/* Operator Story */}
-      <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 bg-brand-purewhite">
+      <section className="pt-4 lg:pt-6 pb-6 lg:pb-8 bg-brand-purewhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
@@ -87,7 +87,7 @@ export default function About() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 bg-brand-navy text-brand-offwhite">
+      <section className="pt-4 lg:pt-6 pb-6 lg:pb-8 bg-brand-navy text-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
             <div>
@@ -111,7 +111,7 @@ export default function About() {
       </section>
 
       {/* The Pillars */}
-      <section className="pt-8 lg:pt-10 pb-12 lg:pb-16 bg-brand-offwhite">
+      <section className="pt-4 lg:pt-6 pb-6 lg:pb-8 bg-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading 
             eyebrow="The Daredevil Philosophy"
@@ -130,7 +130,7 @@ export default function About() {
       </section>
 
       {/* Contact Strip */}
-      <section className="py-16 bg-brand-purewhite border-t border-brand-charcoal/5">
+      <section className="py-8 bg-brand-purewhite border-t border-brand-charcoal/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <a href={contact.whatsapp} target="_blank" rel="noreferrer" className="flex items-center gap-2 font-mono text-sm text-brand-charcoal hover:text-brand-burgundy transition-colors">
