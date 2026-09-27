@@ -66,7 +66,7 @@ export default function Footer() {
                     </li>
                   ))}
                   <li>
-                    <Link to="/#signal" className="text-sm leading-6 text-brand-offwhite/70 hover:text-brand-yellow transition-colors">
+                    <Link to="/signal-audit" className="text-sm leading-6 text-brand-offwhite/70 hover:text-brand-yellow transition-colors">
                       Signal Loop
                     </Link>
                   </li>
