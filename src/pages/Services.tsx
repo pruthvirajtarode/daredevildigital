@@ -87,11 +87,11 @@ export default function Services() {
                 >
                   <motion.img 
                     src={[
-                      '/images/unsplash_social.jpg',
-                      '/images/unsplash_coaching.jpg',
+                      '/images/proper_social.jpg',
+                      '/images/proper_coaching2.jpg',
                       '/images/unsplash_analytics.jpg',
-                      '/images/unsplash_content.jpg',
-                      '/images/unsplash_webdev.jpg'
+                      '/images/proper_content2.jpg',
+                      '/images/proper_webdev2.jpg'
                     ][index]}
                     alt={service.title} 
                     className="absolute inset-0 w-full h-full object-cover"
