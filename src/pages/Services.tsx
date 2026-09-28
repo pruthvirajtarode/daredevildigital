@@ -87,6 +87,7 @@ export default function Services() {
                 >
                   <motion.img 
                     src={[
+                      '/images/chatgpt_ads.png',
                       '/images/proper_social.jpg',
                       '/images/proper_coaching2.jpg',
                       '/images/unsplash_analytics.jpg',
