@@ -9,6 +9,18 @@ export type Service = {
 export const services: Service[] = [
   {
     id: '01',
+    title: 'CHATGPT ADS',
+    slug: 'chatgpt-ads',
+    description: 'Leverage AI-driven advertising strategies to maximize reach, engagement, and conversion with cutting-edge ChatGPT ad placements.',
+    capabilities: [
+      'AI ad strategy',
+      'Campaign optimization',
+      'Audience targeting',
+      'Performance analytics'
+    ]
+  },
+  {
+    id: '02',
     title: 'SOCIAL MEDIA MANAGEMENT',
     slug: 'social-media-management',
     description: 'From strategy to execution, we build consistent social presence that keeps your brand visible, relevant and connected.',
@@ -21,7 +33,7 @@ export const services: Service[] = [
     ]
   },
   {
-    id: '02',
+    id: '03',
     title: 'SOCIAL MEDIA COACHING',
     slug: 'social-media-coaching',
     description: 'Build the confidence and systems to manage your social presence effectively.',
@@ -34,7 +46,7 @@ export const services: Service[] = [
     ]
   },
   {
-    id: '03',
+    id: '04',
     title: 'ANALYTICS & REPORTING',
     slug: 'analytics-reporting',
     description: 'Turn digital activity into actionable business insight.',
@@ -48,7 +60,7 @@ export const services: Service[] = [
     ]
   },
   {
-    id: '04',
+    id: '05',
     title: 'CONTENT CREATION',
     slug: 'content-creation',
     description: 'Create visual content that makes your brand recognizable and memorable.',
@@ -62,7 +74,7 @@ export const services: Service[] = [
     ]
   },
   {
-    id: '05',
+    id: '06',
     title: 'WEBSITE DEVELOPMENT',
     slug: 'website-development',
     description: 'Turn your digital presence into an experience designed to build trust and drive action.',
