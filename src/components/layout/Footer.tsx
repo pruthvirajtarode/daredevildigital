@@ -95,7 +95,7 @@ export default function Footer() {
 
             {/* Address & Direct contact details */}
             <div className="md:grid md:grid-cols-1 md:gap-8">
-              <div className="mt-10 md:mt-0">
+              <div>
                 <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-brand-yellow">Contact Operator</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   <li className="flex items-start gap-3 text-sm leading-6 text-brand-offwhite/70">
