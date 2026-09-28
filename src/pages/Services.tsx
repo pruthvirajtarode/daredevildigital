@@ -14,7 +14,7 @@ export default function Services() {
         description="Performance Marketing, Social Strategy, and Creative Execution for Singapore businesses."
       />
       {/* Hero */}
-      <section className="pt-24 lg:pt-32 pb-6 lg:pb-8 bg-brand-navy text-brand-offwhite">
+      <section className="pt-24 lg:pt-24 pb-6 lg:pb-8 bg-brand-navy text-brand-offwhite">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <SectionHeading 
             eyebrow="OUR CAPABILITIES"
