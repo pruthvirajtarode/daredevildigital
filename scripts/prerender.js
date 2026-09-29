@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import express from 'express';
-import puppeteer from 'puppeteer';
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -40,13 +40,28 @@ app.use((req, res) => {
 
 const PORT = 3005;
 
+const isVercel = process.env.VERCEL === '1' || process.env.VERCEL;
+
 const server = app.listen(PORT, async () => {
-  console.log(`[Prerender] Started local server on port ${PORT}`);
+  console.log(`[Prerender] Started local server on port ${PORT}. Env: ${isVercel ? 'Vercel' : 'Local'}`);
   
   try {
-    const browser = await puppeteer.launch({
-      headless: true
-    });
+    let browser;
+    if (isVercel) {
+      const puppeteer = (await import('puppeteer-core')).default;
+      const chromium = (await import('@sparticuz/chromium')).default;
+      browser = await puppeteer.launch({
+        args: chromium.args,
+        defaultViewport: chromium.defaultViewport,
+        executablePath: await chromium.executablePath(),
+        headless: chromium.headless,
+      });
+    } else {
+      const puppeteer = (await import('puppeteer')).default;
+      browser = await puppeteer.launch({
+        headless: true
+      });
+    }
     const page = await browser.newPage();
     
     for (const route of routes) {
