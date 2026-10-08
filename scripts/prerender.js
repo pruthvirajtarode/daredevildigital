@@ -85,11 +85,11 @@ const server = app.listen(PORT, async () => {
         // Only overwrite index.html at the very end to avoid messing up the SPA fallback for other routes
         outputPath = path.join(distDir, 'index-prerendered.html');
       } else {
-        const routeDir = path.join(distDir, route);
+        outputPath = path.join(distDir, `${route}.html`);
+        const routeDir = path.dirname(outputPath);
         if (!fs.existsSync(routeDir)) {
           fs.mkdirSync(routeDir, { recursive: true });
         }
-        outputPath = path.join(routeDir, 'index.html');
       }
       
       fs.writeFileSync(outputPath, html, 'utf-8');
