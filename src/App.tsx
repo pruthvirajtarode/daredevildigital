@@ -11,10 +11,12 @@ import SignalAuditPage from './pages/SignalAuditPage';
 import FAQPage from './pages/FAQPage';
 import AuditPage from './pages/AuditPage';
 import BlueprintPage from './pages/BlueprintPage';
+import MetaPixelRouteTracker from './components/MetaPixelRouteTracker';
 
 function App() {
   return (
     <Router>
+      <MetaPixelRouteTracker />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />

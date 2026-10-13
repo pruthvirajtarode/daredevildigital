@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ArrowLeft, CheckCircle2 } from 'lucide-react';
 import Button from '../ui/Button';
+import { trackEvent, getCookie, generateEventId } from '../../lib/metaPixel';
 
 const servicesOptions = [
   'Signal Audit',
@@ -65,9 +66,18 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
     
+    // Shared ID so Meta deduplicates the browser Pixel + Conversions API events
+    const metaEventId = generateEventId('lead');
+
     const payload = {
       ...formData,
-      source: 'Contact Form'
+      source: 'Contact Form',
+      meta: {
+        eventId: metaEventId,
+        fbp: getCookie('_fbp'),
+        fbc: getCookie('_fbc'),
+        eventSourceUrl: window.location.href
+      }
     };
 
     try {
@@ -81,6 +91,12 @@ export default function ContactForm() {
         throw new Error('Failed to submit form');
       }
       
+      trackEvent(
+        'Lead',
+        { content_name: 'Website Contact Form', content_category: formData.services.join(', ') },
+        metaEventId
+      );
+
       setIsSubmitting(false);
       setIsSuccess(true);
     } catch (error) {

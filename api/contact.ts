@@ -1,4 +1,74 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
+import { createHash } from 'crypto';
+
+const sha256 = (value?: string) =>
+  value ? createHash('sha256').update(value.trim().toLowerCase()).digest('hex') : undefined;
+
+/**
+ * Send a server-side "Lead" event to Meta via the Conversions API.
+ * Uses the same event_id as the browser Pixel so Meta deduplicates them.
+ * Never throws: tracking must not break the contact form.
+ */
+async function sendMetaLeadEvent(req: VercelRequest, data: any) {
+  const pixelId = process.env.META_PIXEL_ID;
+  const accessToken = process.env.META_CAPI_ACCESS_TOKEN;
+  if (!pixelId || !accessToken) return; // CAPI not configured yet
+
+  const apiVersion = process.env.META_GRAPH_API_VERSION || 'v25.0';
+  const meta = data.meta || {};
+  const forwardedFor = (req.headers['x-forwarded-for'] as string | undefined)?.split(',')[0]?.trim();
+  let phoneDigits = typeof data.phone === 'string' ? data.phone.replace(/\D/g, '') : undefined;
+  // Meta needs the country code; local Singapore numbers are 8 digits
+  if (phoneDigits && phoneDigits.length === 8) phoneDigits = '65' + phoneDigits;
+
+  const body: Record<string, unknown> = {
+    data: [
+      {
+        event_name: 'Lead',
+        event_time: Math.floor(Date.now() / 1000),
+        event_id: meta.eventId,
+        action_source: 'website',
+        event_source_url: meta.eventSourceUrl || req.headers.referer,
+        user_data: {
+          em: sha256(data.email),
+          ph: sha256(phoneDigits),
+          fn: sha256(data.firstName),
+          ln: sha256(data.lastName),
+          country: sha256('sg'),
+          client_ip_address: forwardedFor || req.socket?.remoteAddress,
+          client_user_agent: req.headers['user-agent'],
+          fbp: meta.fbp,
+          fbc: meta.fbc
+        },
+        custom_data: {
+          content_name: 'Website Contact Form',
+          content_category: Array.isArray(data.services) ? data.services.join(', ') : undefined
+        }
+      }
+    ]
+  };
+
+  // Optional: set META_TEST_EVENT_CODE to see events under Events Manager → Test events
+  if (process.env.META_TEST_EVENT_CODE) body.test_event_code = process.env.META_TEST_EVENT_CODE;
+
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 4000);
+    const resp = await fetch(
+      `https://graph.facebook.com/${apiVersion}/${pixelId}/events?access_token=${encodeURIComponent(accessToken)}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+        signal: controller.signal
+      }
+    );
+    clearTimeout(timeout);
+    if (!resp.ok) console.error('Meta CAPI error:', resp.status, await resp.text());
+  } catch (err) {
+    console.error('Meta CAPI request failed:', err);
+  }
+}
 
 export default async function handler(
   req: VercelRequest,
@@ -71,6 +141,9 @@ export default async function handler(
       console.error('Wix Webhook failed:', wixResponse.status, errorText);
       return res.status(502).json({ success: false, message: 'Failed to forward request to CRM.' });
     }
+
+    // Server-side conversion (Conversions API). Errors are swallowed and capped at 4s.
+    await sendMetaLeadEvent(req, data);
 
     // Success
     return res.status(200).json({ success: true, message: 'Your request has been received successfully.' });
