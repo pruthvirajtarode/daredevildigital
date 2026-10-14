@@ -4,6 +4,53 @@ import { createHash } from 'crypto';
 const sha256 = (value?: string) =>
   value ? createHash('sha256').update(value.trim().toLowerCase()).digest('hex') : undefined;
 
+/** Trim + cap untrusted client strings before forwarding them anywhere. */
+const clean = (value: unknown, max = 300): string =>
+  typeof value === 'string' ? value.trim().slice(0, max) : '';
+
+const header = (req: VercelRequest, name: string): string => {
+  const v = req.headers[name];
+  const s = Array.isArray(v) ? v[0] : v || '';
+  try {
+    return decodeURIComponent(s); // Vercel URL-encodes city names
+  } catch {
+    return s;
+  }
+};
+
+/**
+ * Build flat, email-friendly lead-source fields from the client attribution
+ * snapshot plus Vercel's geo-IP headers. Flat keys are used because Wix
+ * Automations webhook variables don't handle nested objects well.
+ */
+function buildLeadSource(req: VercelRequest, data: any) {
+  const a = data.attribution || {};
+  const first = a.firstTouch || {};
+  const last = a.lastTouch || {};
+  const forwardedFor = header(req, 'x-forwarded-for').split(',')[0]?.trim();
+  const country = header(req, 'x-vercel-ip-country');
+  const region = header(req, 'x-vercel-ip-country-region');
+  const city = header(req, 'x-vercel-ip-city');
+
+  const utm = (t: any) =>
+    [t.utmSource, t.utmMedium, t.utmCampaign].map((v: unknown) => clean(v, 100)).filter(Boolean).join(' / ');
+
+  return {
+    trafficSource: clean(last.source) || clean(first.source) || 'Unknown (no attribution data)',
+    firstTouchSource: clean(first.source),
+    landingPage: clean(last.landingPage || first.landingPage, 500),
+    referrer: clean(last.referrer || first.referrer, 500),
+    utm: utm(last) || utm(first),
+    adClickId: clean(last.gclid || first.gclid) ? 'gclid' : clean(last.fbclid || first.fbclid) ? 'fbclid' : '',
+    firstVisitAt: clean(first.timestamp, 40),
+    formPage: clean(a.formPage, 500) || clean(data.meta?.eventSourceUrl, 500),
+    pagesViewed: Number.isFinite(Number(a.pagesViewed)) ? String(Number(a.pagesViewed)) : '',
+    visitorLocation: [city, region, country].filter(Boolean).join(', ') || 'Unknown',
+    visitorIp: forwardedFor || '',
+    userAgent: clean(header(req, 'user-agent'), 300)
+  };
+}
+
 /**
  * Send a server-side "Lead" event to Meta via the Conversions API.
  * Uses the same event_id as the browser Pixel so Meta deduplicates them.
@@ -108,6 +155,8 @@ export default async function handler(
       return res.status(500).json({ success: false, message: 'Internal Configuration Error' });
     }
 
+    const leadSource = buildLeadSource(req, data);
+
     // Structure the payload for Wix Automations
     const payload = {
       source: data.source || 'Daredevil Digital Website',
@@ -123,8 +172,17 @@ export default async function handler(
       marketingChallenge: data.challenge,
       email: data.email,
       phone: data.phone,
-      anythingElse: data.enquiry
+      anythingElse: data.enquiry,
+      // Lead source / session info (Wix Analytics can't see this Vercel-hosted site)
+      ...leadSource
     };
+
+    // Audit trail in Vercel → Logs (no message body, just source + contact)
+    console.log('New enquiry:', JSON.stringify({
+      email: data.email,
+      businessName: data.businessName,
+      ...leadSource
+    }));
 
     // Forward to Wix Webhook
     const wixResponse = await fetch(webhookUrl, {

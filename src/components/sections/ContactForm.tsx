@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ArrowLeft, CheckCircle2 } from 'lucide-react';
 import Button from '../ui/Button';
 import { trackEvent, getCookie, generateEventId } from '../../lib/metaPixel';
+import { getAttribution } from '../../lib/attribution';
 
 const servicesOptions = [
   'Signal Audit',
@@ -72,6 +73,7 @@ export default function ContactForm() {
     const payload = {
       ...formData,
       source: 'Contact Form',
+      attribution: getAttribution(),
       meta: {
         eventId: metaEventId,
         fbp: getCookie('_fbp'),
