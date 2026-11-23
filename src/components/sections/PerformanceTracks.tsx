@@ -111,7 +111,7 @@ export default function PerformanceTracks() {
             </div>
 
             <p className="text-brand-charcoal/70 text-sm leading-relaxed mb-8">
-              For home based, start up, or early stage businesses ready to deploy ad spend on Meta systematically. We map target audiences, creative vectors, and lead flows prior to launching campaign structures.
+              For home-based, start-up, or early stage businesses ready to deploy ad spend on Meta systematically. We map target audiences, creative vectors, and lead flows prior to launching campaign structures.
             </p>
 
             <div className="flex-1 space-y-6 mb-12">
