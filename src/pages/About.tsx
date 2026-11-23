@@ -68,7 +68,7 @@ export default function About() {
             <div className="space-y-8">
               {credentials.map((cred) => (
                 <div key={cred.label} className="flex gap-6 p-8 bg-brand-offwhite rounded-3xl border border-brand-charcoal/5 hover:border-brand-yellow transition-all duration-300">
-                  <span className="font-mono text-3xl font-bold text-brand-burgundy shrink-0 mt-1">
+                  <span className="font-display text-3xl font-bold text-brand-burgundy shrink-0 mt-1">
                     {cred.label}
                   </span>
                   <div>
@@ -91,7 +91,7 @@ export default function About() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
             <div>
-              <span className="block mb-6 text-xs font-mono font-bold tracking-widest text-brand-yellow uppercase">
+              <span className="block mb-6 text-xs font-semibold tracking-widest text-brand-yellow uppercase">
                 BRAND VISION
               </span>
               <p className="font-display text-3xl font-bold leading-tight italic">
@@ -99,7 +99,7 @@ export default function About() {
               </p>
             </div>
             <div>
-              <span className="block mb-6 text-xs font-mono font-bold tracking-widest text-brand-yellow uppercase">
+              <span className="block mb-6 text-xs font-semibold tracking-widest text-brand-yellow uppercase">
                 OPERATIONAL MISSION
               </span>
               <p className="font-display text-3xl font-bold leading-tight text-brand-offwhite/90 italic">
@@ -133,15 +133,15 @@ export default function About() {
       <section className="py-8 bg-brand-purewhite border-t border-brand-charcoal/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col md:flex-row items-center gap-6">
-            <a href={contact.whatsapp} target="_blank" rel="noreferrer" className="flex items-center gap-2 font-mono text-sm text-brand-charcoal hover:text-brand-burgundy transition-colors">
+            <a href={contact.whatsapp} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-medium text-brand-charcoal hover:text-brand-burgundy transition-colors">
               <MessageCircle className="w-5 h-5 text-brand-yellow" />
               <span>{contact.phone}</span>
             </a>
-            <a href={`mailto:${contact.email}`} className="flex items-center gap-2 font-mono text-sm text-brand-charcoal hover:text-brand-burgundy transition-colors">
+            <a href={`mailto:${contact.email}`} className="flex items-center gap-2 text-sm font-medium text-brand-charcoal hover:text-brand-burgundy transition-colors">
               <Mail className="w-5 h-5 text-brand-yellow" />
               <span>{contact.email}</span>
             </a>
-            <span className="flex items-center gap-2 font-mono text-sm text-brand-charcoal/60">
+            <span className="flex items-center gap-2 text-sm font-medium text-brand-charcoal/60">
               <MapPin className="w-5 h-5 text-brand-yellow" />
               <span>{contact.location}</span>
             </span>

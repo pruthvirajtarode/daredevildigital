@@ -42,7 +42,7 @@
     "typography": {
       "fonts": {
         "display": {
-          "value": "'Space Grotesk', sans-serif",
+          "value": "'Plus Jakarta Sans', sans-serif",
           "usage": "H1, H2, large display numbers, hero typography"
         },
         "body": {

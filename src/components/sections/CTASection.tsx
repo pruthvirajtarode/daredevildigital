@@ -27,7 +27,7 @@ export default function CTASection() {
           transition={{ duration: 0.8 }}
           className="mx-auto max-w-3xl text-center"
         >
-          <span className="block mb-6 text-xs font-mono font-bold tracking-[0.2em] text-brand-yellow uppercase">
+          <span className="block mb-6 text-xs font-semibold tracking-widest text-brand-yellow uppercase">
             TAKE ACTION
           </span>
           
@@ -61,14 +61,14 @@ export default function CTASection() {
               href={contact.whatsapp}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 font-mono text-xs text-brand-offwhite/75 hover:text-brand-yellow border border-white/10 hover:border-brand-yellow/30 px-5 py-3 rounded-full transition-all"
+              className="flex items-center gap-2 text-xs font-medium text-brand-offwhite/75 hover:text-brand-yellow border border-white/10 hover:border-brand-yellow/30 px-5 py-3 rounded-full transition-all"
             >
               <MessageCircle className="w-4 h-4" />
               <span>WhatsApp</span>
             </a>
             <a
               href={`mailto:${contact.email}`}
-              className="flex items-center gap-2 font-mono text-xs text-brand-offwhite/75 hover:text-brand-yellow border border-white/10 hover:border-brand-yellow/30 px-5 py-3 rounded-full transition-all"
+              className="flex items-center gap-2 text-xs font-medium text-brand-offwhite/75 hover:text-brand-yellow border border-white/10 hover:border-brand-yellow/30 px-5 py-3 rounded-full transition-all"
             >
               <Mail className="w-4 h-4" />
               <span>Email</span>
@@ -77,7 +77,7 @@ export default function CTASection() {
               href={contact.instagram}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 font-mono text-xs text-brand-offwhite/75 hover:text-brand-yellow border border-white/10 hover:border-brand-yellow/30 px-5 py-3 rounded-full transition-all"
+              className="flex items-center gap-2 text-xs font-medium text-brand-offwhite/75 hover:text-brand-yellow border border-white/10 hover:border-brand-yellow/30 px-5 py-3 rounded-full transition-all"
             >
               <InstagramIcon className="w-4 h-4" />
               <span>Instagram</span>
@@ -86,7 +86,7 @@ export default function CTASection() {
               href={contact.facebook}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 font-mono text-xs text-brand-offwhite/75 hover:text-brand-yellow border border-white/10 hover:border-brand-yellow/30 px-5 py-3 rounded-full transition-all"
+              className="flex items-center gap-2 text-xs font-medium text-brand-offwhite/75 hover:text-brand-yellow border border-white/10 hover:border-brand-yellow/30 px-5 py-3 rounded-full transition-all"
             >
               <FacebookIcon className="w-4 h-4" />
               <span>Facebook</span>

@@ -62,10 +62,10 @@ export default function LeadEngineAudit() {
                 <div key={layer.num} className="p-6 bg-white/5 border border-white/10 rounded-2xl">
                   <div className="flex justify-between items-center mb-3">
                     <h3 className="font-display text-lg font-bold text-brand-purewhite flex items-center gap-3">
-                      <span className="text-brand-yellow font-mono text-sm">{layer.num}</span>
+                      <span className="text-brand-yellow font-bold text-sm">{layer.num}</span>
                       {layer.name}
                     </h3>
-                    <span className="font-mono text-sm text-brand-yellow font-bold bg-brand-yellow/10 px-2 py-0.5 rounded">
+                    <span className="text-xs font-semibold text-brand-yellow bg-brand-yellow/10 px-2.5 py-0.5 rounded-full">
                       {layer.weight} weight
                     </span>
                   </div>
@@ -93,10 +93,10 @@ export default function LeadEngineAudit() {
           <div className="lg:col-span-5 lg:sticky lg:top-32">
             <div className="bg-brand-purewhite text-brand-charcoal rounded-3xl p-8 lg:p-12 shadow-2xl border border-brand-charcoal/10">
               <div className="mb-6">
-                <span className="text-xs font-mono text-brand-charcoal/50 line-through block">
+                <span className="text-sm font-semibold text-brand-charcoal/40 line-through block mb-1">
                   {pricing.audit.previous}
                 </span>
-                <span className="font-mono text-5xl font-bold text-brand-burgundy leading-none">
+                <span className="font-display text-5xl font-bold text-brand-burgundy leading-none tracking-tight">
                   {pricing.audit.current}
                 </span>
                 <p className="text-sm font-semibold text-brand-burgundy mt-2">
@@ -111,7 +111,7 @@ export default function LeadEngineAudit() {
                   QUALIFICATION CRITERIA
                 </div>
                 <p className="text-xs text-brand-charcoal/70 leading-relaxed">
-                  Singapore targeted lead generation businesses spending S$3,000/month or more on Meta, running campaigns continuously for 60+ days.
+                  Singapore targeted lead generation businesses spending S$2,000/month or more on Meta, running campaigns continuously for 60+ days.
                 </p>
               </div>
 
@@ -136,7 +136,7 @@ export default function LeadEngineAudit() {
               >
                 Book your Lead Engine Audit
               </Link>
-              <span className="block text-center font-mono text-[10px] text-brand-charcoal/50 mt-3">
+              <span className="block text-center text-xs text-brand-charcoal/50 mt-3">
                 * Intake via appointment. View access to Business Manager required.
               </span>
             </div>

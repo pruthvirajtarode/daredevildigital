@@ -100,12 +100,12 @@ export default function Hero() {
           
           {/* Active Verticals Pill Strip */}
           <div className="mt-8 pt-6 border-t border-white/20 flex flex-col sm:flex-row sm:items-center gap-4 lg:gap-6">
-            <span className="font-mono text-xs font-bold text-white/60 uppercase tracking-widest shrink-0">
+            <span className="text-xs font-semibold text-white/70 uppercase tracking-widest shrink-0">
               Active Verticals
             </span>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2.5">
               {['Renovation', 'Electrical', 'Aesthetics', 'Tuition', 'Finance', 'Legal', 'Real Estate'].map((v) => (
-                <span key={v} className="font-mono text-xs sm:text-sm text-white border border-white/20 px-4 py-2 rounded bg-white/10 shadow-sm backdrop-blur-sm">
+                <span key={v} className="text-xs sm:text-sm font-medium text-white border border-white/20 px-3.5 py-1.5 rounded-full bg-white/10 shadow-sm backdrop-blur-sm">
                   {v}
                 </span>
               ))}
@@ -138,7 +138,7 @@ export default function Hero() {
                   <span className="w-2.5 h-2.5 rounded-full bg-brand-yellow" />
                   <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
                 </div>
-                <span className="font-mono text-[9px] text-white/50 tracking-widest">D3_INTELLIGENCE_LOOP</span>
+                <span className="text-[10px] font-semibold text-white/60 tracking-wider">D3 SIGNAL LOOP</span>
               </div>
               
               <div className="flex-1 relative bg-brand-charcoal overflow-hidden p-6 flex flex-col justify-between">
@@ -146,11 +146,11 @@ export default function Hero() {
                 <div className="space-y-4">
                   <div className="flex justify-between items-start">
                     <div>
-                      <span className="font-mono text-[9px] text-brand-yellow uppercase tracking-widest block">
+                      <span className="text-[10px] font-semibold text-brand-yellow uppercase tracking-wider block">
                         CAPI FEEDBACK ENGINE
                       </span>
                       <span className="text-xl font-display font-bold text-brand-purewhite mt-1 block">
-                        D3_INTELLIGENCE_LOOP
+                        Signal Optimization Loop
                       </span>
                     </div>
                     <span className="font-mono text-[9px] text-[#22C55E] bg-[#22C55E]/10 border border-[#22C55E]/20 px-2 py-0.5 rounded uppercase tracking-wider flex items-center gap-1.5">

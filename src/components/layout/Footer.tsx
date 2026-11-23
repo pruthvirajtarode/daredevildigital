@@ -56,7 +56,7 @@ export default function Footer() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               {/* Explore Links */}
               <div>
-                <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-brand-yellow">Explore</h3>
+                <h3 className="text-xs font-semibold uppercase tracking-widest text-brand-yellow">Explore</h3>
                 <ul role="list" className="mt-4 space-y-3">
                   {footerNavigation.explore.map((item) => (
                     <li key={item.name}>
@@ -80,7 +80,7 @@ export default function Footer() {
 
               {/* Service Links */}
               <div className="mt-10 md:mt-0">
-                <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-brand-yellow">Services</h3>
+                <h3 className="text-xs font-semibold uppercase tracking-widest text-brand-yellow">Services</h3>
                 <ul role="list" className="mt-4 space-y-3">
                   {footerNavigation.services.map((item) => (
                     <li key={item.name}>
@@ -96,7 +96,7 @@ export default function Footer() {
             {/* Address & Direct contact details */}
             <div className="md:grid md:grid-cols-1 md:gap-8">
               <div>
-                <h3 className="text-xs font-mono font-bold uppercase tracking-widest text-brand-yellow">Contact Operator</h3>
+                <h3 className="text-xs font-semibold uppercase tracking-widest text-brand-yellow">Contact Operator</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   <li className="flex items-start gap-3 text-sm leading-6 text-brand-offwhite/70">
                     <MapPin className="w-5 h-5 flex-shrink-0 text-brand-yellow mt-0.5" />

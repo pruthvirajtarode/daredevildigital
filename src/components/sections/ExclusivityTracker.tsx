@@ -65,7 +65,7 @@ export default function ExclusivityTracker() {
           </motion.div>
           
           {/* Legend */}
-          <div className="flex flex-wrap gap-6 text-xs font-mono text-brand-offwhite/60 shrink-0">
+          <div className="flex flex-wrap gap-6 text-xs font-medium text-brand-offwhite/70 shrink-0">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#22C55E] shadow-[0_0_6px_#22C55E]" />
               <span>Available</span>
@@ -90,26 +90,26 @@ export default function ExclusivityTracker() {
           className="grid grid-cols-3 gap-6 bg-brand-navy/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 lg:p-8 mb-12 text-center shadow-2xl"
         >
           <div>
-            <span className="block font-mono text-2xl lg:text-4xl font-bold text-brand-purewhite">
+            <span className="block font-display text-2xl lg:text-4xl font-bold tracking-tight text-brand-purewhite">
               {stats.total}
             </span>
-            <span className="block font-mono text-[10px] text-brand-offwhite/50 uppercase mt-1 tracking-wider">
+            <span className="block text-xs font-medium text-brand-offwhite/60 uppercase mt-1 tracking-wider">
               Total niches tracked
             </span>
           </div>
           <div className="border-x border-white/10 px-6">
-            <span className="block font-mono text-2xl lg:text-4xl font-bold text-[#22C55E]">
+            <span className="block font-display text-2xl lg:text-4xl font-bold tracking-tight text-[#22C55E]">
               {stats.available}
             </span>
-            <span className="block font-mono text-[10px] text-brand-offwhite/50 uppercase mt-1 tracking-wider">
+            <span className="block text-xs font-medium text-brand-offwhite/60 uppercase mt-1 tracking-wider">
               Slots available
             </span>
           </div>
           <div>
-            <span className="block font-mono text-2xl lg:text-4xl font-bold text-brand-yellow">
+            <span className="block font-display text-2xl lg:text-4xl font-bold tracking-tight text-brand-yellow">
               {stats.taken}
             </span>
-            <span className="block font-mono text-[10px] text-brand-offwhite/50 uppercase mt-1 tracking-wider">
+            <span className="block text-xs font-medium text-brand-offwhite/60 uppercase mt-1 tracking-wider">
               Slots taken
             </span>
           </div>

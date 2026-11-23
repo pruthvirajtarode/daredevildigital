@@ -60,7 +60,7 @@ export default function Services() {
                   </p>
                   
                   <div className="mb-10">
-                    <h4 className="text-xs font-mono font-bold tracking-widest uppercase text-brand-navy mb-4 border-b border-brand-charcoal/10 pb-2">Capabilities</h4>
+                    <h4 className="text-xs font-semibold tracking-widest uppercase text-brand-navy mb-4 border-b border-brand-charcoal/10 pb-2">Capabilities</h4>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                       {service.capabilities.map((cap) => (
                         <li key={cap} className="flex items-center gap-2 text-brand-charcoal/70">
@@ -121,7 +121,7 @@ export default function Services() {
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {company.process.map((step) => (
               <div key={step.id} className="bg-white/5 border border-white/10 p-8 rounded-3xl">
-                <span className="block font-mono text-3xl font-bold text-brand-yellow mb-6">{step.id}</span>
+                <span className="block font-display text-3xl font-bold text-brand-yellow mb-6">{step.id}</span>
                 <h3 className="text-xl font-bold text-brand-purewhite mb-4">{step.title}</h3>
                 <p className="text-xs text-brand-offwhite/70 leading-relaxed">{step.description}</p>
               </div>

@@ -60,7 +60,7 @@ export default function Blueprint() {
                   className="p-6 bg-brand-offwhite border border-brand-charcoal/5 rounded-2xl"
                 >
                   <div className="flex gap-4 items-start">
-                    <span className="font-mono text-xs font-bold text-brand-burgundy bg-brand-burgundy/10 px-2.5 py-1 rounded shrink-0">
+                    <span className="text-xs font-semibold text-brand-burgundy bg-brand-burgundy/10 px-3 py-1 rounded-full shrink-0">
                       LAYER {layer.num}
                     </span>
                     <div>
@@ -80,7 +80,7 @@ export default function Blueprint() {
             <div className="mt-8 bg-brand-navy/5 border border-brand-navy/10 rounded-2xl p-6 flex gap-4">
               <Info className="w-5 h-5 text-brand-navy shrink-0 mt-0.5" />
               <div>
-                <span className="block font-mono text-[10px] font-bold text-brand-navy uppercase tracking-wider">
+                <span className="block text-xs font-semibold text-brand-navy uppercase tracking-wider">
                   WHAT IS EXCLUDED
                 </span>
                 <p className="text-xs text-brand-charcoal/75 leading-relaxed mt-1">
@@ -100,10 +100,10 @@ export default function Blueprint() {
           >
             <div className="bg-brand-navy text-brand-offwhite rounded-3xl p-8 lg:p-12 shadow-2xl border border-white/5">
               <div className="mb-6">
-                <span className="text-xs font-mono text-brand-offwhite/40 line-through block">
+                <span className="text-sm font-semibold text-brand-offwhite/50 line-through block mb-1">
                   {pricing.blueprint.previous}
                 </span>
-                <span className="font-mono text-5xl font-bold text-brand-yellow leading-none">
+                <span className="font-display text-5xl font-bold text-brand-yellow leading-none tracking-tight">
                   {pricing.blueprint.current}
                 </span>
                 <p className="text-sm font-semibold text-brand-yellow mt-2">
@@ -118,7 +118,7 @@ export default function Blueprint() {
                   WHO IS THIS FOR?
                 </div>
                 <p className="text-xs text-brand-offwhite/75 leading-relaxed">
-                  home based operators and early stage companies ready to advertise correctly. Not yet at S$3,000/month in Meta ad budgets, seeking a clear build roadmap before retainers start.
+                  home based operators and early stage companies ready to advertise correctly. Not yet at S$2,000/month in Meta ad budgets, seeking a clear build roadmap before retainers start.
                 </p>
               </div>
 
@@ -147,7 +147,7 @@ export default function Blueprint() {
               >
                 Get the Blueprint for S$888
               </a>
-              <span className="block text-center font-mono text-[10px] text-brand-offwhite/50 mt-3">
+              <span className="block text-center text-xs text-brand-offwhite/60 mt-3">
                 * Strategic blueprints delivered within 7 business days from briefing.
               </span>
             </div>

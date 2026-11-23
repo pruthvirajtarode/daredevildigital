@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, TrendingUp } from 'lucide-react';
+import { ArrowRight, TrendingUp } from 'lucide-react';
 import { pricing } from '../../data/pricing';
 import Button from '../ui/Button';
 
@@ -34,7 +34,7 @@ export default function PerformanceTracks() {
             
             <div className="flex justify-between items-start mb-8">
               <div>
-                <span className="inline-block px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-widest text-brand-yellow bg-brand-yellow/10 border border-brand-yellow/20 rounded mb-4">
+                <span className="inline-flex items-center px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-brand-yellow bg-brand-yellow/10 border border-brand-yellow/20 rounded-full mb-4">
                   For Active Spenders
                 </span>
                 <h3 className="font-display text-3xl font-bold text-brand-purewhite">
@@ -44,7 +44,7 @@ export default function PerformanceTracks() {
             </div>
             
             <p className="text-brand-offwhite/70 text-sm leading-relaxed mb-8">
-              For businesses already spending S$3,000/month or more on Meta ads. You have live data and budget; the problem lies in event configuration, target signals, saturating creative, or lead handling logic. We audit, repair, then optimize.
+              For businesses already spending S$2,000/month or more on Meta ads. You have live data and budget; the problem lies in event configuration, target signals, saturating creative, or lead handling logic. We audit, repair, then optimize.
             </p>
 
             <div className="flex-1 space-y-6 mb-12">
@@ -54,8 +54,8 @@ export default function PerformanceTracks() {
                     <ArrowRight className="w-4 h-4 text-brand-yellow" /> Lead Engine Audit
                   </span>
                   <div className="text-right">
-                    <span className="font-mono text-[10px] text-white/40 line-through mr-2">{pricing.audit.previous}</span>
-                    <span className="font-mono text-sm font-bold text-brand-yellow">{pricing.audit.current}</span>
+                    <span className="text-xs text-white/40 line-through mr-2">{pricing.audit.previous}</span>
+                    <span className="font-display text-base font-bold text-brand-yellow">{pricing.audit.current}</span>
                   </div>
                 </div>
                 <p className="text-xs text-brand-offwhite/50 pl-6">
@@ -66,39 +66,15 @@ export default function PerformanceTracks() {
               <div className="border-t border-white/10 pt-4">
                 <div className="flex justify-between items-center mb-1">
                   <span className="font-display text-base font-semibold text-brand-purewhite flex items-center gap-2">
-                    <ArrowRight className="w-4 h-4 text-brand-yellow" /> Launch Management
-                  </span>
-                  <span className="font-mono text-sm font-bold text-brand-purewhite">{pricing.launch.price}</span>
-                </div>
-                <p className="text-xs text-brand-offwhite/50 pl-6">
-                  {pricing.launch.note} Fix execution roadmap built into campaign resets.
-                </p>
-              </div>
-
-              <div className="border-t border-white/10 pt-4">
-                <div className="flex justify-between items-center mb-1">
-                  <span className="font-display text-base font-semibold text-brand-purewhite flex items-center gap-2">
                     <ArrowRight className="w-4 h-4 text-brand-yellow" /> Engine Management
                   </span>
                   <div className="text-right">
-                    <span className="font-mono text-[10px] text-white/40 line-through mr-2">{pricing.engine.previous}</span>
-                    <span className="font-mono text-sm font-bold text-brand-purewhite">{pricing.engine.current}</span>
+                    <span className="text-xs text-white/40 line-through mr-2">{pricing.engine.previous}</span>
+                    <span className="font-display text-base font-bold text-brand-purewhite">{pricing.engine.current}</span>
                   </div>
                 </div>
                 <p className="text-xs text-brand-offwhite/50 pl-6">
                   {pricing.engine.note} CAPI integration, offline mapping, and creative iteration.
-                </p>
-              </div>
-
-              <div className="border-t border-white/10 pt-4">
-                <div className="flex justify-between items-center mb-1">
-                  <span className="font-display text-base font-semibold text-brand-purewhite flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-brand-yellow" /> Exclusive Management
-                  </span>
-                  <span className="font-mono text-sm font-bold text-brand-yellow">{pricing.exclusive.price}</span>
-                </div>
-                <p className="text-xs text-brand-offwhite/50 pl-6">
-                  {pricing.exclusive.note} category exclusivity limit: one operator per vertical.
                 </p>
               </div>
             </div>
@@ -125,9 +101,12 @@ export default function PerformanceTracks() {
 
             <div className="flex justify-between items-start mb-8">
               <div>
-                <span className="inline-block px-3 py-1 text-[10px] font-mono font-bold uppercase tracking-widest text-brand-burgundy bg-brand-burgundy/10 border border-brand-burgundy/20 rounded mb-4">
+                <span className="inline-flex items-center px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-brand-burgundy bg-brand-burgundy/10 border border-brand-burgundy/20 rounded-full mb-4">
                   For Early Stage
                 </span>
+                <h3 className="font-display text-3xl font-bold text-brand-navy">
+                  Digital Marketing Blueprint
+                </h3>
               </div>
             </div>
 
@@ -142,8 +121,8 @@ export default function PerformanceTracks() {
                     <ArrowRight className="w-4 h-4 text-brand-burgundy" /> Strategic Blueprint
                   </span>
                   <div className="text-right">
-                    <span className="font-mono text-[10px] text-brand-charcoal/40 line-through mr-2">{pricing.blueprint.previous}</span>
-                    <span className="font-mono text-sm font-bold text-brand-burgundy">{pricing.blueprint.current}</span>
+                    <span className="text-xs text-brand-charcoal/40 line-through mr-2">{pricing.blueprint.previous}</span>
+                    <span className="font-display text-base font-bold text-brand-burgundy">{pricing.blueprint.current}</span>
                   </div>
                 </div>
                 <p className="text-xs text-brand-charcoal/60 pl-6">
@@ -156,7 +135,7 @@ export default function PerformanceTracks() {
                   <span className="font-display text-base font-semibold text-brand-navy flex items-center gap-2">
                     <ArrowRight className="w-4 h-4 text-brand-burgundy" /> Starter Management
                   </span>
-                  <span className="font-mono text-sm font-bold text-brand-navy">{pricing.starter.price}</span>
+                  <span className="font-display text-base font-bold text-brand-navy">{pricing.starter.price}</span>
                 </div>
                 <p className="text-xs text-brand-charcoal/60 pl-6">
                   {pricing.starter.note} Optimized management scale for low ad spend parameters.
@@ -166,7 +145,7 @@ export default function PerformanceTracks() {
               <div className="border-t border-brand-charcoal/10 pt-4 flex gap-3 bg-brand-offwhite p-4 rounded-xl border border-brand-charcoal/5">
                 <TrendingUp className="w-5 h-5 text-brand-burgundy shrink-0 mt-0.5" />
                 <div>
-                  <span className="block font-mono text-[10px] font-bold text-brand-burgundy uppercase">
+                  <span className="block text-xs font-semibold text-brand-burgundy uppercase tracking-wider">
                     Graduation Clause
                   </span>
                   <p className="text-[11px] text-brand-charcoal/70 leading-normal mt-1">

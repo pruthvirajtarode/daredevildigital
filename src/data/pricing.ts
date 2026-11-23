@@ -1,7 +1,7 @@
 export const pricing = {
   audit: {
-    current: "S$999",
-    previous: "S$1,299",
+    current: "S$699",
+    previous: "S$999",
     note: "Credited in full against month one of management."
   },
   blueprint: {
@@ -18,13 +18,13 @@ export const pricing = {
     note: "Fixes implemented. Campaign management. Reporting."
   },
   engine: {
-    current: "S$1,499/mo",
-    previous: "S$1,999/mo",
+    current: "S$1,199/mo",
+    previous: "S$1,499/mo",
     note: "Signal Loop active. CAPI + offline conversions. Creative iteration. Full reporting stack."
   },
   exclusive: {
     price: "S$3,499/mo",
     note: "Category exclusivity in your vertical. One client per niche."
   },
-  graduationClause: "When monthly ad spend consistently clears S$3,000, you graduate to Option A. Written into the agreement from day one."
+  graduationClause: "When monthly ad spend consistently clears S$2,000, you graduate to Option A. Written into the agreement from day one."
 };

@@ -54,7 +54,7 @@ export default function ConfigurationHealthScore() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7"
           >
-            <span className="block mb-4 text-xs font-mono font-bold tracking-[0.2em] text-brand-yellow uppercase">
+            <span className="block mb-4 text-xs font-semibold tracking-widest text-brand-yellow uppercase">
               ACCOUNT CONFIGURATION HEALTH
             </span>
             <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">
@@ -67,7 +67,7 @@ export default function ConfigurationHealthScore() {
               <Button href="/contact" variant="secondary" size="md" className="whitespace-nowrap">
                 Check Your Score
               </Button>
-              <div className="text-xs font-mono text-brand-offwhite/50 mt-3 sm:mt-0 sm:self-center">
+              <div className="text-xs text-brand-offwhite/60 mt-3 sm:mt-0 sm:self-center">
                 * Real score is derived from our 6 layer Lead Engine Audit.
               </div>
             </div>
@@ -105,10 +105,10 @@ export default function ConfigurationHealthScore() {
               </svg>
               {/* Score text inside */}
               <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <span className="font-mono text-5xl font-bold text-brand-yellow leading-none">
+                <span className="font-display text-5xl font-bold text-brand-yellow leading-none tracking-tight">
                   {score}
                 </span>
-                <span className="font-mono text-xs text-brand-offwhite/50 mt-1 uppercase tracking-wider">
+                <span className="text-xs font-semibold text-brand-offwhite/60 mt-1 uppercase tracking-wider">
                   / 100
                 </span>
               </div>
