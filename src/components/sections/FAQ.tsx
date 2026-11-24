@@ -12,7 +12,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="pt-6 lg:pt-8 pb-8 lg:pb-12 bg-brand-offwhite border-b border-brand-charcoal/5">
+    <section id="faq" className="flex-1 pt-6 lg:pt-8 pb-12 lg:pb-20 bg-brand-purewhite">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* Left Heading */}
@@ -25,11 +25,11 @@ export default function FAQ() {
           </div>
 
           {/* Right Accordion List */}
-          <div className="lg:col-span-7 border border-brand-charcoal/10 rounded-3xl overflow-hidden divide-y divide-brand-charcoal/10 bg-brand-purewhite shadow-lg">
+          <div className="lg:col-span-7 border border-brand-charcoal/10 rounded-3xl overflow-hidden divide-y divide-brand-charcoal/10 bg-brand-purewhite shadow-xl shadow-brand-navy/5">
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index;
               return (
-                <div key={index} className="transition-colors hover:bg-brand-offwhite/30">
+                <div key={index} className="transition-colors hover:bg-brand-offwhite/50">
                   <h3>
                     <button
                       onClick={() => toggleFaq(index)}
