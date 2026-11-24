@@ -1,16 +1,16 @@
 export const pricing = {
   audit: {
-    current: "S$699",
+    current: "S$799",
     previous: "S$999",
     note: "Credited in full against month one of management."
   },
   blueprint: {
-    current: "S$888",
-    previous: "S$1,149",
+    current: "S$699",
+    previous: "S$888",
     note: "Credited in full against your first month of Starter Management."
   },
   starter: {
-    price: "S$699/mo",
+    price: "S$899/mo",
     note: "Campaign build, management, and reporting for early stage Meta spend."
   },
   launch: {

@@ -1,4 +1,4 @@
-import { Info, HelpCircle, Check } from 'lucide-react';
+import { Info, HelpCircle, Check, ArrowRight, TrendingUp } from 'lucide-react';
 import SectionHeading from '../ui/SectionHeading';
 import { pricing } from '../../data/pricing';
 import { motion } from 'framer-motion';
@@ -99,21 +99,54 @@ export default function Blueprint() {
             className="lg:col-span-5 lg:sticky lg:top-32"
           >
             <div className="bg-brand-navy text-brand-offwhite rounded-3xl p-8 lg:p-12 shadow-2xl border border-white/5">
+              {/* Header Pricing Breakdown */}
               <div className="mb-6">
-                <span className="text-sm font-semibold text-brand-offwhite/50 line-through block mb-1">
-                  {pricing.blueprint.previous}
+                <span className="inline-flex items-center px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-brand-yellow bg-brand-yellow/10 border border-brand-yellow/20 rounded-full mb-3">
+                  For Early Stage
                 </span>
-                <span className="font-display text-5xl font-bold text-brand-yellow leading-none tracking-tight">
-                  {pricing.blueprint.current}
-                </span>
+                <div className="flex items-baseline gap-3 mb-1">
+                  <span className="text-sm font-semibold text-brand-offwhite/50 line-through">
+                    {pricing.blueprint.previous}
+                  </span>
+                  <span className="font-display text-5xl font-bold text-brand-yellow leading-none tracking-tight">
+                    {pricing.blueprint.current}
+                  </span>
+                </div>
                 <p className="text-sm font-semibold text-brand-yellow mt-2">
                   {pricing.blueprint.note}
                 </p>
               </div>
 
+              {/* Starter Management & Graduation Clause Block */}
+              <div className="space-y-3 mb-6 bg-white/5 rounded-2xl p-5 border border-white/10">
+                <div className="flex justify-between items-center border-b border-white/10 pb-3">
+                  <span className="font-display text-sm font-semibold text-brand-purewhite flex items-center gap-2">
+                    <ArrowRight className="w-4 h-4 text-brand-yellow" /> Starter Management
+                  </span>
+                  <span className="font-display text-sm font-bold text-brand-purewhite">
+                    {pricing.starter.price}
+                  </span>
+                </div>
+                <p className="text-xs text-brand-offwhite/60">
+                  {pricing.starter.note}
+                </p>
+
+                <div className="pt-2 flex gap-2.5 border-t border-white/10">
+                  <TrendingUp className="w-4 h-4 text-brand-yellow shrink-0 mt-0.5" />
+                  <div>
+                    <span className="text-[10px] font-semibold text-brand-yellow uppercase tracking-wider block mb-0.5">
+                      Graduation Clause
+                    </span>
+                    <p className="text-[11px] text-brand-offwhite/70 leading-normal">
+                      {pricing.graduationClause}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               {/* Target segment */}
-              <div className="bg-white/5 rounded-2xl p-6 border border-white/10 mb-8">
-                <div className="flex items-center gap-2 mb-3 text-brand-yellow font-bold font-display text-sm">
+              <div className="bg-white/5 rounded-2xl p-5 border border-white/10 mb-6">
+                <div className="flex items-center gap-2 mb-2 text-brand-yellow font-bold font-display text-sm">
                   <HelpCircle className="w-4 h-4 text-brand-yellow" />
                   WHO IS THIS FOR?
                 </div>
@@ -122,7 +155,7 @@ export default function Blueprint() {
                 </p>
               </div>
 
-              <div className="space-y-4 mb-8">
+              <div className="space-y-3 mb-8">
                 {[
                   "Ideal lead profiling and qualification thresholds",
                   "Singapore focused ad targeting blueprints",
@@ -145,7 +178,7 @@ export default function Blueprint() {
                 rel="noreferrer"
                 className="inline-flex items-center justify-center w-full rounded-full bg-[#25D366] text-white hover:bg-[#20b858] transition-all px-8 py-4 font-bold text-center text-base shadow-md uppercase tracking-wider"
               >
-                Get the Blueprint for S$888
+                Get the Blueprint for {pricing.blueprint.current}
               </a>
               <span className="block text-center text-xs text-brand-offwhite/60 mt-3">
                 * Strategic blueprints delivered within 7 business days from briefing.

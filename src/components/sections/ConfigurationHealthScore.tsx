@@ -41,9 +41,9 @@ export default function ConfigurationHealthScore() {
   }, [isInView, controls]);
 
   return (
-    <section id="health-score" ref={ref} className="py-8 lg:py-12 bg-brand-navy text-brand-offwhite relative overflow-hidden border-b border-white/10">
+    <section id="health-score" ref={ref} className="py-12 lg:py-20 bg-brand-offwhite text-brand-charcoal relative overflow-hidden border-b border-brand-charcoal/5">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-yellow/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-burgundy/5 rounded-full blur-3xl pointer-events-none" />
       
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -54,20 +54,20 @@ export default function ConfigurationHealthScore() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7"
           >
-            <span className="block mb-4 text-xs font-semibold tracking-widest text-brand-yellow uppercase">
+            <span className="block mb-4 text-xs font-semibold tracking-widest text-brand-burgundy uppercase">
               ACCOUNT CONFIGURATION HEALTH
             </span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">
+            <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-brand-navy mb-6 leading-tight">
               Most Singapore lead gen accounts are optimizing toward the wrong signal.
             </h2>
-            <p className="text-brand-offwhite/80 text-lg leading-relaxed mb-8">
+            <p className="text-brand-charcoal/80 text-lg leading-relaxed mb-8">
               Based on our analysis of active campaigns in Singapore, the average setup fails to feed post click conversion events back to ad platforms. Meta's algorithm is forced to optimize for volume (form clicks) rather than value (closed sales).
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start text-center sm:text-left">
-              <Button href="/contact" variant="secondary" size="md" className="whitespace-nowrap">
+              <Button href="/contact" variant="primary" size="md" className="whitespace-nowrap">
                 Check Your Score
               </Button>
-              <div className="text-xs text-brand-offwhite/60 mt-3 sm:mt-0 sm:self-center">
+              <div className="text-xs text-brand-charcoal/60 mt-3 sm:mt-0 sm:self-center">
                 * Real score is derived from our 6 layer Lead Engine Audit.
               </div>
             </div>
@@ -78,7 +78,7 @@ export default function ConfigurationHealthScore() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-5 flex flex-col xl:flex-row items-center justify-center gap-8 bg-white/5 border border-white/10 rounded-3xl p-8 xl:p-12 backdrop-blur-sm"
+            className="lg:col-span-5 flex flex-col xl:flex-row items-center justify-center gap-8 bg-brand-purewhite border border-brand-charcoal/10 rounded-3xl p-8 xl:p-12 shadow-xl shadow-brand-navy/5"
           >
             {/* Animated Gauge */}
             <div className="relative w-48 h-48 flex items-center justify-center shrink-0">
@@ -88,7 +88,7 @@ export default function ConfigurationHealthScore() {
                   cx="60"
                   cy="60"
                   r="50"
-                  className="stroke-white/10 fill-none"
+                  className="stroke-brand-charcoal/10 fill-none"
                   strokeWidth="8"
                 />
                 {/* Progress circle */}
@@ -105,10 +105,10 @@ export default function ConfigurationHealthScore() {
               </svg>
               {/* Score text inside */}
               <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <span className="font-display text-5xl font-bold text-brand-yellow leading-none tracking-tight">
+                <span className="font-display text-5xl font-bold text-brand-navy leading-none tracking-tight">
                   {score}
                 </span>
-                <span className="text-xs font-semibold text-brand-offwhite/60 mt-1 uppercase tracking-wider">
+                <span className="text-xs font-semibold text-brand-charcoal/50 mt-1 uppercase tracking-wider">
                   / 100
                 </span>
               </div>
@@ -117,14 +117,14 @@ export default function ConfigurationHealthScore() {
             {/* Labels */}
             <div className="space-y-4 text-center sm:text-left">
               <div>
-                <span className="block text-sm font-bold tracking-widest text-brand-yellow/80 uppercase">
+                <span className="block text-xs font-bold tracking-widest text-brand-burgundy uppercase">
                   TYPICAL SG SCORE
                 </span>
-                <span className="text-2xl font-display font-bold text-brand-purewhite">
+                <span className="text-2xl font-display font-bold text-brand-navy">
                   Active Meta Spenders
                 </span>
               </div>
-              <div className="text-sm text-brand-offwhite/70 leading-relaxed max-w-xs">
+              <div className="text-sm text-brand-charcoal/70 leading-relaxed max-w-xs">
                 Illustrative average score before Signal Loop implementation. Book an audit to pinpoint your configuration errors.
               </div>
             </div>
