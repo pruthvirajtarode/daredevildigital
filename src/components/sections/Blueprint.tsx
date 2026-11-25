@@ -1,6 +1,7 @@
 import { Info, HelpCircle, Check, ArrowRight, TrendingUp } from 'lucide-react';
 import SectionHeading from '../ui/SectionHeading';
 import { pricing } from '../../data/pricing';
+import { contact } from '../../data/contact';
 import { motion } from 'framer-motion';
 
 export default function Blueprint() {
@@ -119,13 +120,18 @@ export default function Blueprint() {
 
               {/* Starter Management & Graduation Clause Block */}
               <div className="space-y-3 mb-6 bg-white/5 rounded-2xl p-5 border border-white/10">
-                <div className="flex justify-between items-center border-b border-white/10 pb-3">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-3 gap-2">
                   <span className="font-display text-sm font-semibold text-brand-purewhite flex items-center gap-2">
-                    <ArrowRight className="w-4 h-4 text-brand-yellow" /> Starter Management
+                    <ArrowRight className="w-4 h-4 text-brand-yellow shrink-0" /> Starter Management
                   </span>
-                  <span className="font-display text-sm font-bold text-brand-purewhite">
-                    {pricing.starter.price}
-                  </span>
+                  <a
+                    href={`${contact.whatsapp}?text=${encodeURIComponent("Hi Daredevil Digital, I would like to customize my Starter Management package.")}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center gap-1 px-3 py-1 rounded-full text-[11px] font-bold bg-brand-yellow text-brand-navy hover:bg-brand-purewhite hover:text-brand-navy transition-all shadow-sm shrink-0 whitespace-nowrap uppercase tracking-wider self-start sm:self-auto"
+                  >
+                    Customize my package →
+                  </a>
                 </div>
                 <p className="text-xs text-brand-offwhite/60">
                   {pricing.starter.note}

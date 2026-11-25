@@ -4,5 +4,6 @@ export const contact = {
   email: 'info@daredevildigital.com',
   whatsapp: 'https://wa.me/6588240612',
   instagram: 'https://www.instagram.com/daredevil_digital/',
-  facebook: 'https://www.facebook.com/daredevildigital24/'
+  facebook: 'https://www.facebook.com/daredevildigital24/',
+  linkedin: 'https://www.linkedin.com/company/daredevil-digital/'
 };

@@ -10,7 +10,7 @@ export const faqs: FAQItem[] = [
   },
   {
     question: "I'm not spending S$2K/month yet. Can I still work with D3?",
-    answer: "Yes, Option B is the right entry point. The Digital Marketing Blueprint (S$699) covers six layers: business snapshot, audience architecture, offer and lead mechanism, campaign blueprint, creative direction, and a 90 day execution roadmap. You move into Starter Management at S$899/month, with a written graduation clause: when monthly ad spend consistently clears S$2,000, you move to Option A terms."
+    answer: "Yes, Option B is the right entry point. The Digital Marketing Blueprint (S$699) covers six layers: business snapshot, audience architecture, offer and lead mechanism, campaign blueprint, creative direction, and a 90 day execution roadmap. You move into Starter Management with a customized package scoped to your budget, with a written graduation clause: when monthly ad spend consistently clears S$2,000, you move to Option A terms."
   },
   {
     question: "What happens after the audit if I don't proceed to management?",
@@ -22,7 +22,7 @@ export const faqs: FAQItem[] = [
   },
   {
     question: "How does the exclusivity work exactly?",
-    answer: "At the Exclusive Management tier (S$3,499/month), D3 works with one business per niche. Once your niche is confirmed and you're a paying client, no direct competitor in that niche gets taken on. The slot is held for the duration of your engagement. Check the Exclusivity Tracker above to see if your niche is still open."
+    answer: "At the Exclusive Management tier, D3 works with one business per niche. Once your niche is confirmed and you're a paying client, no direct competitor in that niche gets taken on. The slot is held for the duration of your engagement. Check the Exclusivity Tracker above to see if your niche is still open."
   },
   {
     question: "What access do you need to run the audit?",

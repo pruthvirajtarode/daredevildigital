@@ -12,6 +12,10 @@ const FacebookIcon = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
 );
 
+const LinkedinIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+);
+
 export default function CTASection() {
   return (
     <section id="cta" className="bg-brand-navy py-6 lg:py-8 relative overflow-hidden border-t border-white/10">
@@ -90,6 +94,15 @@ export default function CTASection() {
             >
               <FacebookIcon className="w-4 h-4" />
               <span>Facebook</span>
+            </a>
+            <a
+              href={contact.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 text-xs font-medium text-brand-offwhite/75 hover:text-brand-yellow border border-white/10 hover:border-brand-yellow/30 px-5 py-3 rounded-full transition-all"
+            >
+              <LinkedinIcon className="w-4 h-4" />
+              <span>LinkedIn</span>
             </a>
           </div>
 

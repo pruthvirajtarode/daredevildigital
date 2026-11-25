@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, TrendingUp } from 'lucide-react';
 import { pricing } from '../../data/pricing';
+import { contact } from '../../data/contact';
 import Button from '../ui/Button';
 
 export default function PerformanceTracks() {
@@ -64,14 +65,18 @@ export default function PerformanceTracks() {
               </div>
 
               <div className="border-t border-white/10 pt-4">
-                <div className="flex justify-between items-center mb-1">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">
                   <span className="font-display text-base font-semibold text-brand-purewhite flex items-center gap-2">
-                    <ArrowRight className="w-4 h-4 text-brand-yellow" /> Engine Management
+                    <ArrowRight className="w-4 h-4 text-brand-yellow shrink-0" /> Engine Management
                   </span>
-                  <div className="text-right">
-                    <span className="text-xs text-white/40 line-through mr-2">{pricing.engine.previous}</span>
-                    <span className="font-display text-base font-bold text-brand-purewhite">{pricing.engine.current}</span>
-                  </div>
+                  <a
+                    href={`${contact.whatsapp}?text=${encodeURIComponent("Hi Daredevil Digital, I would like to customize my Engine Management package.")}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-brand-yellow text-brand-navy hover:bg-brand-purewhite hover:text-brand-navy transition-all shadow-sm shrink-0 whitespace-nowrap uppercase tracking-wider self-start sm:self-auto"
+                  >
+                    Customize my package →
+                  </a>
                 </div>
                 <p className="text-xs text-brand-offwhite/50 pl-6">
                   {pricing.engine.note} CAPI integration, offline mapping, and creative iteration.
@@ -131,11 +136,18 @@ export default function PerformanceTracks() {
               </div>
 
               <div className="border-t border-brand-charcoal/10 pt-4">
-                <div className="flex justify-between items-center mb-1">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">
                   <span className="font-display text-base font-semibold text-brand-navy flex items-center gap-2">
-                    <ArrowRight className="w-4 h-4 text-brand-burgundy" /> Starter Management
+                    <ArrowRight className="w-4 h-4 text-brand-burgundy shrink-0" /> Starter Management
                   </span>
-                  <span className="font-display text-base font-bold text-brand-navy">{pricing.starter.price}</span>
+                  <a
+                    href={`${contact.whatsapp}?text=${encodeURIComponent("Hi Daredevil Digital, I would like to customize my Starter Management package.")}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-brand-navy text-brand-purewhite hover:bg-brand-burgundy transition-all shadow-sm shrink-0 whitespace-nowrap uppercase tracking-wider self-start sm:self-auto"
+                  >
+                    Customize my package →
+                  </a>
                 </div>
                 <p className="text-xs text-brand-charcoal/60 pl-6">
                   {pricing.starter.note} Optimized management scale for low ad spend parameters.
